@@ -1,0 +1,335 @@
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+
+/* Layout Container */
+.lc {
+	max-width: $max-width;	
+	margin: 0 auto;
+	padding: $pad-half;
+}
+
+.site-content {
+	margin-left:-12px;
+	margin-right:-12px;
+}
+/*------------------------------------*\
+    $TEMPLATES
+\*------------------------------------*/
+
+/* Two Column Layout */
+.l-two-col {
+	@extend .cf;
+
+	.l-main {
+		@media all and (min-width: $bp-large) {
+			float: left;
+			width: 70%;
+			padding-right: $pad;
+		}
+	}
+	
+	.l-sidebar {
+		@media all and (max-width: $bp-large) {
+			clear: both;
+		}
+
+		@media all and (min-width: $bp-large) {
+			float: left;
+			width: 30%;
+			padding: 0 0 0 $pad;
+		}
+	}
+}
+
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
+/* Grid Container */
+.section {
+	overflow: hidden;
+	margin: $padpx-double 0;
+	padding: $padpx-double 0.875% 0;
+	background: $creme-light-2;
+	overflow: visible;
+	position: relative;
+	
+	@media all and (min-width: $bp-small) {
+		margin: $padpx-quad 0;
+	}
+	@media all and (min-width: $bp-full) {
+	padding: $padpx-double $padpx-half 0;
+	}
+
+	> a.more {
+		@include font-2-style();
+		font-size: $font-size-sm;
+		position: absolute;
+		bottom: $padpx;
+		right: $padpx;
+	}
+}
+/* Grid Item */
+.gi {
+	padding:0 12px;
+	margin: 0 0 24px;
+	position: relative;
+	box-sizing:border-box;
+	
+	img {
+		display: block;
+	}
+
+	@media all and (min-width: $bp-med) {
+		float: left;
+	}
+
+}
+
+/* Grid 1up */
+.g-1up {
+	margin: 0 0 24px;
+	.gi {
+		width: 100%;
+	}
+}
+/* Grid 2up */
+.g-2up {
+	margin: 0 0 24px;
+	@media all and (min-width: $bp-med-2) {
+		> .gi {
+			float: left;
+			width: 50%;
+			
+			&:nth-of-type(odd) {
+				clear: left;
+			}
+		}
+	}
+	@media all and (min-width: $bp-full) {
+		> .gi {
+			// width: 460px;
+		}
+	}
+}
+
+/* Grid Half (Always displayed side by side) */
+.g-half {
+	margin: 0 0 24px;
+	> .gi {
+		float: left;
+		width: 50%;
+		
+		&:nth-of-type(odd) {
+			clear: left;
+		}
+	}
+}
+
+/* Grid 3up */
+.g-3up {
+	margin: 0 0 24px;
+	@media all and (min-width: $bp-med) {
+		> .gi {
+			float: left;
+			width: 50%;
+			
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+		}
+	}
+	
+	@media all and (min-width: $bp-med-2) {
+		> .gi {
+			width: 33.3333%;
+			
+			&:nth-of-type(2n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+	}
+	@media all and (min-width: $bp-full) {
+		> .gi {
+			// width: 300px;
+		}
+	}
+
+}
+
+/* Grid 4up */
+.g-4up {
+	margin: 0 0 24px;
+	@media all and (min-width: $bp-med) {
+		>.gi {
+			float: left;
+			width: 50%;
+			
+			&:nth-of-type(2n+1) {
+				clear: both;
+			}
+		}
+	}
+	
+	@media all and (min-width: $bp-large) {
+		>.gi {
+			width: 25%;
+			
+			&:nth-of-type(2n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(4n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+/* Grid Quarter (Always displayed side by side) */
+.g-quarter {
+	margin: 0 0 24px;
+	> .gi {
+		float: left;
+		width: 25%;
+		
+		&:nth-of-type(4n+1) {
+			clear: left;
+		}
+	}
+}
+
+.g-max4 {
+	margin: 0 0 24px;
+
+	@media all and (min-width: $bp-small-2) {
+		>.gi {
+			float: left;
+			width: 50%;
+			
+			&:nth-of-type(2n+1) {
+				clear: both;
+			}
+		}
+	}
+
+	@media all and (min-width: $bp-small-3) {
+		>.gi {
+			width: 33.3333333%;
+			
+			&:nth-of-type(2n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+	}
+	
+	@media all and (min-width: $bp-large) {
+		>.gi {
+			width: 25%;
+			
+			&:nth-of-type(3n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(4n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+/* Grid 5up */
+.g-max5 {
+	margin: 0 0 24px;
+
+	>.gi {
+		float: left;
+		width: 50%;
+		
+		&:nth-of-type(2n+1) {
+			clear: both;
+		}
+	}
+
+	@media all and (min-width: $bp-small-3) {
+		>.gi {
+			width: 33.3333333%;
+			
+			&:nth-of-type(2n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+	}
+	
+	@media all and (min-width: $bp-med) {
+		>.gi {
+			width: 25%;
+			
+			&:nth-of-type(3n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(4n+1) {
+				clear: left;
+			}
+		}
+	}
+
+	@media all and (min-width: $bp-med-2) {
+		>.gi {
+			width: 20%;
+			
+			&:nth-of-type(4n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(5n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+/* Grid 2/3 */
+.gi-2-3 {
+	margin: 0 0 24px;
+	@media all and (min-width: $bp-med) {
+		float: left;
+		width: 66.666666%;
+	}
+}
+
+.gi-1-3 {
+	margin: 0 0 24px;
+	@media all and (min-width: $bp-med) {
+		float: left;
+		width: 33.333333%;
+	}
+}
+
+/* Grid 4up block */
+.g-opposites {
+	margin: 0 0 24px;
+	.gi {
+		float: left;
+		
+		&:last-child {
+			float: right;
+			text-align: right;
+		}
+	}
+}

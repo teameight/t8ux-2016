@@ -1,0 +1,105 @@
+/* Global Font Classes */
+.font-secondary {
+	font-family: $font-secondary;
+}
+.font-tertiary {
+	font-family: $font-tertiary;
+}
+
+//Group Header
+
+.section .ghead {
+	position: absolute;
+	top: -50px;
+	width: 100%;
+	left: 0;
+}
+
+.ghead {
+	padding-left: 1.75%;
+	position: relative;
+	line-height: 45px;
+	height: 38px;
+	@media all and (min-width: $bp-full) {
+		padding-left: 23px;
+	}
+}
+.ghead:before {
+	background: $red;
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	top: 22px;
+	left: 0;
+	content: '';
+}
+.ghead span {
+	position: relative;
+	z-index: 1;
+}
+.ghead span:before {
+	background: $creme-light;
+	height: 22px;
+	width: 100%;
+	padding: 0 5px;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	left: -5px;
+	top:0;
+}
+
+
+//Intro text
+.intro {
+	font-size: $font-size-slightly-larger;
+	font-weight: bold;
+}
+
+//Pullquote
+.pullquote {
+	font-family: $font-secondary;
+	font-size: $font-size-large;
+}
+
+//Text Passages
+.text {
+	background: $creme;
+	padding: $padpx;
+	
+	@media all and (min-width: $bp-small) {
+		padding: $padpx-double;
+	}
+
+	@media all and (min-width: $bp-large) {
+		padding: 10% 10% 8%;
+	}
+
+	a {
+		text-decoration: none;
+		color:$blue-dark;
+
+		&:hover, &:focus {
+			color: $red;
+		}
+	}
+
+	ul {
+		list-style: disc;
+		margin: 0 0 $space 1.2em;
+
+		ul {
+			margin-bottom: 0;
+		}
+	}
+
+	ol {
+		list-style: decimal;
+		margin: 0 0 $space 1.2em;
+
+		ol {
+			margin-bottom: 0;
+		}
+	}
+}

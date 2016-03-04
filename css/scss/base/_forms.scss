@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+form > div {
+	margin-bottom: $space;
+}
+
+form ol, form ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+label {
+	display: block;
+	padding-bottom: $space-quarter;
+	@include font-2-style();
+	font-size: $font-size-sm;
+	color:$grey;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+input, textarea {
+	border: 0;
+	padding: $padpx-half;
+	background: $creme-light-2;
+}
+
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+	-webkit-appearance: none;
+}
+
+button, input[type="submit"] {
+	padding: 0.65rem;
+	background: $blue;
+	border: 0;
+	cursor: pointer;
+	color: $red;
+	@include font-2-style();
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.3em;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+//Form Field Container
+.field-container {
+	margin-bottom: $space;
+}
+
+.inline-form {
+	
+	fieldset, .inline-container {
+		position: relative;
+	}
+
+	input {
+		height: 40px; 
+		vertical-align: bottom;	
+	}
+	
+	input[type=submit], button, .btn {
+		font-size: $font-size-sm;
+		padding: $padpx-half;
+		background: $grey-light-2;
+		width: auto;
+		height: 40px;
+		vertical-align: bottom;
+
+		&:hover, &:focus {
+			background: $grey;
+			color: $white;
+		}
+	}
+}
+
+// PK to clean this up
+.inline-search-results-form {
+	width: 100%;
+	@media all and (min-width: $bp-med) {
+		width: 82%;
+
+	} 
+	
+	fieldset, .inline-container {
+		position: relative;
+	}
+	
+	input[type=submit], button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		width: auto;
+	}
+}
+
+/* Validation */
+.has-error {
+	border-color: $error;
+}
+.is-valid {
+	border-color: $valid;
+}
+
+
+
+
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+
+/* Search Form */
+.search-field {
+	padding-right: 3em;
+}
+.inline-form .search-submit {
+	background: none;
+	padding: 0.78em 1em;
+	border: 0;
+	border-left: 1px solid $gray;
+	color: $gray;
+}

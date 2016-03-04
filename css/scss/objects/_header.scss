@@ -1,0 +1,50 @@
+.header {
+	background: $creme-dark;
+	padding: 7px 0;
+	height: 50px;
+	overflow: visible;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index:10;
+}
+
+.admin-bar .header {
+	top:32px;
+}
+
+.logolink {
+	width: 35px;
+	margin: 0 auto;
+	display: block;
+}
+
+.nav-toggle {
+	position: absolute;
+	display: block;
+	padding: 9px 0 9px 9px;
+	font-size: 1.3rem;
+	line-height: 1;
+	border-left: 1px solid $blue-med;
+	right: $padpx-half;
+	top: 0;
+
+	@media all and (min-width: $bp-small) {
+		right: $padpx;
+	}
+
+	@media all and (min-width: $bp-med-2) {
+		display: none;
+	}
+}
+
+.search-form {
+	overflow: hidden;
+	max-height: 0;
+
+	@media all and (min-width: $bp-med-2) {
+		float: right;
+		max-height: none;
+		margin: 0.65em 0.5em 0 0;
+	}
+}

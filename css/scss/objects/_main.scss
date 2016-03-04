@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $MAIN CONTENT AREA
+\*------------------------------------*/
+#main {
+	padding: $padpx-double $padpx-half;
+	overflow: hidden;
+	@extend .lc;
+	@extend .cf;
+
+	@media all and (min-width: $bp-small) {
+		padding: $padpx-triple $padpx;
+	}
+
+}

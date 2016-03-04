@@ -1,0 +1,46 @@
+/* Links */ 
+a {
+	color: $grey;
+	text-decoration: none;
+	outline: 0;
+	
+	&:hover, &:focus {
+		color: $red;
+	}
+
+    &.anchor {
+        position:absolute;
+        top:-120px;
+        height:0;
+        display:block;
+    }
+
+    img {
+        border: none;
+    }
+}
+
+
+.nav-social a {
+	height:18px;
+	width: 18px;
+	display: inline-block;
+	overflow: hidden;
+
+	&:hover, &:focus {
+	}
+}
+.nav-social li {
+	height:18px;
+	width: 18px;
+	display: inline;
+    font-size: 18px;
+	margin-right: $padpx-half;
+}
+
+/**
+ * All Genericons.
+ */
+[class*="genericon"] {
+    font-size: 18px;
+}
