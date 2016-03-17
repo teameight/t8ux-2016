@@ -4,15 +4,18 @@
 .footer {
 	clear: both;
 	overflow: hidden;
-	background: $red;
-	color: $creme-light;
+	background: $teal;
+	color: $creme;
 	line-height: 1.2;
 	text-align: center;
+
+	.wrap{
+		max-width:$max-width;
+	}
 
 	@media all and (min-width: $bp-med-2) {
 		text-align: left;
 	}
-
 
 	.lc {
 		padding: $pad $pad 0;
@@ -20,24 +23,26 @@
 
 	h4 {
 		font-size: $font-size-sm;
-		margin-bottom: $padpx-half;
+		margin-bottom: $padpx/2;
+		color:$creme;
 	}
 
 	a {
-		color: $creme-light;
+		color: $creme;
 
         &:hover {
-            color: $blue-med;
+            color: $yellow;
         }
 	}
 	
 	.left,
 	.right {
-		padding: $padpx-triple $padpx;
+		padding: 4em $padpx 2em;
 		float:none;
 	}
 	.left {
 		border-bottom: 2px dashed $creme;
+		@include grid-column(5);
 
 		@media all and (min-width: $bp-med-2) {
 			float:left;
@@ -45,13 +50,45 @@
 		}
 	}
 	.right {
+		@include grid-column(5);
 		@media all and (min-width: $bp-med-2) {
 			float:right;
+
+			input {
+				display:inline-block;
+				float:left;
+			}
+
+			input.email {
+				width:$col-1*7;
+			}
+			input.button {
+				width:$col-1*5;
+			}
+		}
+		@media all and (min-width: $bp-large) {
+
+			input.email {
+				width:75%;
+			}
+			input.button {
+				width:25%;
+			}
+		}
+	}
+
+	.button {
+		background:$mint;
+		color:$teal;
+
+		&:hover, &:active {
+			background:$yellow;
+			color:$teal;
 		}
 	}
 
 	.nav-social {
-		padding: $padpx-half 0;
+		padding: $padpx/2 0;
 	}
 
 	.bott {
@@ -59,7 +96,6 @@
 
 	    .copyright {
 		    padding: $padpx $padpx 0;
-		    font-size: $font-size-sm;
 			
 			@media all and (min-width: $bp-med-2) {
 			    text-align: left;

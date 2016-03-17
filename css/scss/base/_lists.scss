@@ -1,7 +1,22 @@
-ol, ul {
-	margin: 0;
-	padding: 0;
+#content ol, #content ul {
 	list-style: none;
+
+	li {
+		@include font-sizing(18, 24);
+		margin-bottom:4px;
+		padding-left: 1em;
+		text-indent: -.9em;
+
+		&:before {
+			color:$red;
+			content: "\002022";
+    		padding-right: .75em;
+		}
+
+		#content & a {
+			background-image: none;
+		}
+	}
 }
 
 /* Definition Lists */

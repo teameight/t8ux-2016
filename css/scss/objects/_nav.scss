@@ -11,13 +11,13 @@
 	
 	a {
 		display: block;
-		padding: $padpx $padpx 4px 0;
+		padding: 24px 0 4px 2em;
 		@include font-2-style();
 		font-size:0.75em;
-		color: $grey-light;
+		color: $creme-dk;
 
 		&:hover, &:focus {
-			color: $red;
+			color: $white;
 		}	
 	}
 
@@ -29,9 +29,12 @@
 		max-height: none;
 		float: right;
 		clear: none;
+		width:45%;
+		text-align:right;
+
 
 		li {
-			float: left;
+			display:inline-block;
 		}
 
 		a {
@@ -57,4 +60,25 @@
 	a {
 		padding: $padpx;
 	}
+}
+.nav-social a {
+	display: inline-block;
+
+	&:hover, &:focus {
+		color:$yellow;
+	}
+}
+.nav-social li {
+	display: inline;
+    font-size: 2em;
+	margin-right: .75em;
+}
+
+/**
+ * All Genericons.
+ */
+[class*="genericon"] {
+    width:1em;
+    height:1em;
+    font-size:1em;
 }

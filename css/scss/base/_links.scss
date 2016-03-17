@@ -1,11 +1,13 @@
 /* Links */ 
 a {
-	color: $grey;
+	color: $gray-dk;
 	text-decoration: none;
 	outline: 0;
+	@include transitions(color $duration $ease-cb, background-color $duration $ease-cb);
+
 	
 	&:hover, &:focus {
-		color: $red;
+		//background-color: $mint;
 	}
 
     &.anchor {
@@ -20,27 +22,60 @@ a {
     }
 }
 
+a.button, .button {
+	font-family: $font-secondary;
+	@include font-sizing(14, 14);
+	font-weight: normal;
+	letter-spacing: .05em;
+	margin-top:20px;
+	margin-bottom:4px;
+	display:inline-block;
+	position: relative;
 
-.nav-social a {
-	height:18px;
-	width: 18px;
-	display: inline-block;
-	overflow: hidden;
+	text-transform:uppercase;
+	@include font-smoothing;
+	color:$creme;
+    background: $red;
+    padding: 1em 1.5em .75em;
+    z-index:1;
+
+	@include transitions(color $duration/2 $ease-cb, background-color $duration $ease-cb);
+
+    &:before {
+    	background: linear-gradient(90deg, $mint 33.333%, $creme 33.333%, $creme 66.666%, $mint 0);
+		background-size: 3px 100%;
+		background-position:center;
+		content: '';    
+	    display: block;
+	    height: 100%;
+	    position: absolute;
+	    top: 0; left: 0;
+	    opacity: 0;
+	    width: 100%;
+	    z-index: -1;
+	
+		@include transitions(opacity $duration $ease-cb);
+
+    }
+    &:hover, &:active {
+    	color:$teal;
+
+    	&:before {
+    		opacity:1;
+    	}
+    }
+
+}
+
+%smart-underline {
+	text-decoration:none;
+	background-image: linear-gradient(to top, $mint 18%, rgba(0, 178, 169, 0) 18%);
 
 	&:hover, &:focus {
+		@include transitions(background-color 0.25s ease, color 0.25s ease);
+		background-color:$mint;
 	}
 }
-.nav-social li {
-	height:18px;
-	width: 18px;
-	display: inline;
-    font-size: 18px;
-	margin-right: $padpx-half;
-}
-
-/**
- * All Genericons.
- */
-[class*="genericon"] {
-    font-size: 18px;
+.text a, .pcont a, .entry-content a {
+	@extend %smart-underline;
 }

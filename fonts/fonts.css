@@ -1,4 +1,69 @@
 /**
+ * @license
+ * MyFonts Webfont Build ID 3181099, 2016-03-03T21:56:17-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MagallanesCondBold by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/magallanes-condensed/bold/
+ * Copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * Webfont: MagallanesCondExtraLight by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/magallanes-condensed/extra-light/
+ * Copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * Webfont: MagallanesCond by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/magallanes-condensed/regular/
+ * Copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * Webfont: QuirogaSerifPro-Bold by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/quiroga-serif-pro/bold/
+ * Copyright: Copyright (c) 2007 by Fernando D&#x00ED;az. All rights reserved.
+ * 
+ * Webfont: QuirogaSerifPro-Italic by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/quiroga-serif-pro/italic/
+ * Copyright: Copyright (c) 2007 by Fernando D&#x00ED;az. All rights reserved.
+ * 
+ * Webfont: QuirogaSerifPro by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/quiroga-serif-pro/reguar/
+ * Copyright: Copyright (c) 2010 by Fernando D&#x00ED;az. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3181099
+ * Licensed pageviews: 10,000
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/308a2b");
+
+  
+@font-face {font-family: 'MagallanesCondBold';src: url('webfonts/308A2B_0_0.eot');src: url('webfonts/308A2B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/308A2B_0_0.woff2') format('woff2'),url('webfonts/308A2B_0_0.woff') format('woff'),url('webfonts/308A2B_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'MagallanesCondExtraLight';src: url('webfonts/308A2B_1_0.eot');src: url('webfonts/308A2B_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/308A2B_1_0.woff2') format('woff2'),url('webfonts/308A2B_1_0.woff') format('woff'),url('webfonts/308A2B_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'MagallanesCond';src: url('webfonts/308A2B_2_0.eot');src: url('webfonts/308A2B_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/308A2B_2_0.woff2') format('woff2'),url('webfonts/308A2B_2_0.woff') format('woff'),url('webfonts/308A2B_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'QuirogaSerifPro';font-weight: bold;font-style: normal;src: url('webfonts/308A2B_3_0.eot');src: url('webfonts/308A2B_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/308A2B_3_0.woff2') format('woff2'),url('webfonts/308A2B_3_0.woff') format('woff'),url('webfonts/308A2B_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'QuirogaSerifPro';font-weight: normal;font-style: italic;src: url('webfonts/308A2B_4_0.eot');src: url('webfonts/308A2B_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/308A2B_4_0.woff2') format('woff2'),url('webfonts/308A2B_4_0.woff') format('woff'),url('webfonts/308A2B_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'QuirogaSerifPro';font-weight: normal;font-style: normal;src: url('webfonts/308A2B_5_0.eot');src: url('webfonts/308A2B_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/308A2B_5_0.woff2') format('woff2'),url('webfonts/308A2B_5_0.woff') format('woff'),url('webfonts/308A2B_5_0.ttf') format('truetype');}
+ 
+
+
+/**
 
 	Genericons Helper CSS
 

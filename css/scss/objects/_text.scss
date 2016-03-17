@@ -65,24 +65,15 @@
 
 //Text Passages
 .text {
-	background: $creme;
+	background: $creme-dk;
 	padding: $padpx;
 	
 	@media all and (min-width: $bp-small) {
-		padding: $padpx-double;
+		padding: $padpx*2;
 	}
 
 	@media all and (min-width: $bp-large) {
-		padding: 10% 10% 8%;
-	}
-
-	a {
-		text-decoration: none;
-		color:$blue-dark;
-
-		&:hover, &:focus {
-			color: $red;
-		}
+		padding: $padpx*5;
 	}
 
 	ul {

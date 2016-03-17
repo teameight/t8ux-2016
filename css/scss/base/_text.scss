@@ -1,16 +1,38 @@
 /* Text-Related Elements */ 
-p {
-	margin-bottom: $space;
+p, li {
+    @include font-sizing(18, 28);
+    letter-spacing: .02em;
+    margin-top:0;
+    margin-bottom:12px;
+    @include font-smoothing;
+
 }
+
+p.emphasized {
+    font-family: $font-tertiary;
+    @include font-sizing(20, 32);
+    font-weight: normal;
+    letter-spacing: .03em;
+}
+
 
 /* Blockquote */
 blockquote {
-    font-style:italic;
-    border-left: 1px solid $gray;
-    color: $gray;
-	padding-left: $pad;
-	margin-bottom: $space;
+    @include font-sizing(30, 40);
+    font-style: italic;
+    margin-top:4px;
+    margin-bottom:20px;
+
+    @include font-smoothing;
+    color: $teal;
 }
+
+p + h4,
+ul + h4,
+ol + h4 {
+    margin-top:24px;
+}
+
 
 /* Horizontal Rule */ 
 hr {

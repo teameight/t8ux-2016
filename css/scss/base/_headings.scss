@@ -1,36 +1,76 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 h1, .alpha   { 
-	line-height: 0.9em;
-	font-family: $font-tertiary;
+	font-family: $font;
+	@include font-sizing(90, 100);
 	font-weight: normal;
-	font-size: 3.25em;
-	color: $white;
-	letter-spacing: .03em;
+	letter-spacing: -.01em;
+	margin-top:4px;
+	margin-bottom:20px;
+
+	@include font-smoothing;
+	color: $gray;
+	opacity:.8;
+	
+	&.alt {
+		font-family: $font-secondary;
+		@include font-sizing(80, 96);
+	}
 }
 
 h2, .beta    { 
-	line-height: 1.2;
-	font-family: $font-tertiary;
+	font-family: $font;
+	@include font-sizing(48, 56);
 	font-weight: normal;
-	font-size: 2.375em;
-	color: $red;
-	letter-spacing: .03em;
+	letter-spacing: .01em;
+	margin-top:4px;
+	margin-bottom:12px;
+
+	@include font-smoothing;
+	color: $gray;
+	opacity:.9;
 }
 
 h3, .gamma   { 
-	line-height: 1.1;
-	font-size: 1.125em;
-	@include font-2-style();
+	font-family: $font-tertiary;
+	@include font-sizing(36, 44);
+	font-weight: normal;
+	letter-spacing: .03em;
+	margin-top:4px;
+	margin-bottom:20px;
+
+	@include font-smoothing;
+	color: $gray;
 }
 
 h4, .delta   {
-	@include font-2-style();
-	font-size: 1em;
+	font-family: $font-secondary;
+	@include font-sizing(18, 24);
+	font-weight: normal;
+	letter-spacing: .05em;
+	margin-top:12px;
+	margin-bottom:4px;
+
+	text-transform:uppercase;
+	@include font-smoothing;
+	color: $red;
+	
+	&.alt {
+		border-bottom: 2px solid;
+	    margin-bottom: 14px;
+	}
 }
 
 h5, .epsilon { 
-	
+	font-family: $font-tertiary;
+	@include font-sizing(27, 32);
+	font-weight: normal;
+	letter-spacing: .01em;
+	margin-top:4px;
+	margin-bottom:20px;
+
+	@include font-smoothing;
+	color: $gray-dk-trans;
 }
 
 h6, .zeta    { 
@@ -39,10 +79,12 @@ h6, .zeta    {
 
 /* Subheadings */
 .subheading {
-	font-family: $font;
-	font-weight: 300;
+	font-family:$font;
 	font-style:italic;
-	letter-spacing: 0.02em;
+	color:$teal;
+}
+h4 + .subheading {
+	@include font-sizing(22, 28);
 }
 h5.subheading {
 	font-size: 1.25em;

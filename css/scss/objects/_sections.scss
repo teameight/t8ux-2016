@@ -1,14 +1,49 @@
 .section {
-	margin: $padpx*5 0;
-
+	margin: $padpx*5 auto;
+}
+.section.case-studies {
+	margin: 0 auto;
 	@media all and (min-width: $bp-full) {
-		max-width: $max-width;
+		max-width: $bp-xl;
 	}
 
-	.phead {
+}
+.section.fullgrid {
+	max-width:none;
+	margin-bottom:0;
+
+	> .gi {
+		padding:0;
 		margin:0;
-	}
 
+		@media all and (min-width: $bp-med) {
+			width: 100 / 2 * 1%;
+			float:left;
+			&:nth-child(2n + 2) {
+				clear:both;
+			}
+		}
+		@media all and (min-width: $bp-large) {
+			width: 100 / 3 * 1%;
+			&:nth-child(2n + 2) {
+				clear:none;
+			}
+			&:nth-child(3n + 2) {
+				clear:both;
+			}
+		}
+		@media all and (min-width: $bp-xxl) {
+			&:nth-child(2n + 2),
+			&:nth-child(3n + 2) {
+				clear:none;
+			}
+			&:nth-child(4n + 2) {
+				clear:both;
+			}
+			width: 100 / 4 * 1%;
+		}
+
+	}
 }
 
 .section.cont-wrap {
@@ -33,39 +68,6 @@
 		}
 	}
 
-	.web-page-head {
-	    border: 2px solid $grey-light;
-	    width: 100%;
-	    height: 18px;
-	    margin: 0;
-	    background-color: $gray-light-4;
-
-	    span {
-		    width: 9px;
-		    height:9px;
-		    border: 2px solid $grey-light;
-		    display: block;
-		    float: left;
-		    margin: 2px 0 0 8px;
-		    border-radius: 50%;
-		}
-
-	}
-	> .web-page-head {
-	    margin: 0 12px;
-	}
-
-	img.web-page {
-	    border: 2px solid $grey-light;
-	    border-top: 0;
-	}
-
-	.imgdesc .web-page-head {
-		@media all and (min-width: $bp-large) {
-			width:57.143%;
-			float:left;
-		}
-	}
 
 	.imgdesc, .freeform {
 		@media all and (min-width: $bp-full) {
@@ -121,16 +123,58 @@
 }
 
 /* Home Main */
-.section.home-main {
+.section.logo-banner-wrap {
+
+	max-width:none;
 	text-align:center;
-	margin: $padpx-triple 0 $padpx-triple*2;
-	background:transparent;
-	padding:0;
+	margin: 0;
+	background:url(../images/paper-texture.png) repeat center center $red;
+	padding:0 2em;
+	box-sizing:border-box;
+
+	.logo-banner {
+		padding-top: 59%;
+		position: relative;
+		margin:0 auto;
+		top:47%;
+		transform:translateY(-50%);
+		max-width:1100px;
+
+		&:after {
+			content:"";
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background: url(../images/logobanner-bg.png) no-repeat center center;
+			background-size: contain;
+			opacity:0;
+			@include transitions(opacity $duration $ease-cb $duration/2);
+		}
+	}
+
+	.logo-block {
+	    max-width: 600px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+	    width: 28%;
+	    z-index:1;
+	    opacity:0;
+		@include transitions(opacity $duration $ease-cb);
+	}
+
+	.logo-block, .logo-banner:after {
+
+		.loaded & {
+			opacity:1;
+		}
+	}
 
 	>h1 {
-		color: $grey;
-		font-size: 4em;
-		margin-bottom: 0.25em;
+		color: $creme;
 	}
 	p {
 		font-size: 1.2em;
@@ -152,12 +196,221 @@
 	}
 
 }
-.section.big-notice, 
+.section.home-main {
+	background:$mint;
+	//border-top:1em solid $yellow;
+
+	max-width:none;
+	margin:0;
+	padding:0;
+
+	article {
+		padding:6em 2em;
+		margin:0 auto;
+		text-align:center;
+
+		@media screen and (min-width:$bp-med-2){
+			padding:8em;
+			max-width:$bp-med-2;
+		}
+	}
+
+}
+.section.home-sub {
+	background:$teal;
+	border-bottom:2em solid $mint;
+
+	max-width:none;
+	margin:0;
+	padding:0;
+
+	article {
+		padding:4em 0;
+		margin:0 auto;
+		text-align:center;
+
+		h3 {
+			font-family:$font;
+			font-weight:normal;
+			font-style:italic;
+			@include font-sizing(22, 28);
+			color:$creme;
+		}
+		h4 {
+
+			a {
+				color:$creme;
+				display:block;
+				margin:4px 0 16px;
+				@include font-sizing(14, 20);
+
+				&:last-child {
+					margin-bottom:4px;
+				}
+
+				&:hover, &:active {
+					color:$yellow;
+				}
+			}
+
+		}
+
+		@media screen and (min-width:$bp-med-2) {
+
+			h3, h4 {
+				width:50%;
+				float:left;	
+			}
+
+			h3 {
+				text-align:right;
+				padding-right:36px;
+				padding-top: 1.125em;
+			}
+
+			h4 {
+				border-left:2px solid $creme;
+				text-align:left;
+				padding-left:36px;
+			}
+
+		}
+	}
+
+}
+
+
+
+section.phead {
+	width:100%;
+    background-color:$creme-dk;
+    margin-bottom: $padpx*5;
+    margin-top: 56px;
+
+	@media all and (min-width: $bp-med-3) {
+		display: flex;
+	    align-items: stretch;
+	}
+
+	/* Post Title */
+	.tcrd {
+		background: $mint;
+		position:relative;
+
+		@media all and (max-width: $bp-large) {
+			font-size:.75em;
+		}
+
+		h1 {
+
+			@extend .alt;
+			padding: $padpx*6 48px 0;
+		
+		}
+
+		h5 {
+		    color: $gray;
+		    @include font-sizing(26,32);
+			padding: 0 48px 1em;
+		}
+
+		h1, h5 {
+			max-width: 626px;
+			margin:0 auto;
+		}
+
+		@media all and (min-width: $bp-med-3) {
+			width:$col-1*5;
+			box-sizing:border-box;
+
+			&:before {
+				display:none!important;
+			}
+
+			h1, h5 {
+				max-width:none;
+				margin:0;
+			}
+			
+			h1 {
+				padding-bottom:0;
+				margin-bottom:-.225em;
+				width:100%;
+				padding-right:10%;
+				position:absolute;
+				bottom:50%;
+				text-align:right;
+				right:0;
+				z-index: 1;
+
+				&:before {
+					content:'';
+					width:100%;
+					height:2px;
+					background:$red;
+					display:block;
+					position:absolute;
+					bottom: .225em;
+				    left: 0;
+				    z-index: -1;
+				}
+			}
+
+			h5 {
+			    text-align: right;
+			    position: absolute;
+			    top: 50%;
+			    width: 100%;
+			    padding: 12px 10% 0;
+			}
+		}
+
+		&:before {
+			content:'';
+			width:100%;
+			height:2px;
+			background:$red;
+			display:block;
+			position:absolute;
+			bottom: 0;
+		    left: 0;
+		}
+	}
+	/* Post Content */
+	.pcont {
+		
+	    .text {
+	    	padding: 3em;
+    		max-width: 39em;
+    		margin:0 auto;
+	    }
+
+		@media all and (min-width: $bp-med-3) {
+			width:$col-1*6;
+			box-sizing:border-box;	    
+			width: 50%;
+		    margin-left: 8.3333%;
+		    padding: 6em 0;
+
+		    .text {
+		    	padding: 0 3em 0 0;
+    			max-width: 36em;
+    			margin:0;
+		    }
+		}
+
+	}
+}
+
+.single .wrap section, .single .wrap > img {
+	margin-bottom:$padpx*4;
+}
+
 .section.makers {
 	
 	background:$red;
 	padding:0;
-	margin-bottom: $padpx-quad*2.5;
+	margin-bottom: $padpx*4*2.5;
 
 	.article-header.tcrd {
 
@@ -200,7 +453,7 @@
 /* Team */
 
 .section.team {
-	padding: $padpx-dub-half 3%;
+	padding: $padpx 3%;
 
 	.team-member {
 		padding:0;

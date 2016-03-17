@@ -33,7 +33,7 @@ button, input, select, textarea {
 
 input, textarea {
 	border: 0;
-	padding: $padpx-half;
+	padding: $padpx/2;
 	background: $creme-light-2;
 }
 
@@ -43,11 +43,8 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 button, input[type="submit"] {
 	padding: 0.65rem;
-	background: $blue;
 	border: 0;
 	cursor: pointer;
-	color: $red;
-	@include font-2-style();
 }
 
 input[type="checkbox"],
@@ -83,16 +80,13 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	
 	input[type=submit], button, .btn {
-		font-size: $font-size-sm;
-		padding: $padpx-half;
-		background: $grey-light-2;
+		padding: 8px 1em 4px;
 		width: auto;
 		height: 40px;
 		vertical-align: bottom;
+		margin: 0;
 
 		&:hover, &:focus {
-			background: $grey;
-			color: $white;
 		}
 	}
 }

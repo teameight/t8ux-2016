@@ -2,12 +2,34 @@
     $VARIABLES
 \*------------------------------------*/
 
-//Colors
-$red : #CB4627;
+
+//2016 Colors
+$red : #E95740;
+$teal : #22A09E;
+$mint : #a1cebe;
+$yellow : #f1d23a;
+$rose : #edd2e1;
+
+$creme-lt : #fbfaf6;
+$creme : #f4f0e9;
+$creme-dk : #e5e0ce;
+
+$gray : #58595b;
+$gray-dk : #231f20;
+$gray-dark : #231f20;
+
+$white : #fff;
+$black : #000;
+
+$red-trans : rgba(233, 87, 64, .75);
+$gray-dk-trans : rgba(35, 31, 32, .8);
+
+//Old Colors
+
 $blue-dark : #738D97;
 $blue-med : #94A8AD;
 $blue : #BDCED3;
-$creme : #E4E2C6;
+
 $creme-light : #EAE8D3;
 $creme-light-2 : #F4F2E4;
 $creme-dark : #DEDCBB;
@@ -15,16 +37,13 @@ $grey : #6C6C71;
 $grey-light : #989898;
 $grey-light-2 : #D1D1D4;
 
-$gray : #808080;
 $gray-light : #f9f9f9;
 $gray-light-2 : #eee;
 $gray-light-3 : #ddd;
 $gray-light-4 : #bbb;
 $gray-med : #666;
-$gray-dark : #333;
 $gray-dark-2 : #131313;
-$white : #fff;
-$black : #000;
+
 
 $dim : rgba(0,0,0,0.5);
 $dimmer : rgba(0,0,0,0.8);
@@ -37,19 +56,11 @@ $brand-twitter: #35ccff;
 $brand-linkedin: #217bc1;
 
 //Typography
-@font-face {
-	font-family: 'BlanchCon';
-	src: url('../fonts/blanchcon.eot'); /* IE9 Compat Modes */
-	src: url('../fonts/blanchcon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	     url('../fonts/blanchcon.woff') format('woff'), /* Modern Browsers */
-	     url('../fonts/blanchcon.ttf')  format('truetype'), /* Safari, Android, iOS */
-	     url('../fonts/blanchcon.svg#svgBlanchCon') format('svg'); /* Legacy iOS */
-	}
 
-
-$font : "freight-text-pro", "Adobe Caslon Pro", Georgia, Times, "Times New Roman", serif;
-$font-secondary : "franklin-gothic-urw", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-tertiary : "BlanchCon", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font : "QuirogaSerifPro", Georgia, Times, "Times New Roman", serif;
+$font-secondary : "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-tertiary : "MagallanesCond", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-4 : "MagallanesCondExtraLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
 $font-size-norm : 1em;
 $font-size-slightly-larger : 1.0625em;
@@ -58,10 +69,34 @@ $font-size-sm : 0.875em;
 $font-size-large : 1.4375em;
 
 //Layout
-$max-width: 1240px;
+$max-width: 1300px;
+
+//GRID Columns
+$col-1 : ( (100/12) * 1) * 1%;
+$col-2 : ( (100/12) * 2) * 1%;
+$col-3 : ( (100/12) * 3) * 1%;
+$col-4 : ( (100/12) * 4) * 1%;
+$col-5 : ( (100/12) * 5) * 1%;
+$col-6 : ( (100/12) * 6) * 1%;
+$col-7 : ( (100/12) * 7) * 1%;
+$col-8 : ( (100/12) * 8) * 1%;
+$col-9 : ( (100/12) * 9) * 1%;
+$col-10 : ( (100/12) * 10) * 1%;
+$col-11 : ( (100/12) * 11) * 1%;
+$col-12 : 100%;
+
+
+
+
 $offset-left-1: 4.5rem;
 
 $l-sidebar-width: 19.75rem;
+
+
+//Animation
+
+$ease-cb : cubic-bezier(.165,.84,.44,1);
+$duration : 1s;
 
 //Defaults
 $space : 1rem;
@@ -77,14 +112,7 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
-$padpx : 20px;
-$padpx-half : $padpx/2;
-$padpx-and-half : $padpx*1.5;
-$padpx-double : $padpx*2;
-$padpx-dub-half : $padpx*2.5;
-$padpx-triple : $padpx*3;
-$padpx-quad : $padpx*4;
-$padpx-quarter :$padpx/4;
+$padpx : 16px;
 
 //Borders
 $border-med: 3px;
@@ -92,18 +120,19 @@ $border-thick: 7px;
 
 
 //Breakpoints
-$bp-small : 24em;
-$bp-small-2 : 29.75em;
-$bp-small-3 : 39.8em;
-$bp-med : 28em;
-$bp-med-2 : 35em;
+$bp-small : 320px;
+$bp-small-2 : 320px;
+$bp-small-3 : 480px;
+$bp-med : 600px;
+$bp-med-2 : 720px;
+$bp-med-3 : 960px;
 
-$bp-large : 45em; // (720px)
-$bp-large-2 : 1024px; 
-$bp-full : 1200px;
+$bp-large : 1024px;
+$bp-large-2 : 1200px; 
+$bp-full : 1400px;
 
-$bp-xl : 73em;
-$bp-xxl : 89em;
-$bp-xxxl : 93em;
+$bp-xl : 1600px;
+$bp-xxl : 1800px;
+$bp-xxxl : 2000px;
 
-//
+

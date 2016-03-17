@@ -24,20 +24,15 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-<script src="https://use.typekit.net/bie6biv.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="page" class="site">
-		<header class="header cf" role="banner">
-			<div class="wrap">
-				<a href="<?php echo home_url(); ?>" class="logolink"><img src="<?php bloginfo('template_directory'); ?>/images/t8-block.png" class="logo" alt="Team Eight" /></a>
+	<header class="header cf" role="banner">
+		<div class="wrap">
+			<a href="<?php echo home_url(); ?>" class="logolink"><img src="<?php bloginfo('template_directory'); ?>/images/micro-block-01.svg" class="logo" alt="Team Eight" /></a>
 <!--				<a href="#nav" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>-->
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			</div>
-		</header>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
+	</header>
 		<!-- End .header -->
-
-		<div id="main" class="site-main wrap">

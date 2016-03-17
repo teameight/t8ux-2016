@@ -1,12 +1,30 @@
 .header {
-	background: $creme-dark;
-	padding: 7px 0;
-	height: 50px;
+	background: $red;
+	border-bottom:2px solid $creme;
+	padding: 8px 18px;
+	height: 58px;
 	overflow: visible;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	z-index:10;
+
+	@include transitions(border $duration/2 $ease-cb);
+
+
+	.home & {
+		background:transparent;
+		border:none;
+
+		&.below {
+			background: $red;
+			border-bottom:2px solid $creme;
+		}
+	}
+	.home &.above {
+		position:absolute;
+
+	}
 }
 
 .admin-bar .header {
@@ -14,9 +32,24 @@
 }
 
 .logolink {
-	width: 35px;
+	width: 76px;
 	margin: 0 auto;
 	display: block;
+
+	
+	.home & {
+		opacity:0;
+		transform:translateY(-50%);
+
+		@include transitions(opacity $duration/4 $ease-cb, transform $duration $ease-cb);
+
+	}
+	.home .below & {
+		opacity:1;
+		transform:translateY(0);
+		
+		@include transitions(opacity $duration $ease-cb $duration/8, transform $duration/2 $ease-cb);
+	}
 }
 
 .nav-toggle {
@@ -26,7 +59,7 @@
 	font-size: 1.3rem;
 	line-height: 1;
 	border-left: 1px solid $blue-med;
-	right: $padpx-half;
+	right: $padpx/2;
 	top: 0;
 
 	@media all and (min-width: $bp-small) {

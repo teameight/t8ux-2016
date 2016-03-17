@@ -2,6 +2,26 @@
     $MIXINS
 \*------------------------------------*/
 
+@mixin grid-column($number-of-cols, $col-padding : 0, $side : none) {
+  box-sizing:border-box;
+  
+  @media all and (min-width: $bp-med-2) {
+    width: $col-1 * $number-of-cols;
+    @if $side == left {
+      padding-left : $col-1 * $col-padding;
+    }
+    @if $side == right {
+      padding-right : $col-1 * $col-padding;
+    }
+
+  }
+}
+@mixin grid-padding() {
+  padding-left:18px;
+  padding-right:18px;
+}
+
+
 /* CSS Transition
 	Usage: @include transition(width,0.3s,ease-out);
  */
@@ -13,14 +33,32 @@
 	transition: $transition-property $transition-time $method;
 }
 
-/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
-	Usage: @include font-size(1, large);
-*/
-@mixin font-size( $decimal-size, $keyword: null ) {
-  @if $keyword{ font-size: $keyword; }
-  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
-  font-size: $decimal-size * 1rem;
+@mixin transitions($transitions...) {
+  -webkit-transition: $transitions;
+  -moz-transition: $transitions;
+  -ms-transition: $transitions;
+  -o-transition: $transitions;
+  transition: $transitions;
 }
+
+@mixin font-sizing($fsize, $lheight) {
+    font-size: $fsize/16 * 1em;
+    line-height: $lheight/$fsize;
+}
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+/* DEPRECATED */
 
 /* Franklin Small font style
 	Usage: @include font-2-style();
@@ -31,6 +69,16 @@
 	font-weight: 600;
 	letter-spacing: .08em;
 }
+
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
+@mixin font-size( $decimal-size, $keyword: null ) {
+  @if $keyword{ font-size: $keyword; }
+  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
+  font-size: $decimal-size * 1rem;
+}
+
 
 /*   
 	@include background-opacity(#333, 0.5);

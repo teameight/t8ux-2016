@@ -58,33 +58,11 @@ add_action( 'wp_enqueue_scripts', 'teameight_scripts_styles' );
 function team_eight_query_other_things( $query ) {
     if ( $query->is_home() && $query->is_main_query() ) {
         $query->set( 'cat', 48 ); // other things cat id
+        $query->set( 'category__not_in', 47 ); // other things cat id
         // set the number of posts per page
-        $posts_per_page = 9;
-        // get sticky posts array
-        $sticky_posts = get_option( 'sticky_posts' );
+        $posts_per_page = 16;
+        $query->set('posts_per_page', $posts_per_page);
 
-        // if we have any sticky posts and we are at the first page
-        if (is_array($sticky_posts)) {
-
-            // count the number of sticky posts
-            $sticky_count = count($sticky_posts);
-
-            // and if the number of sticky posts is less than
-            // the number we want to set:
-            if ($sticky_count < $posts_per_page) {
-                $query->set('posts_per_page', $posts_per_page - $sticky_count);
-
-                // if the number of sticky posts is greater than or equal
-                // the number of pages we want to set, ignore sticky posts
-            } else {
-                $query->set('posts_per_page', 1);
-            }
-
-            // fallback in case we have no sticky posts
-            // and we are not on the first page
-        } else {
-            $query->set('posts_per_page', $posts_per_page);
-        }
     }
 }
 add_action( 'pre_get_posts', 'team_eight_query_other_things' );
@@ -164,3 +142,24 @@ function teameight_singles_images($att_id, $size, $class) {
     echo wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 
 }
+
+ /**
+ * Shortcodes
+ */
+ 
+function t8_button($atts, $content = null){
+   extract(shortcode_atts(array(
+      'style' => 'green',
+      'link' => '#',
+      'target' => '_self',
+   ), $atts));
+ 
+   return 
+        '<a class="'.$style.' button" target="'. $target .'" href="'. $link .'">'.
+   
+        do_shortcode($content) .
+
+        '</a>';
+
+}
+add_shortcode( 'button', 't8_button' );

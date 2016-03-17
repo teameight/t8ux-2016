@@ -16,7 +16,7 @@
 			teameight_singles_images($attachment_id, $size, $class);
 		?>
 	<?php elseif(get_row_layout() == "image_and_text"): ?>
-	<div class="imgdesc cf">
+	<section class="imgdesc">
 		<?php  
 			$attachment_id = get_sub_field('image');
 			$size = "full";
@@ -24,23 +24,31 @@
 			 
 			teameight_singles_images($attachment_id, $size, $class);
 		?>
-		<div class="desc">
-			<div class="text">
-				<?php the_sub_field('text'); ?>
-			</div>
+		<div class="text">
+			<?php the_sub_field('text'); ?>
 		</div>
-	</div>	
+	</section>	
+	<?php elseif(get_row_layout() == "section_header"): ?>
+	<section class="sechead">
+		<header>
+			<h4 class="alt"><?php the_sub_field('section_title'); ?></h4>
+			<h5 class="subheading"><?php the_sub_field('subtitle'); ?></h5>
+		</header>
+		<div class="text">
+			<?php the_sub_field('intro_content'); ?>
+		</div>
+	</section>	
 	<?php elseif(get_row_layout() == "text_only"): ?>
 		<?php $class = get_sub_field('html_class'); ?>
-	<div class="freeform <?php echo $class; ?>">
+	<section class="freeform <?php echo $class; ?>">
 		<?php the_sub_field('text'); ?>
-	</div>
+	</section>
 	<?php elseif( get_row_layout() == "row2" || get_row_layout() == "row3" ): ?>
 	<?php 
 		$row = ( get_row_layout() == "row2" ? 2 : 3 ); 
 		$imgsize = 'full';
 	?>
-	<div class="g g-<?php echo $row; ?>up cf">
+	<section class="g g-<?php echo $row; ?>up cf">
 		<div class="gi">
 			<?php  
 				$attachment_id = get_sub_field('image_1');
@@ -67,6 +75,6 @@
 			?>
 		</div>
 		<?php } ?>
-	</div>
+	</section>
 	<?php endif; ?>
 <?php endwhile; ?>
