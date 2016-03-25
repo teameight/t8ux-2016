@@ -38,8 +38,11 @@ add_action( 'after_setup_theme', 'teameight_setup' );
  */
 function teameight_scripts_styles() {
 
-	// Loads JavaScript file with functionality specific to Team Eight.
-	wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2015-08-28', true );
+    // Loads JavaScript file with functionality specific to Team Eight.
+    wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2015-08-28', true );
+
+    // Loads JavaScript file with lazyload.
+   // wp_enqueue_script( 'teameight-lazyload', get_template_directory_uri() . '/js/lazyload.js', array( 'jquery' ), '2015-08-28', true );
 
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'teameight-style', get_template_directory_uri() . '/css/style.css', array(), '2015-08-28' );
@@ -140,6 +143,86 @@ function teameight_singles_images($att_id, $size, $class) {
     }
 
     echo wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
+
+}
+
+/**
+ * Outputs images with classes from ACF feilds on single posts and/or with lazy load support
+ *
+ * 
+ */
+function teameight_images($attachment_id, $size, $class, $lload = true) {
+
+    if($class == "web-page"){
+        echo "<div class='web-page-head'><span></span><span></span><span></span></div>";
+    }
+    $html = '';
+    $image = wp_get_attachment_image_src($attachment_id, $size, $icon);
+    if ( $image ) {
+        list($src, $width, $height) = $image;
+        $hwstring = image_hwstring($width, $height);
+        $size_class = $size;
+        if ( is_array( $size_class ) ) {
+            $size_class = join( 'x', $size_class );
+        }
+        $attachment = get_post($attachment_id);
+        $placeholder = get_template_directory_uri()."/images/img-phold.gif";
+        $default_attr = array(
+            'src'   => $placeholder,
+            'data-src'   => $src,
+            'class' => "attachment-$size_class size-$size_class $class",
+            'alt'   => trim(strip_tags( get_post_meta($attachment_id, '_wp_attachment_image_alt', true) )), // Use Alt field first
+        );
+        if ( empty($default_attr['alt']) )
+            $default_attr['alt'] = trim(strip_tags( $attachment->post_excerpt )); // If not, Use the Caption
+        if ( empty($default_attr['alt']) )
+            $default_attr['alt'] = trim(strip_tags( $attachment->post_title )); // Finally, use the title
+ 
+        $attr = wp_parse_args( $attr, $default_attr );
+ 
+        // Generate 'srcset' and 'sizes' if not already present.
+        if ( empty( $attr['srcset'] ) ) {
+            $image_meta = get_post_meta( $attachment_id, '_wp_attachment_metadata', true );
+ 
+            if ( is_array( $image_meta ) ) {
+                $size_array = array( absint( $width ), absint( $height ) );
+                $srcset = wp_calculate_image_srcset( $size_array, $src, $image_meta, $attachment_id );
+                $sizes = wp_calculate_image_sizes( $size_array, $src, $image_meta, $attachment_id );
+ 
+                if ( $srcset && ( $sizes || ! empty( $attr['sizes'] ) ) ) {
+                    $attr['srcset'] = $srcset;
+ 
+                    if ( empty( $attr['sizes'] ) ) {
+                        $attr['sizes'] = $sizes;
+                    }
+                }
+            }
+        }
+        $attr['data-srcset'] = $attr['srcset'];
+        unset($attr['srcset']); 
+ 
+        /**
+         * Filter the list of attachment image attributes.
+         *
+         * @since 2.8.0
+         *
+         * @param array        $attr       Attributes for the image markup.
+         * @param WP_Post      $attachment Image attachment post.
+         * @param string|array $size       Requested size. Image size or array of width and height values
+         *                                 (in that order). Default 'thumbnail'.
+         */
+        $attr = apply_filters( 'wp_get_attachment_image_attributes', $attr, $attachment, $size );
+        $attr = array_map( 'esc_attr', $attr );
+        $html = rtrim("<img $hwstring");
+        foreach ( $attr as $name => $value ) {
+            $html .= " $name=" . '"' . $value . '"';
+        }
+        $html .= ' />';
+    }
+ 
+    echo $html;
+
+    // echo wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 
 }
 

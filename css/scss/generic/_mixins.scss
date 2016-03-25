@@ -13,6 +13,10 @@
     @if $side == right {
       padding-right : $col-1 * $col-padding;
     }
+    @if $side == both {
+      padding-left : $col-1 * $col-padding;
+      padding-right : $col-1 * $col-padding;
+    }
 
   }
 }

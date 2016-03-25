@@ -49,35 +49,33 @@
 				@include transitions(opacity $duration/2 $ease-cb);
 				display:block;
 			}	
-			img:last-child {
+			img:last-of-type:not(:only-of-type) {
 				display:block;
 				position:absolute;
 				top:0;
 				left:0;
 			}
-		}
-
-		&:hover, &focus {
-				
-			.imgwrap img:last-child {
-				opacity:0;
-			}
 			
-			@media screen and (min-width:$bp-med-2){	
-				.card {
-
-					.labels {
-						margin-left: $col-1;
-						width:$col-4;				
-					}
-					.title {
-						opacity:1;
-						height:50%;
-						margin-left: $col-1;
-						padding:0;
-						@include transitions(margin $duration $ease-cb, width $duration $ease-cb, opacity $duration $ease-cb);
-				    }
+			&:hover, &:focus {
+				img:last-of-type:not(:only-of-type) {
+					opacity:0;
 				}
+			}
+		}
+		
+		.card.in-view {
+			@media screen and (min-width:$bp-med-2){
+				.labels {
+					margin-left: $col-1;
+					width:$col-4;				
+				}
+				.title {
+					opacity:1;
+					height:50%;
+					margin-left: $col-1;
+					padding:0;
+					@include transitions(margin $duration $ease-cb, width $duration $ease-cb, opacity $duration $ease-cb);
+			    }
 			}
 
 		}
@@ -178,52 +176,52 @@
 
 		}
 	}
-		&:nth-child(odd) {
+	&:nth-child(odd) {
 
-			@media screen and (min-width:$bp-med-2){
-				h1, h3, h4 {
-					text-align:right;
+		@media screen and (min-width:$bp-med-2){
+			h1, h3, h4 {
+				text-align:right;
+			}
+
+			.card .labels {
+
+				right:0;
+				left:auto;
+				margin-right: $col-1;
+
+
+				h3, h4 {
+				    padding-left: 36px;
+				    padding-right: 0;
 				}
+			}
+			.card .title {
 
-				.card .labels {
+				right:0;
+				left:auto;
+				margin-right:$col-1;
 
-					right:0;
-					left:auto;
+			}
+		}
+
+		@media all and (min-width:$bp-large){
+			.card .labels, .card .title {
+				margin-right: $col-2;
+			}
+		}
+
+
+		.cs-link {
+			float:left;
+
+			.card.in-view {
+				.labels {
 					margin-right: $col-1;
-
-
-					h3, h4 {
-					    padding-left: 36px;
-					    padding-right: 0;
-					}
 				}
-				.card .title {
-
-					right:0;
-					left:auto;
-					margin-right:$col-1;
-	
+				.title {
+					margin-right: $col-1;
 				}
-			}
-
-			@media all and (min-width:$bp-large){
-				.card .labels, .card .title {
-					margin-right: $col-2;
-				}
-			}
-
-
-			.cs-link {
-				float:left;
-
-				&:hover, &:focus {
-					.card .labels {
-						margin-right: $col-1;
-					}
-					.title {
-						margin-right: $col-1;
-					}
-				}		
-			}
+			}		
+		}
 	}
 }

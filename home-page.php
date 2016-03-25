@@ -38,7 +38,7 @@ get_header(); ?>
 		<?php 
 		// Most recent 9 STICKY POSTS ONLY from the Other Things category
 		$args = array( 
-			'cat'					=> 48, // featured cat id
+			'cat'					=> 48, // Other Things cat id
 			'ignore_sticky_posts'    => 0,
 	        'posts_per_page'         => 16
 		);

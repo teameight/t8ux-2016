@@ -3,7 +3,7 @@ a {
 	color: $gray-dk;
 	text-decoration: none;
 	outline: 0;
-	@include transitions(color $duration $ease-cb, background-color $duration $ease-cb);
+	@include transitions(color $duration/2 $ease-cb, background-color $duration/2 $ease-cb);
 
 	
 	&:hover, &:focus {
@@ -12,7 +12,7 @@ a {
 
     &.anchor {
         position:absolute;
-        top:-120px;
+        top:-58px;
         height:0;
         display:block;
     }

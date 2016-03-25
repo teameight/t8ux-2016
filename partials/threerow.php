@@ -7,7 +7,7 @@
 ?>
 <?php if ( '' != get_the_post_thumbnail() ) { ?>
 	<a class="gi tcrdwrap" href="<?php the_permalink(); ?>">
-		<?php the_post_thumbnail( 'medium' ); ?>
+		<?php teameight_images(get_post_thumbnail_id(), 'medium'); ?>
 		<?php get_template_part( 'partials/titlecard' ); ?>
 	</a>
 <?php } ?>

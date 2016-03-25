@@ -83,7 +83,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 }
 
 /* line 11, scss/generic/_reset.scss */
-html, body, div, object, iframe, h1, h2, h3, h4, .title-card h1, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+html, body, div, object, iframe, h1, h2, h3, #gform_1 #field_1_3 > label, h4, .title-card h1, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
   margin: 0;
   padding: 0;
 }
@@ -233,16 +233,16 @@ a {
   color: #231f20;
   text-decoration: none;
   outline: 0;
-  -webkit-transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -ms-transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 13, scss/base/_links.scss */
 a.anchor {
   position: absolute;
-  top: -120px;
+  top: -58px;
   height: 0;
   display: block;
 }
@@ -336,7 +336,7 @@ h1, .alpha {
   opacity: .8;
 }
 /* line 15, scss/base/_headings.scss */
-h1.alt, section.phead .tcrd h1, .alpha.alt, section.phead .tcrd h1.alpha {
+h1.alt, section.phead .tcrd h1, .designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h1, .alpha.alt, section.phead .tcrd h1.alpha {
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 5em;
   line-height: 1.2;
@@ -358,7 +358,7 @@ h2, .beta {
 }
 
 /* line 34, scss/base/_headings.scss */
-h3, .gamma {
+h3, #gform_1 #field_1_3 > label, .gamma {
   font-family: "MagallanesCond", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 2.25em;
   line-height: 1.22222;
@@ -386,7 +386,7 @@ h4, .title-card h1, .delta {
   color: #E95740;
 }
 /* line 58, scss/base/_headings.scss */
-h4.alt, .title-card h1.alt, .title-card section.phead .tcrd h1, section.phead .tcrd .title-card h1, .delta.alt, section.phead .tcrd h1.delta {
+h4.alt, .title-card h1.alt, .title-card section.phead .tcrd h1, section.phead .tcrd .title-card h1, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .title-card h1, .delta.alt, section.phead .tcrd h1.delta {
   border-bottom: 2px solid;
   margin-bottom: 14px;
 }
@@ -440,7 +440,12 @@ p, li {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 11, scss/base/_text.scss */
+/* line 10, scss/base/_text.scss */
+li li {
+  font-size: 1em;
+}
+
+/* line 14, scss/base/_text.scss */
 p.emphasized {
   font-family: "MagallanesCond", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 1.25em;
@@ -450,7 +455,7 @@ p.emphasized {
 }
 
 /* Blockquote */
-/* line 20, scss/base/_text.scss */
+/* line 23, scss/base/_text.scss */
 blockquote {
   font-size: 1.875em;
   line-height: 1.33333;
@@ -462,7 +467,7 @@ blockquote {
   color: #22A09E;
 }
 
-/* line 30, scss/base/_text.scss */
+/* line 33, scss/base/_text.scss */
 p + h4, .title-card p + h1,
 ul + h4,
 .title-card ul + h1,
@@ -472,7 +477,7 @@ ol + h4,
 }
 
 /* Horizontal Rule */
-/* line 38, scss/base/_text.scss */
+/* line 41, scss/base/_text.scss */
 hr {
   border: 0;
   height: 1px;
@@ -480,7 +485,7 @@ hr {
   margin: 2rem 0;
 }
 
-/* line 45, scss/base/_text.scss */
+/* line 48, scss/base/_text.scss */
 abbr {
   border-bottom: 1px dotted #58595b;
   cursor: help;
@@ -608,75 +613,69 @@ fieldset {
 /* line 20, scss/base/_forms.scss */
 label {
   display: block;
-  padding-bottom: 0.25rem;
-  font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: .08em;
-  font-size: 0.875em;
-  color: #6C6C71;
+  padding-bottom: 4px;
 }
 
-/* line 28, scss/base/_forms.scss */
+/* line 25, scss/base/_forms.scss */
 button, input, select, textarea {
   font-family: inherit;
   font-size: 1em;
   margin: 0;
 }
 
-/* line 34, scss/base/_forms.scss */
+/* line 31, scss/base/_forms.scss */
 input, textarea {
   border: 0;
   padding: 8px;
   background: #F4F2E4;
 }
 
-/* line 40, scss/base/_forms.scss */
+/* line 37, scss/base/_forms.scss */
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
   -webkit-appearance: none;
 }
 
-/* line 44, scss/base/_forms.scss */
+/* line 41, scss/base/_forms.scss */
 button, input[type="submit"] {
   padding: 0.65rem;
   border: 0;
   cursor: pointer;
 }
 
-/* line 50, scss/base/_forms.scss */
+/* line 47, scss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
   margin-right: 0.3em;
 }
 
-/* line 56, scss/base/_forms.scss */
+/* line 53, scss/base/_forms.scss */
 input[type="search"] {
   -webkit-appearance: none;
   border-radius: 0;
 }
 
-/* line 61, scss/base/_forms.scss */
+/* line 58, scss/base/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 67, scss/base/_forms.scss */
+/* line 64, scss/base/_forms.scss */
 .field-container {
   margin-bottom: 1rem;
 }
 
-/* line 73, scss/base/_forms.scss */
+/* line 70, scss/base/_forms.scss */
 .inline-form fieldset, .inline-form .inline-container {
   position: relative;
 }
-/* line 77, scss/base/_forms.scss */
+/* line 74, scss/base/_forms.scss */
 .inline-form input {
   height: 40px;
   vertical-align: bottom;
 }
-/* line 82, scss/base/_forms.scss */
+/* line 79, scss/base/_forms.scss */
 .inline-form input[type=submit], .inline-form button, .inline-form .btn {
   padding: 8px 1em 4px;
   width: auto;
@@ -685,21 +684,21 @@ input[type="search"]::-webkit-search-decoration {
   margin: 0;
 }
 
-/* line 95, scss/base/_forms.scss */
+/* line 92, scss/base/_forms.scss */
 .inline-search-results-form {
   width: 100%;
 }
 @media all and (min-width: 600px) {
-  /* line 95, scss/base/_forms.scss */
+  /* line 92, scss/base/_forms.scss */
   .inline-search-results-form {
     width: 82%;
   }
 }
-/* line 102, scss/base/_forms.scss */
+/* line 99, scss/base/_forms.scss */
 .inline-search-results-form fieldset, .inline-search-results-form .inline-container {
   position: relative;
 }
-/* line 106, scss/base/_forms.scss */
+/* line 103, scss/base/_forms.scss */
 .inline-search-results-form input[type=submit], .inline-search-results-form button {
   position: absolute;
   top: 0;
@@ -709,12 +708,12 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* Validation */
-/* line 116, scss/base/_forms.scss */
+/* line 113, scss/base/_forms.scss */
 .has-error {
   border-color: #f00;
 }
 
-/* line 119, scss/base/_forms.scss */
+/* line 116, scss/base/_forms.scss */
 .is-valid {
   border-color: #089e00;
 }
@@ -723,18 +722,214 @@ input[type="search"]::-webkit-search-decoration {
     $SPECIFIC FORMS
 \*------------------------------------*/
 /* Search Form */
-/* line 131, scss/base/_forms.scss */
+/* line 128, scss/base/_forms.scss */
 .search-field {
   padding-right: 3em;
 }
 
-/* line 134, scss/base/_forms.scss */
+/* line 131, scss/base/_forms.scss */
 .inline-form .search-submit {
   background: none;
   padding: 0.78em 1em;
   border: 0;
   border-left: 1px solid #58595b;
   color: #58595b;
+}
+
+/* line 141, scss/base/_forms.scss */
+#gform_1 input::-webkit-input-placeholder, #gform_1 textarea::-webkit-input-placeholder {
+  color: #6C6C71;
+  font-style: italic;
+}
+/* line 146, scss/base/_forms.scss */
+#gform_1 input:-moz-placeholder, #gform_1 textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #6C6C71;
+  font-style: italic;
+}
+/* line 151, scss/base/_forms.scss */
+#gform_1 input::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #6C6C71;
+  font-style: italic;
+}
+/* line 156, scss/base/_forms.scss */
+#gform_1 input:-ms-input-placeholder, #gform_1 textarea:-ms-input-placeholder {
+  color: #6C6C71;
+  font-style: italic;
+}
+/* line 162, scss/base/_forms.scss */
+#gform_1 .validation_message, #gform_1 .validation_error {
+  color: red;
+  font-style: italic;
+}
+/* line 167, scss/base/_forms.scss */
+#gform_1 textarea {
+  background: #f4f0e9;
+  border: 3px solid #e5e0ce;
+  padding: 8px 16px;
+  height: 120px;
+  width: 100%;
+}
+/* line 174, scss/base/_forms.scss */
+#gform_1 .ginput_counter {
+  font-size: .875em;
+  color: #58595b;
+  font-style: italic;
+  margin-top: 0;
+}
+/* line 182, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input {
+  position: absolute;
+  visibility: hidden;
+}
+/* line 187, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 4px;
+  padding: 0 0 0 36px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 202, scss/base/_forms.scss */
+#gform_1 #field_1_1 {
+  margin-top: 30px;
+}
+/* line 204, scss/base/_forms.scss */
+#gform_1 #field_1_1 > label {
+  display: none;
+}
+/* line 210, scss/base/_forms.scss */
+#gform_1 #field_1_2 > label,
+#gform_1 #field_1_2 > div {
+  padding-left: 2em;
+}
+/* line 215, scss/base/_forms.scss */
+#gform_1 #field_1_3 {
+  margin-top: 48px;
+  position: relative;
+}
+/* line 219, scss/base/_forms.scss */
+#gform_1 #field_1_3 > label {
+  font-size: 1.6875em;
+  line-height: 1.33333;
+  color: #E95740;
+}
+/* line 223, scss/base/_forms.scss */
+#gform_1 #field_1_3 > label .gfield_required {
+  font-size: .5em;
+  vertical-align: super;
+}
+/* line 229, scss/base/_forms.scss */
+#gform_1 #field_1_3 .ginput_container_email {
+  width: 100%;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 720px) {
+  /* line 229, scss/base/_forms.scss */
+  #gform_1 #field_1_3 .ginput_container_email {
+    float: left;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 229, scss/base/_forms.scss */
+  #gform_1 #field_1_3 .ginput_container_email {
+    width: 58.33333%;
+  }
+}
+/* line 237, scss/base/_forms.scss */
+#gform_1 #field_1_3 .ginput_container_email input {
+  background: #e5e0ce;
+  width: 100%;
+}
+/* line 243, scss/base/_forms.scss */
+#gform_1 #field_1_3 .validation_message {
+  position: absolute;
+  top: 102px;
+}
+/* line 248, scss/base/_forms.scss */
+#gform_1 .gform_footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 720px) {
+  /* line 248, scss/base/_forms.scss */
+  #gform_1 .gform_footer {
+    float: left;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 248, scss/base/_forms.scss */
+  #gform_1 .gform_footer {
+    width: 41.66667%;
+  }
+}
+/* line 255, scss/base/_forms.scss */
+#gform_1 .gform_footer input {
+  margin-top: 0;
+  width: 100%;
+  line-height: 22px;
+  padding: 10px 1em 6px;
+}
+/* line 262, scss/base/_forms.scss */
+#gform_1 .gform_footer input[type=submit]:hover, #gform_1 .gform_footer input[type=submit]:active {
+  background: #f1d23a;
+}
+/* line 269, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input + label,
+#gform_1 #field_1_2 label {
+  position: relative;
+}
+/* line 274, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input + label:before, #gform_1 .gfield_checkbox input + label:after,
+#gform_1 #field_1_2 label:before,
+#gform_1 #field_1_2 label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+/* line 281, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input + label:before,
+#gform_1 #field_1_2 label:before {
+  width: 24px;
+  height: 24px;
+  background-color: #f4f0e9;
+  border: 3px solid #E95740;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  -webkit-transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 292, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input + label:after,
+#gform_1 #field_1_2 label:after {
+  width: 6px;
+  height: 10px;
+  border: solid #f4f0e9;
+  border-width: 0 2px 2px 0;
+  top: 4px;
+  left: 9px;
+  transform: rotate(45deg);
+  display: none;
+}
+/* line 305, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input:checked + label:after, #gform_1 #field_1_2 label.checked:after {
+  display: block;
+}
+/* line 308, scss/base/_forms.scss */
+#gform_1 .gfield_checkbox input:checked + label:before, #gform_1 #field_1_2 label.checked:before {
+  background: #22A09E;
+  border-color: #22A09E;
 }
 
 /*------------------------------------*\
@@ -2232,7 +2427,7 @@ img.no-big {
   text-align: center;
 }
 /* line 232, scss/objects/_sections.scss */
-.section.home-sub article h3 {
+.section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label {
   font-family: "QuirogaSerifPro", Georgia, Times, "Times New Roman", serif;
   font-weight: normal;
   font-style: italic;
@@ -2258,12 +2453,12 @@ img.no-big {
 }
 @media screen and (min-width: 720px) {
   /* line 260, scss/objects/_sections.scss */
-  .section.home-sub article h3, .section.home-sub article h4, .section.home-sub article .title-card h1, .title-card .section.home-sub article h1 {
+  .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label, .section.home-sub article h4, .section.home-sub article .title-card h1, .title-card .section.home-sub article h1 {
     width: 50%;
     float: left;
   }
   /* line 265, scss/objects/_sections.scss */
-  .section.home-sub article h3 {
+  .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label {
     text-align: right;
     padding-right: 36px;
     padding-top: 1.125em;
@@ -2716,24 +2911,24 @@ section.phead .pcont .text {
   display: block;
 }
 /* line 52, scss/objects/_article.scss */
-.case-studies .case-study .cs-link .imgwrap img:last-child {
+.case-studies .case-study .cs-link .imgwrap img:last-of-type:not(:only-of-type) {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 62, scss/objects/_article.scss */
-.case-studies .case-study .cs-link:hover .imgwrap img:last-child, .case-studies .case-study .cs-linkfocus .imgwrap img:last-child {
+/* line 60, scss/objects/_article.scss */
+.case-studies .case-study .cs-link .imgwrap:hover img:last-of-type:not(:only-of-type), .case-studies .case-study .cs-link .imgwrap:focus img:last-of-type:not(:only-of-type) {
   opacity: 0;
 }
 @media screen and (min-width: 720px) {
-  /* line 69, scss/objects/_article.scss */
-  .case-studies .case-study .cs-link:hover .card .labels, .case-studies .case-study .cs-linkfocus .card .labels {
+  /* line 68, scss/objects/_article.scss */
+  .case-studies .case-study .cs-link .card.in-view .labels {
     margin-left: 8.33333%;
     width: 33.33333%;
   }
-  /* line 73, scss/objects/_article.scss */
-  .case-studies .case-study .cs-link:hover .card .title, .case-studies .case-study .cs-linkfocus .card .title {
+  /* line 72, scss/objects/_article.scss */
+  .case-studies .case-study .cs-link .card.in-view .title {
     opacity: 1;
     height: 50%;
     margin-left: 8.33333%;
@@ -2745,18 +2940,18 @@ section.phead .pcont .text {
     transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
-/* line 86, scss/objects/_article.scss */
+/* line 84, scss/objects/_article.scss */
 .case-studies .case-study .card {
   padding: 1em 16px 0;
 }
 @media screen and (min-width: 720px) {
-  /* line 86, scss/objects/_article.scss */
+  /* line 84, scss/objects/_article.scss */
   .case-studies .case-study .card {
     padding: 0;
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 94, scss/objects/_article.scss */
+  /* line 92, scss/objects/_article.scss */
   .case-studies .case-study .card .title, .case-studies .case-study .card .labels {
     box-sizing: border-box;
     position: absolute;
@@ -2765,20 +2960,20 @@ section.phead .pcont .text {
     left: 0;
   }
 }
-/* line 104, scss/objects/_article.scss */
+/* line 102, scss/objects/_article.scss */
 .case-studies .case-study .card .labels {
   font-size: .825em;
   width: 100%;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 104, scss/objects/_article.scss */
+  /* line 102, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     width: 33.33333%;
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 104, scss/objects/_article.scss */
+  /* line 102, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     bottom: 50%;
     transform: translate3d(0, 100%, 0);
@@ -2791,43 +2986,43 @@ section.phead .pcont .text {
   }
 }
 @media all and (min-width: 720px) and (max-width: 1024px) {
-  /* line 104, scss/objects/_article.scss */
+  /* line 102, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     margin-left: 8.33333%;
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 104, scss/objects/_article.scss */
+  /* line 102, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     width: 25%;
     font-size: 1em;
   }
 }
-/* line 129, scss/objects/_article.scss */
-.case-studies .case-study .card .labels h3, .case-studies .case-study .card .labels h4, .case-studies .case-study .card .labels .title-card h1, .title-card .case-studies .case-study .card .labels h1 {
+/* line 127, scss/objects/_article.scss */
+.case-studies .case-study .card .labels h3, .case-studies .case-study .card .labels #gform_1 #field_1_3 > label, #gform_1 .case-studies .case-study .card .labels #field_1_3 > label, .case-studies .case-study .card .labels h4, .case-studies .case-study .card .labels .title-card h1, .title-card .case-studies .case-study .card .labels h1 {
   padding-right: 36px;
 }
-/* line 132, scss/objects/_article.scss */
-.case-studies .case-study .card .labels h3 {
+/* line 130, scss/objects/_article.scss */
+.case-studies .case-study .card .labels h3, .case-studies .case-study .card .labels #gform_1 #field_1_3 > label, #gform_1 .case-studies .case-study .card .labels #field_1_3 > label {
   padding-bottom: .5em;
 }
-/* line 135, scss/objects/_article.scss */
-.case-studies .case-study .card .labels h3.subheading {
+/* line 133, scss/objects/_article.scss */
+.case-studies .case-study .card .labels h3.subheading, .case-studies .case-study .card .labels #gform_1 #field_1_3 > label.subheading, #gform_1 .case-studies .case-study .card .labels #field_1_3 > label.subheading {
   color: #58595b;
 }
-/* line 141, scss/objects/_article.scss */
+/* line 139, scss/objects/_article.scss */
 .case-studies .case-study .card .title {
   font-size: .75em;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 141, scss/objects/_article.scss */
+  /* line 139, scss/objects/_article.scss */
   .case-studies .case-study .card .title {
     width: 41.66667%;
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 141, scss/objects/_article.scss */
+  /* line 139, scss/objects/_article.scss */
   .case-studies .case-study .card .title {
     bottom: 46%;
     padding: 0;
@@ -2843,25 +3038,25 @@ section.phead .pcont .text {
   }
 }
 @media all and (min-width: 720px) and (max-width: 1024px) {
-  /* line 141, scss/objects/_article.scss */
+  /* line 139, scss/objects/_article.scss */
   .case-studies .case-study .card .title {
     width: 58.33333%;
     margin-left: 8.33333%;
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 141, scss/objects/_article.scss */
+  /* line 139, scss/objects/_article.scss */
   .case-studies .case-study .card .title {
     font-size: 1em;
   }
 }
-/* line 167, scss/objects/_article.scss */
+/* line 165, scss/objects/_article.scss */
 .case-studies .case-study .card h1 {
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   color: #231f20;
 }
 @media screen and (min-width: 720px) {
-  /* line 167, scss/objects/_article.scss */
+  /* line 165, scss/objects/_article.scss */
   .case-studies .case-study .card h1 {
     position: absolute;
     bottom: 0;
@@ -2870,22 +3065,22 @@ section.phead .pcont .text {
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 184, scss/objects/_article.scss */
-  .case-studies .case-study:nth-child(odd) h1, .case-studies .case-study:nth-child(odd) h3, .case-studies .case-study:nth-child(odd) h4, .case-studies .case-study:nth-child(odd) .title-card h1, .title-card .case-studies .case-study:nth-child(odd) h1 {
+  /* line 182, scss/objects/_article.scss */
+  .case-studies .case-study:nth-child(odd) h1, .case-studies .case-study:nth-child(odd) h3, .case-studies .case-study:nth-child(odd) #gform_1 #field_1_3 > label, #gform_1 .case-studies .case-study:nth-child(odd) #field_1_3 > label, .case-studies .case-study:nth-child(odd) h4, .case-studies .case-study:nth-child(odd) .title-card h1, .title-card .case-studies .case-study:nth-child(odd) h1 {
     text-align: right;
   }
-  /* line 188, scss/objects/_article.scss */
+  /* line 186, scss/objects/_article.scss */
   .case-studies .case-study:nth-child(odd) .card .labels {
     right: 0;
     left: auto;
     margin-right: 8.33333%;
   }
-  /* line 195, scss/objects/_article.scss */
-  .case-studies .case-study:nth-child(odd) .card .labels h3, .case-studies .case-study:nth-child(odd) .card .labels h4, .case-studies .case-study:nth-child(odd) .card .labels .title-card h1, .title-card .case-studies .case-study:nth-child(odd) .card .labels h1 {
+  /* line 193, scss/objects/_article.scss */
+  .case-studies .case-study:nth-child(odd) .card .labels h3, .case-studies .case-study:nth-child(odd) .card .labels #gform_1 #field_1_3 > label, #gform_1 .case-studies .case-study:nth-child(odd) .card .labels #field_1_3 > label, .case-studies .case-study:nth-child(odd) .card .labels h4, .case-studies .case-study:nth-child(odd) .card .labels .title-card h1, .title-card .case-studies .case-study:nth-child(odd) .card .labels h1 {
     padding-left: 36px;
     padding-right: 0;
   }
-  /* line 200, scss/objects/_article.scss */
+  /* line 198, scss/objects/_article.scss */
   .case-studies .case-study:nth-child(odd) .card .title {
     right: 0;
     left: auto;
@@ -2893,20 +3088,360 @@ section.phead .pcont .text {
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 210, scss/objects/_article.scss */
+  /* line 208, scss/objects/_article.scss */
   .case-studies .case-study:nth-child(odd) .card .labels, .case-studies .case-study:nth-child(odd) .card .title {
     margin-right: 16.66667%;
   }
 }
-/* line 216, scss/objects/_article.scss */
+/* line 214, scss/objects/_article.scss */
 .case-studies .case-study:nth-child(odd) .cs-link {
   float: left;
 }
-/* line 220, scss/objects/_article.scss */
-.case-studies .case-study:nth-child(odd) .cs-link:hover .card .labels, .case-studies .case-study:nth-child(odd) .cs-link:focus .card .labels {
+/* line 218, scss/objects/_article.scss */
+.case-studies .case-study:nth-child(odd) .cs-link .card.in-view .labels {
   margin-right: 8.33333%;
 }
-/* line 223, scss/objects/_article.scss */
-.case-studies .case-study:nth-child(odd) .cs-link:hover .title, .case-studies .case-study:nth-child(odd) .cs-link:focus .title {
+/* line 221, scss/objects/_article.scss */
+.case-studies .case-study:nth-child(odd) .cs-link .card.in-view .title {
   margin-right: 8.33333%;
+}
+
+/*------------------------------------*\
+    $ABOUT
+\*------------------------------------*/
+/* line 5, scss/templates/_about.scss */
+.about-intro {
+  background: #22A09E;
+  max-width: none;
+  margin: 58px 0 0;
+  padding: 48px 5%;
+}
+@media screen and (min-width: 720px) {
+  /* line 5, scss/templates/_about.scss */
+  .about-intro {
+    padding: 0;
+  }
+}
+/* line 17, scss/templates/_about.scss */
+.about-intro article {
+  padding: 128px 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 720px;
+}
+/* line 23, scss/templates/_about.scss */
+.about-intro article h3, .about-intro article #gform_1 #field_1_3 > label, #gform_1 .about-intro article #field_1_3 > label {
+  color: #f4f0e9;
+  font-size: 1.75em;
+  line-height: 1.28571;
+}
+
+/* line 30, scss/templates/_about.scss */
+.about-do {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #a1cebe 50%, #f4f0e9 50%);
+}
+@media screen and (min-width: 720px) {
+  /* line 37, scss/templates/_about.scss */
+  .about-do .wrap {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+  }
+}
+/* line 45, scss/templates/_about.scss */
+.about-do .wrap > div {
+  padding: 48px 5%;
+}
+@media screen and (min-width: 720px) {
+  /* line 45, scss/templates/_about.scss */
+  .about-do .wrap > div {
+    padding: 80px 0;
+  }
+}
+/* line 52, scss/templates/_about.scss */
+.about-do .wrap > div h4, .about-do .wrap > div .title-card h1, .title-card .about-do .wrap > div h1 {
+  color: #58595b;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.5;
+}
+/* line 57, scss/templates/_about.scss */
+.about-do .wrap > div h4 em, .about-do .wrap > div .title-card h1 em, .title-card .about-do .wrap > div h1 em {
+  font-style: normal;
+  text-decoration: underline;
+}
+/* line 64, scss/templates/_about.scss */
+.about-do .wrap .doing-now {
+  background: #a1cebe;
+  box-sizing: border-box;
+}
+@media all and (min-width: 720px) {
+  /* line 64, scss/templates/_about.scss */
+  .about-do .wrap .doing-now {
+    width: 41.66667%;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
+}
+@media screen and (min-width: 720px) {
+  /* line 71, scss/templates/_about.scss */
+  .about-do .wrap .doing-now h4:after, .about-do .wrap .doing-now .title-card h1:after, .title-card .about-do .wrap .doing-now h1:after {
+    content: "-->";
+    position: absolute;
+    right: -61%;
+    top: -1px;
+    width: 60%;
+    text-align: right;
+    color: #E95740;
+  }
+  /* line 80, scss/templates/_about.scss */
+  .about-do .wrap .doing-now h4:before, .about-do .wrap .doing-now .title-card h1:before, .title-card .about-do .wrap .doing-now h1:before {
+    content: "";
+    position: absolute;
+    right: -54%;
+    top: 9px;
+    width: 51%;
+    border-top: 2px solid #E95740;
+  }
+}
+/* line 90, scss/templates/_about.scss */
+.about-do .wrap .doing-now #sb_instagram {
+  margin-left: -18px;
+  margin-right: -18px;
+  width: auto !important;
+  padding-bottom: 0 !important;
+}
+/* line 96, scss/templates/_about.scss */
+.about-do .wrap .doing-now #sb_instagram #sbi_images {
+  padding: 0 !important;
+}
+/* line 100, scss/templates/_about.scss */
+.about-do .wrap .doing-now #sb_instagram #sbi_images .sbi_item {
+  padding: 18px !important;
+}
+/* line 103, scss/templates/_about.scss */
+.about-do .wrap .doing-now #sb_instagram #sbi_images .sbi_item a {
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+}
+/* line 112, scss/templates/_about.scss */
+.about-do .wrap .doing-now a.instalink {
+  font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  letter-spacing: .05em;
+  margin-bottom: 4px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+  line-height: 1.25;
+  display: block;
+  text-align: right;
+  text-transform: none;
+  color: #E95740;
+  margin-top: -16px;
+}
+/* line 127, scss/templates/_about.scss */
+.about-do .wrap .doing-now a.instalink:hover, .about-do .wrap .doing-now a.instalink:focus {
+  color: #22A09E;
+}
+/* line 133, scss/templates/_about.scss */
+.about-do .wrap .doing-next {
+  background: #f4f0e9;
+  box-sizing: border-box;
+}
+@media all and (min-width: 720px) {
+  /* line 133, scss/templates/_about.scss */
+  .about-do .wrap .doing-next {
+    width: 58.33333%;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
+}
+
+/* line 144, scss/templates/_about.scss */
+.designers-on-duty, .hired-hands {
+  margin: 0;
+  padding: 64px 5%;
+}
+@media screen and (min-width: 720px) {
+  /* line 144, scss/templates/_about.scss */
+  .designers-on-duty, .hired-hands {
+    padding: 96px 36px 64px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  /* line 144, scss/templates/_about.scss */
+  .designers-on-duty, .hired-hands {
+    padding: 96px 0 64px;
+  }
+}
+/* line 157, scss/templates/_about.scss */
+.designers-on-duty h3.alt, .designers-on-duty #gform_1 #field_1_3 > label.alt, #gform_1 .designers-on-duty #field_1_3 > label.alt, .hired-hands h3.alt, .hired-hands #gform_1 #field_1_3 > label.alt, #gform_1 .hired-hands #field_1_3 > label.alt {
+  color: #E95740;
+  border-bottom: 2px solid #E95740;
+  font-size: 1.6875em;
+  line-height: 1.18519;
+  margin-bottom: 32px;
+}
+/* line 164, scss/templates/_about.scss */
+.designers-on-duty .teammate, .hired-hands .teammate {
+  box-sizing: border-box;
+  margin: 32px 0;
+  position: relative;
+}
+@media screen and (min-width: 480px) {
+  /* line 164, scss/templates/_about.scss */
+  .designers-on-duty .teammate, .hired-hands .teammate {
+    float: left;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 164, scss/templates/_about.scss */
+  .designers-on-duty .teammate, .hired-hands .teammate {
+    width: 50%;
+  }
+}
+/* line 173, scss/templates/_about.scss */
+.designers-on-duty .teammate > img, .hired-hands .teammate > img {
+  display: block;
+  height: auto;
+}
+@media screen and (min-width: 480px) {
+  /* line 173, scss/templates/_about.scss */
+  .designers-on-duty .teammate > img, .hired-hands .teammate > img {
+    float: left;
+  }
+}
+/* line 182, scss/templates/_about.scss */
+.designers-on-duty .teammate > img, .designers-on-duty .teammate .imagewrap, .hired-hands .teammate > img, .hired-hands .teammate .imagewrap {
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 480px) {
+  /* line 187, scss/templates/_about.scss */
+  .designers-on-duty .teammate .deets, .hired-hands .teammate .deets {
+    float: left;
+  }
+}
+/* line 192, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h1 {
+  font-size: 2.25em;
+  line-height: 1.11111;
+  margin-bottom: 4px;
+  margin-left: -1px;
+}
+/* line 198, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets h4, .designers-on-duty .teammate .deets .title-card h1, .title-card .designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h4, .hired-hands .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1 {
+  font-size: 1em;
+  line-height: 1.25;
+  margin: 0;
+}
+/* line 202, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets .sitelink, .designers-on-duty .teammate .deets .email, .hired-hands .teammate .deets .sitelink, .hired-hands .teammate .deets .email {
+  color: #58595b;
+  font-style: italic;
+}
+/* line 206, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets p, .hired-hands .teammate .deets p {
+  margin-bottom: 4px;
+}
+/* line 209, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets .nav-social, .hired-hands .teammate .deets .nav-social {
+  font-size: .625em;
+}
+/* line 212, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets .nav-social a, .hired-hands .teammate .deets .nav-social a {
+  color: #58595b;
+}
+/* line 215, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets .nav-social a:hover, .designers-on-duty .teammate .deets .nav-social a:focus, .hired-hands .teammate .deets .nav-social a:hover, .hired-hands .teammate .deets .nav-social a:focus {
+  color: #E95740;
+}
+
+/* line 223, scss/templates/_about.scss */
+.designers-on-duty {
+  background: #fff;
+}
+@media screen and (max-width: 480px) {
+  /* line 227, scss/templates/_about.scss */
+  .designers-on-duty .teammate {
+    margin-top: 64px;
+  }
+  /* line 231, scss/templates/_about.scss */
+  .designers-on-duty .teammate .deets {
+    position: absolute;
+    padding-top: 18px;
+    padding-left: 18px;
+    top: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  /* line 241, scss/templates/_about.scss */
+  .designers-on-duty .teammate > img {
+    width: 50%;
+  }
+  /* line 245, scss/templates/_about.scss */
+  .designers-on-duty .teammate .deets {
+    margin-left: -36px;
+    margin-top: 35%;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 480px) {
+  /* line 245, scss/templates/_about.scss */
+  .designers-on-duty .teammate .deets {
+    position: absolute;
+    padding-top: 18px;
+    padding-left: 18px;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* line 264, scss/templates/_about.scss */
+  .hired-hands .teammate {
+    padding: 0 36px;
+    margin-top: 64px;
+  }
+}
+/* line 271, scss/templates/_about.scss */
+.hired-hands .teammate > .imagewrap {
+  width: 100%;
+  padding-top: 100%;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (min-width: 480px) {
+  /* line 271, scss/templates/_about.scss */
+  .hired-hands .teammate > .imagewrap {
+    width: 33.333%;
+    padding-top: 33.333%;
+    float: left;
+  }
+}
+/* line 286, scss/templates/_about.scss */
+.hired-hands .teammate > .imagewrap img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 102%;
+  height: auto;
+}
+/* line 297, scss/templates/_about.scss */
+.hired-hands .teammate .deets {
+  padding-top: 12px;
+}
+@media screen and (min-width: 480px) {
+  /* line 297, scss/templates/_about.scss */
+  .hired-hands .teammate .deets {
+    padding: 0 36px;
+    margin-top: 10%;
+    width: 66.666%;
+  }
 }

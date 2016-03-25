@@ -1,0 +1,307 @@
+/*------------------------------------*\
+    $ABOUT
+\*------------------------------------*/
+
+.about-intro {
+	background:$teal;
+
+	max-width:none;
+	margin: 58px 0 0;
+
+	padding:$padpx*3 5%;
+	
+	@media screen and (min-width:$bp-med-2) {
+		padding:0;
+	}
+	
+	article {
+		padding: $padpx*8 0;
+		margin:0 auto;
+		text-align:center;
+		max-width:$bp-med-2;
+
+		h3 {
+			color:$creme;
+			@include font-sizing(28,36);
+		}
+
+	}
+}
+.about-do {
+	
+	padding:0;
+	margin:0;
+	
+	background: linear-gradient(to right, $mint 50%, $creme 50%);
+
+	.wrap {
+		
+		@media screen and (min-width:$bp-med-2) {
+			display: flex;
+		    align-items: stretch;
+			padding:0;
+		}
+
+		> div {
+			padding:$padpx*3 5%;
+	
+			@media screen and (min-width:$bp-med-2) {
+				padding:$padpx*5 0;
+			}
+	
+			h4 {
+				color:$gray;
+				position:relative;
+				@include font-sizing(16,24);
+
+				em {
+					font-style:normal;
+					text-decoration:underline;
+				}
+			}
+		}
+
+		.doing-now {
+
+			background: $mint;
+
+			@include grid-column(5, 1, both);
+
+			@media screen and (min-width:$bp-med-2) {
+				h4:after {
+					content: "-->";
+				    position: absolute;
+				    right: -61%;
+				    top: -1px;
+				    width: 60%;
+				    text-align: right;
+				    color:$red;				
+				}
+				h4:before {
+					content:"";
+					position: absolute;
+				    right: -54%;
+				    top: 9px;
+				    width: 51%;
+				    border-top:2px solid $red;
+				}
+			}
+
+			#sb_instagram {
+			    margin-left: -18px;
+			    margin-right: -18px;
+			    width: auto!important;
+			    padding-bottom:0!important;
+
+				#sbi_images {
+					padding:0!important;
+
+
+					.sbi_item {
+						padding:18px!important;
+
+						a {
+							-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.15);
+							-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.15);
+							box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.15);
+						}
+					}
+				}
+			}
+
+			a.instalink {
+				font-family: $font-secondary;
+				font-weight: normal;
+				letter-spacing: .05em;
+				margin-bottom:4px;
+
+				@include font-smoothing;
+
+				@include font-sizing(16,20);
+				display:block;
+				text-align:right;
+				text-transform:none;
+				color:$red;
+				margin-top:-$padpx;
+
+				&:hover, &:focus {
+					color:$teal;
+				}
+			}
+		}
+
+		.doing-next {
+
+			background: $creme;
+			@include grid-column(7, 1, both);
+
+		}
+
+	}
+
+}
+
+.designers-on-duty, .hired-hands {
+	margin:0;
+
+	padding:$padpx*4 5%;
+
+	@media screen and (min-width:$bp-med-2) {
+		padding: $padpx*6 36px $padpx*4;
+	}
+
+	@media screen and (min-width:$max-width) {
+		padding: $padpx*6 0 $padpx*4;
+	}
+
+	h3.alt {
+		color:$red;
+		border-bottom:2px solid $red;
+		@include font-sizing(27,32);
+		margin-bottom: $padpx*2;
+	}
+
+	.teammate {
+		@media screen and (min-width:$bp-small-3) {
+			float:left;
+		}
+		@include grid-column(6);
+		margin:$padpx*2 0;
+		position:relative;
+
+
+		> img {
+			display:block;
+			height:auto;
+
+			@media screen and (min-width:$bp-small-3) {
+				float:left;
+			}
+
+		}
+		> img, .imagewrap {
+			-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
+			-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
+			box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
+		}
+		.deets {
+			@media screen and (min-width:$bp-small-3) {
+				float:left;
+			}
+
+			h1 {
+				@extend h1.alt;
+				@include font-sizing(36,40);
+				margin-bottom:4px;
+				margin-left:-1px;
+			}
+			h4 {
+				@include font-sizing(16,20);
+				margin:0;
+			}
+			.sitelink, .email {
+				color:$gray;
+				font-style:italic;
+			}
+			p {
+			    margin-bottom: 4px;
+			}
+			.nav-social {
+			    font-size: .625em;
+
+			    a {
+			    	color:$gray;
+
+			    	&:hover, &:focus {
+			    		color:$red;
+			    	}
+			    }
+			}
+		}
+	}
+}
+.designers-on-duty {
+	
+	background:$white;
+	
+	.teammate {
+
+		@media screen and (max-width:$bp-small-3) {
+			margin-top:$padpx*4;
+			.deets {
+					
+				position: absolute;
+				padding-top: 18px;
+				padding-left: 18px;
+				top: 0;
+			}
+		}
+
+		@media screen and (min-width:$bp-small-3) {
+			> img {
+				width:50%;
+
+			}
+			.deets {
+
+				@media screen and (max-width:$bp-small-3) {
+					position: absolute;
+					padding-top: 18px;
+					padding-left: 18px;
+					top: 0;
+				}
+
+				margin-left:-36px;
+				margin-top:35%;
+				width:50%;
+			}
+		}
+	}
+
+}
+.hired-hands {
+	
+	.teammate {
+
+		@media screen and (max-width:$bp-small-3) {
+			padding:0 36px;
+			margin-top:$padpx*4;
+		}
+
+		> .imagewrap {
+			
+			width:100%;
+			padding-top:100%;
+			
+			@media screen and (min-width:$bp-small-3) {
+				width:33.333%;
+				padding-top:33.333%;
+				float:left;
+			}
+			height:0;
+			overflow:hidden;
+			
+			position:relative;
+
+			img {
+				position:absolute;
+				top:50%;
+				left:0;
+				transform:translateY(-50%);
+				width:102%;
+				height:auto;
+	
+			}
+
+		}
+		.deets {
+			padding-top:12px;
+			@media screen and (min-width:$bp-small-3) {
+				padding:0 36px;
+				margin-top:10%;
+				width:66.666%;
+			}
+		}
+	}
+
+}
