@@ -99,6 +99,15 @@
 			
 			@media all and (min-width: $bp-med-2) {
 			    text-align: left;
+			    float:left;
+		    }
+	    }
+	    .email {
+		    padding: $padpx $padpx 0;
+			
+			@media all and (min-width: $bp-med-2) {
+			    text-align: right;
+			    float:right;
 		    }
 	    }	
 	}	

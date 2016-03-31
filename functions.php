@@ -44,14 +44,25 @@ function teameight_scripts_styles() {
     // Loads JavaScript file with lazyload.
    // wp_enqueue_script( 'teameight-lazyload', get_template_directory_uri() . '/js/lazyload.js', array( 'jquery' ), '2015-08-28', true );
 
+    if (is_page('contact')) {
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true );
+        wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/gmap.js', array('google-map', 'jquery'), '0.1', true );
+    }
+
+    // Loads fontawesome.
+    wp_enqueue_style( 'teameight-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '2015-08-28' );
+
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'teameight-style', get_template_directory_uri() . '/css/style.css', array(), '2015-08-28' );
+
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'teameight-ie', get_template_directory_uri() . '/css/ie.css', array( 'teameight-style' ), '2013-07-18' );
 	wp_style_add_data( 'teameight-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'teameight_scripts_styles' );
+
+
 
 /**
  * Alter the main query on the home page
@@ -116,6 +127,7 @@ function create_teammates_teameight()
         'public' => true,
         'menu_icon' => 'dashicons-groups',
         'has_archive' => true,
+        'hierarchical' => true,
         'supports' => array(
             'title',
             'editor',

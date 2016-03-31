@@ -42,6 +42,8 @@ button, input[type="submit"] {
 	padding: 0.65rem;
 	border: 0;
 	cursor: pointer;
+	-webkit-appearance: none;
+	border-radius:0;
 }
 
 input[type="checkbox"],
@@ -116,9 +118,22 @@ input[type="search"]::-webkit-search-decoration {
 .is-valid {
 	border-color: $valid;
 }
+.gform_confirmation_wrapper  {
+	background: $rose;
+    padding: 36px;
+    margin-left: -36px;
+	
+	> div {
+	    font-style: italic;
+	    color: #58595b;
 
-
-
+	    h3 {
+	        margin-bottom: 0;
+		    color: $teal;
+		    font-style: normal;
+	    }
+	}
+}
 
 /*------------------------------------*\
     $SPECIFIC FORMS
@@ -135,8 +150,7 @@ input[type="search"]::-webkit-search-decoration {
 	border-left: 1px solid $gray;
 	color: $gray;
 }
-#gform_1 {
-
+.gform_wrapper form {
 	input, textarea {
 		&::-webkit-input-placeholder {
 		   color: $grey;
@@ -158,6 +172,22 @@ input[type="search"]::-webkit-search-decoration {
 		   font-style:italic;
 		}
 	}
+	.gform_footer {
+		input[type=submit] {
+
+			margin-top:0;
+			line-height:22px;
+			padding:10px 1em 6px;
+			
+			&:hover, &:active {
+				background:$yellow;
+			}
+		}
+	}
+}
+
+#gform_1 {
+	
 
 	.validation_message, .validation_error {
 	    color: red;
@@ -252,17 +282,10 @@ input[type="search"]::-webkit-search-decoration {
 		width:100%;
 		@include grid-column(5);
 
-		input {
-			margin-top:0;
-			width:100%;
-			line-height:22px;
-			padding:10px 1em 6px;
-		}
 		input[type=submit] {
-			&:hover, &:active {
-				background:$yellow;
-			}
+			width:100%;
 		}
+
 	}
 
 
@@ -296,7 +319,7 @@ input[type="search"]::-webkit-search-decoration {
 		    border-width: 0 2px 2px 0;
 		    top: 4px;
 		    left: 9px;
-		    transform: rotate(45deg);
+		    @include transform(rotate(45deg));
 		    display:none;
 		}
 	}
@@ -311,5 +334,20 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 
+}
+#gform_2 {
+	margin-top:$padpx;
+
+	label {
+		display:none;
+	}
+	input[type=text], input[type=email], textarea {
+		width:100%;
+		background:$creme;
+	}
+	textarea {
+		border:3px solid $creme-dk;
+		height: 120px;
+	}
 }
 

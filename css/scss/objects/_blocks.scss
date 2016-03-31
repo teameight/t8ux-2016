@@ -72,7 +72,7 @@
 		}
 
 		.title-card {
-			transform: translateY(0);
+			@include transform(translateY(0));
 		}
 	}
 }
@@ -82,7 +82,7 @@
     display:block;
 	@include font-smoothing();
 
-	transform: translateY(100%);
+	@include transform(translateY(100%));
 	box-sizing: border-box;
     position:absolute;
     bottom:0;

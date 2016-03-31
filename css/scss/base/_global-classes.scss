@@ -20,6 +20,7 @@
     margin:0 auto;
     position: relative;
     max-width:$max-width;
+    @extend .cf;
 }
 /* Completely remove from the flow and screen readers. */
 .is-hidden {

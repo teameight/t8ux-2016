@@ -45,6 +45,18 @@ get_header(); ?>
 	<section class="section cf designers-on-duty">
 		<article class="wrap">
 			<h3 class="alt">Designers on Duty</h3>
+			<?php 
+
+				$groupId = get_term_by( 'slug', 'designers-on-duty', 'group' );
+				$groupId = $groupId->term_id;
+
+				$groupDesc = term_description( $groupId, 'group' );
+
+				if($groupDesc != '' && $groupDesc){
+
+			?>
+			<p class="emphasized"><?php echo $groupDesc; ?></p>
+			<? } ?>
 
 				<?php
 					foreach ( $featposts as $post ) :
@@ -63,7 +75,7 @@ get_header(); ?>
 							<?php if( get_field('social') ): ?>
 								<ul class="nav-social cf">
 								<?php while( has_sub_field('social') ): ?>
-									<li><a href="<?php the_sub_field('link'); ?>" class="<?php the_sub_field('platform'); ?>"><span class="genericon genericon-<?php the_sub_field('platform'); ?>"></span></a></li>
+									<li><a href="<?php the_sub_field('link'); ?>" class="<?php the_sub_field('platform'); ?>"><span class=" icon-<?php the_sub_field('platform'); ?>"></span></a></li>
 								<?php endwhile; ?>
 								</ul>
 							<?php endif; ?>
@@ -99,6 +111,18 @@ get_header(); ?>
 	<section class="section cf hired-hands">
 		<article class="wrap">
 			<h3 class="alt">Hired Hands</h3>
+			<?php 
+
+				$groupId = get_term_by( 'slug', 'hired-hands', 'group' );
+				$groupId = $groupId->term_id;
+
+				$groupDesc = term_description( $groupId, 'group' );
+
+				if($groupDesc != '' && $groupDesc){
+
+			?>
+			<p class="emphasized"><?php echo $groupDesc; ?></p>
+			<? } ?>
 
 				<?php
 					foreach ( $featposts as $post ) :

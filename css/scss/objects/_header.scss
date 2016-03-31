@@ -1,8 +1,7 @@
 .header {
 	background: $red;
 	border-bottom:2px solid $creme;
-	padding: 8px 18px;
-	height: 58px;
+	padding:0;
 	overflow: visible;
 	position: fixed;
 	width: 100%;
@@ -11,6 +10,9 @@
 
 	@include transitions(border $duration/2 $ease-cb);
 
+	@media all and (min-width: $bp-med-2) {
+		padding: 8px 18px 0;
+	}
 
 	.home & {
 		background:transparent;
@@ -33,51 +35,24 @@
 
 .logolink {
 	width: 76px;
-	margin: 0 auto;
+	position: absolute;
+    bottom: -45px;
+    left: 50%;
+    @include transform(translateX(-50%));
 	display: block;
 
 	
 	.home & {
 		opacity:0;
-		transform:translateY(-50%);
+		@include transform(translate(-50%, -50%));
 
 		@include transitions(opacity $duration/4 $ease-cb, transform $duration $ease-cb);
 
 	}
 	.home .below & {
 		opacity:1;
-		transform:translateY(0);
+		@include transform(translate(-50%, 0));
 		
 		@include transitions(opacity $duration $ease-cb $duration/8, transform $duration/2 $ease-cb);
-	}
-}
-
-.nav-toggle {
-	position: absolute;
-	display: block;
-	padding: 9px 0 9px 9px;
-	font-size: 1.3rem;
-	line-height: 1;
-	border-left: 1px solid $blue-med;
-	right: $padpx/2;
-	top: 0;
-
-	@media all and (min-width: $bp-small) {
-		right: $padpx;
-	}
-
-	@media all and (min-width: $bp-med-2) {
-		display: none;
-	}
-}
-
-.search-form {
-	overflow: hidden;
-	max-height: 0;
-
-	@media all and (min-width: $bp-med-2) {
-		float: right;
-		max-height: none;
-		margin: 0.65em 0.5em 0 0;
 	}
 }

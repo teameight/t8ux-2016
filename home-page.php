@@ -10,9 +10,11 @@ get_header(); ?>
 	<section class="section cf logo-banner-wrap">
 		<div class="logo-banner">
 			<img class="logo-block" src="<?php bloginfo('template_directory'); ?>/images/voidcube-anim.gif" alt="T/8">
+			<a class="voidlink" title="Enter the void..." href="#start">Enter the void...</a>
 		</div>
 	</section>
 	<section class="section cf home-main">
+		<a class="anchor" name="start"></a>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
 				<?php the_content(); ?>
@@ -40,7 +42,7 @@ get_header(); ?>
 		$args = array( 
 			'cat'					=> 48, // Other Things cat id
 			'ignore_sticky_posts'    => 0,
-	        'posts_per_page'         => 16
+	        'posts_per_page'         => 12
 		);
 		$others = new WP_Query( $args );
 		

@@ -12,10 +12,11 @@
 			<div class="left">
 				<h4>Lurk Us</h4>
 				<ul class="nav-social">
-					<li><a href="http://github.com/teameight" class="github"><span class="genericon genericon-github"></span></a></li>
-					<li><a href="http://www.linkedin.com/company/team-eight-llc" class="linkedin"><span class="genericon genericon-linkedin-alt"></span></a></li>
-					<li><a href="https://www.facebook.com/teameightrva" class="facebook"><span class="genericon genericon-facebook-alt"></span></a></li>
-					<li><a href="https://twitter.com/shoutforthings" class="twitter"><span class="genericon genericon-twitter"></span></a></li>
+					<li><a href="https://www.instagram.com/shoutforthings/" class="instagram"><span class="icon-instagram"></span></a></li>
+					<li><a href="https://www.facebook.com/teameightrva" class="facebook"><span class="icon-facebook"></span></a></li>
+					<li><a href="http://www.linkedin.com/company/team-eight-llc" class="linkedin"><span class="icon-linkedin"></span></a></li>
+					<li><a href="https://twitter.com/shoutforthings" class="twitter"><span class="icon-twitter"></span></a></li>
+					<li><a href="http://github.com/teameight" class="github"><span class="icon-github"></span></a></li>
 				</ul>
 			</div>
 			<div class="right">
@@ -37,6 +38,7 @@
 		<div class="bott">
 			<div class="wrap">
 				<p class="copyright">&copy; <?php echo date('Y'); ?> Team Eight. All rights reserved.</p>
+				<p class="email"><a href="mailto:communicate@team-eight.com">communicate@team-eight.com</a>
 			</div>
 		</div>
 	</footer>
