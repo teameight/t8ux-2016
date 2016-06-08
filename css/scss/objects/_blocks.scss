@@ -59,6 +59,11 @@
 		top:0;
 		left:0;
 		width:102%;
+
+		.cattags & {
+			left: -7%;
+			width: 114%;
+		}
 	}
 
 	&:hover, &:focus {

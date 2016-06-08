@@ -8,9 +8,17 @@
 	}
 
 }
+.section.cattag-dir {
+	margin:44px auto 0;
+}
+
 .section.fullgrid {
 	max-width:none;
 	margin-bottom:0;
+
+	&.cattags {
+		margin-top:0;
+	}
 
 	> .gi {
 		padding:0;
@@ -19,27 +27,11 @@
 		@media all and (min-width: $bp-med) {
 			width: 100 / 2 * 1%;
 			float:left;
-			&:nth-child(2n + 2) {
-				clear:both;
-			}
 		}
 		@media all and (min-width: $bp-large) {
 			width: 100 / 3 * 1%;
-			&:nth-child(2n + 2) {
-				clear:none;
-			}
-			&:nth-child(3n + 2) {
-				clear:both;
-			}
 		}
 		@media all and (min-width: $bp-xxl) {
-			&:nth-child(2n + 2),
-			&:nth-child(3n + 2) {
-				clear:none;
-			}
-			&:nth-child(4n + 2) {
-				clear:both;
-			}
 			width: 100 / 4 * 1%;
 		}
 
@@ -196,18 +188,44 @@
 		}
 	}
 
-	a.voidlink {
-		position: absolute;
-	    overflow: hidden;
-	    text-indent: -9999em;
-	    height: 9.5%;
-	    width: 5.5%;
-	    background: transparent;
-	    top: 57.25%;
-	    left: 47.25%;
-	    z-index: 20;
-	}
 
+
+}
+a.voidlink {
+	position: absolute;
+    overflow: hidden;
+    text-indent: -9999em;
+    height: 9.5%;
+    width: 5.5%;
+    background: transparent;
+    top: 57.25%;
+    left: 47.25%;
+    z-index: 20;
+
+    &.icon-down-open {
+    	text-indent: 0;
+	    bottom: 0;
+	    top: initial;
+	    height: $padpx*2;
+	    color:$creme-dk;
+
+	  animation-name: pulse;
+	  animation-duration: $duration*2; 
+	  animation-timing-function: $ease-cb; 
+	  animation-delay: 0;
+	  animation-direction: alternate;
+	  animation-iteration-count: infinite;
+	  animation-fill-mode: none;
+	  animation-play-state: running; 
+    }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(.9);
+  }
 }
 .section.home-main {
 	background:$mint;

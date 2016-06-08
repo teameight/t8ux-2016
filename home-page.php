@@ -12,6 +12,7 @@ get_header(); ?>
 			<img class="logo-block" src="<?php bloginfo('template_directory'); ?>/images/voidcube-anim.gif" alt="T/8">
 			<a class="voidlink" title="Enter the void..." href="#start">Enter the void...</a>
 		</div>
+		<a class="voidlink icon-down-open" title="" href="#start"></a>
 	</section>
 	<section class="section cf home-main">
 		<a class="anchor" name="start"></a>

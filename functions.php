@@ -10,6 +10,8 @@
  *
  * @return void
  */
+
+
 function teameight_setup() {
 	/*
 	 * This theme supports all available post formats by default.
@@ -38,8 +40,10 @@ add_action( 'after_setup_theme', 'teameight_setup' );
  */
 function teameight_scripts_styles() {
 
+    $version = '2016-03-31';
+
     // Loads JavaScript file with functionality specific to Team Eight.
-    wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2015-08-28', true );
+    wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $version, true );
 
     // Loads JavaScript file with lazyload.
    // wp_enqueue_script( 'teameight-lazyload', get_template_directory_uri() . '/js/lazyload.js', array( 'jquery' ), '2015-08-28', true );
@@ -50,14 +54,14 @@ function teameight_scripts_styles() {
     }
 
     // Loads fontawesome.
-    wp_enqueue_style( 'teameight-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '2015-08-28' );
+    wp_enqueue_style( 'teameight-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), $version );
 
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'teameight-style', get_template_directory_uri() . '/css/style.css', array(), '2015-08-28' );
+	wp_enqueue_style( 'teameight-style', get_template_directory_uri() . '/css/style.css', array(), $version );
 
 
 	// Loads the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'teameight-ie', get_template_directory_uri() . '/css/ie.css', array( 'teameight-style' ), '2013-07-18' );
+	wp_enqueue_style( 'teameight-ie', get_template_directory_uri() . '/css/ie.css', array( 'teameight-style' ), $version );
 	wp_style_add_data( 'teameight-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'teameight_scripts_styles' );

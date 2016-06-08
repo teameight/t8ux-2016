@@ -147,7 +147,6 @@
 				font-size: .75em;
 
 				height:0;
-				overflow:hidden;
 				opacity:0;
 				@include transitions(margin $duration $ease-cb, width $duration $ease-cb, opacity $duration/4 $ease-cb, height 1ms ease $duration*2);
 			}
