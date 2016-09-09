@@ -575,6 +575,18 @@ figcaption {
   height: 100%;
 }
 
+/* line 45, scss/base/_media.scss */
+.single .poster {
+  max-height: 800px;
+  margin: 0 auto 64px;
+  display: block;
+  width: auto;
+}
+/* line 51, scss/base/_media.scss */
+.single .poster.narrow {
+  max-width: 500px;
+}
+
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
