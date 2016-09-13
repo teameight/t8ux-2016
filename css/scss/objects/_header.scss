@@ -34,12 +34,18 @@
 }
 
 .logolink {
-	width: 76px;
+    bottom: -36px;
+	width: 62px;
+
 	position: absolute;
-    bottom: -45px;
     left: 50%;
     @include transform(translateX(-50%));
 	display: block;
+
+	@media all and (min-width: $bp-med-2) {
+	    bottom: -45px;
+		width: 76px;
+	}
 
 	
 	.home & {

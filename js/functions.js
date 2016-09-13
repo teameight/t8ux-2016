@@ -61,10 +61,10 @@
 		logobannerwrap.outerHeight(hm_height);
 		
 		if(parentwidth < lbwidth) {
-			logobanner.width('100%').css("paddingTop", '59%');
+			logobanner.width('100%');
 			//logobannerafter.css("paddingTop", logobanner.height());
 		} else {
-			logobanner.width(lbwidth).css("paddingTop", lbwidth*.59);
+			logobanner.width(lbwidth);
 			//logobannerafter.css("paddingTop", lbwidth*.59);
 		}
 

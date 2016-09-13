@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    $Home
+\*------------------------------------*/
+
+.section.logo-banner-wrap {
+
+	max-width:none;
+	text-align:center;
+	margin: 0;
+	background: $red;
+	padding:0 2em;
+	box-sizing:border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.logo-banner {
+		max-width: 120px;
+	    text-align: center;
+	    margin: 0 auto;
+
+	    @media all and (min-width: $bp-med-2) {
+			max-width: 170px;
+		}
+	}
+
+
+	.logo-block {
+	    z-index:1;
+	    opacity:0;
+		@include transitions(opacity $duration $ease-cb);
+	}
+
+	.logo-block, .logo-banner:after {
+
+		.loaded & {
+			opacity:1;
+		}
+	}
+
+	article {
+
+		max-width: 450px;
+		margin: 12px auto;
+
+		@media all and (min-width: $bp-med-2) {
+			margin: 40px auto;
+		}
+
+
+		h1, h2 {
+			color: $creme;
+			text-transform: uppercase;
+		}
+		h2 {
+			font-family: $font-4;			
+			font-size: 40px;
+			line-height: 48px;
+			letter-spacing: .05em;
+			padding-bottom: 8px;
+		}
+		
+		h3, h4, h5 { 
+			color:$creme; 
+		}
+		h4 {
+			margin-bottom: 24px;
+		}
+	}
+	p {
+		font-size: 1.2em;
+
+		em {
+			display:block;
+			position:relative;
+		}
+		em::before {
+			content: "";
+			display: block;
+			top: -8px;
+			height: 2px;
+			background: $blue-med;
+			width: 5em;
+			margin: 0 auto -2px;
+			position: relative;
+
+		}
+	}
+
+}
+
+a.voidlink img {
+	max-width:68px;
+}
+
+.section.home-main {
+	background:$mint;
+	//border-top:1em solid $yellow;
+
+	max-width:none;
+	margin:0;
+	padding:0;
+
+	article {
+		padding:6em 2em;
+		margin:0 auto;
+		text-align:center;
+
+		@media screen and (min-width:$bp-med-2){
+			padding:8em;
+			max-width:$bp-med-2;
+		}
+	}
+
+}
+.section.home-sub {
+	background:$yellow;
+	border-bottom:2em solid $mint;
+
+	max-width:none;
+	margin:0;
+	padding:0;
+
+	article {
+		padding:4em 0;
+		margin:0 auto;
+		text-align:center;
+
+		h3 {
+			font-family:$font;
+			font-weight:normal;
+			font-style:italic;
+			@include font-sizing(22, 28);
+			color:$teal;
+		}
+		h4 {
+
+			a {
+				color:$teal;
+				display:block;
+				margin:4px 0 16px;
+				@include font-sizing(14, 20);
+
+				&:last-child {
+					margin-bottom:4px;
+				}
+
+				&:hover, &:active {
+					color:$red;
+				}
+			}
+
+		}
+
+		@media screen and (min-width:$bp-med-2) {
+
+			h3, h4 {
+				width:50%;
+				float:left;	
+			}
+
+			h3 {
+				text-align:right;
+				padding-right:36px;
+				padding-top: 1.125em;
+			}
+
+			h4 {
+				border-left:2px solid $teal;
+				text-align:left;
+				padding-left:36px;
+			}
+
+		}
+	}
+
+}

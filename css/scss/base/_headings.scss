@@ -14,7 +14,7 @@ h1, .alpha   {
 	
 	&.alt {
 		font-family: $font-secondary;
-		@include font-sizing(80, 96);
+		@include font-sizing(68, 80);
 	}
 }
 

@@ -139,7 +139,7 @@
 		.title {
 			font-size: .75em;
 
-			@include grid-column(5);
+			@include grid-column(4);
 
 			@media screen and (min-width:$bp-med-2){
 				bottom:46%;
