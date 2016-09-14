@@ -25,6 +25,9 @@
   padding-right:18px;
 }
 
+@mixin grid-width($number-of-cols) {
+  width: $number-of-cols * (100/12);
+}
 
 /* CSS Transition
 	Usage: @include transition(width,0.3s,ease-out);

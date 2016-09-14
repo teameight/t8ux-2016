@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    $Process
+\*------------------------------------*/
+
+section.intro {
+	color:$red;
+	padding-top:100px;
+
+	h2, h3, h4, h5 {
+		color:$red;
+	}
+
+	a.downarrow {
+		color:$red;
+		text-align: center;
+		font-size:2em;
+		display: block;
+	}
+
+}
+
+section.process-step {
+	background:$mint;
+	margin:0;
+	padding: 60px 32px;
+
+
+	@media all and (min-width: $bp-med-2) {
+		padding: 140px 0;
+	}
+	
+	.step-wrap {
+		max-width: $max-width;
+		margin:0 auto;
+	
+		display:flex;
+		align-items: center;
+		flex-direction: column;
+	
+		@media all and (min-width: $bp-med-2) {
+			align-items: center;
+			flex-direction: row;
+		}
+
+		> img {
+			width:100%;
+			margin:20px 0;
+			@include grid-column(6,1,both);
+		}	
+	}
+
+
+
+	article {
+		width:100%;
+		@include grid-column(6,1,both);
+
+		h2 {
+			@extend h1.alt;
+
+			@media all and (max-width: $bp-med-2) {
+				font-size:2.75em;
+			}
+		}
+
+		p {
+			font-size: 20px;
+			line-height: 28px;
+
+			strong, b {
+				color:$gray;
+			}
+		}
+	}
+
+	&.research {
+		background-color: $yellow;
+	}
+	&.info-arch {
+		background-color: $teal;
+	}
+	&.design {
+		background-color: $rose;
+	}
+	&.build {
+		background-color: $mint;
+	}
+	&.iterate {
+		background-color: $red;
+	}
+	
+	&.info-arch,
+	&.iterate {
+		color:$creme;
+
+		h1, h2, h23, h4, h5, p > strong, p > b {
+			color:$creme;
+		}
+
+	}
+
+}
+@media all and (min-width: $bp-med-2) {
+	section.process-step.research,
+	section.process-step.design,
+	section.process-step.iterate { 
+		.step-wrap {
+			flex-direction: row-reverse;
+		}
+	}
+}

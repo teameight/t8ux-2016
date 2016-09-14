@@ -320,7 +320,7 @@ h1, .alpha {
   opacity: .8;
 }
 /* line 15, scss/base/_headings.scss */
-h1.alt, section.phead .tcrd h1, .designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h1, .alpha.alt, section.phead .tcrd h1.alpha {
+h1.alt, section.phead .tcrd h1, section.process-step article h2, .designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h1, .alpha.alt, section.phead .tcrd h1.alpha {
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 4.25em;
   line-height: 1.17647;
@@ -370,7 +370,7 @@ h4, .title-card h1, .section.cattag-dir .h4, .delta {
   color: #E95740;
 }
 /* line 58, scss/base/_headings.scss */
-h4.alt, .title-card h1.alt, .title-card section.phead .tcrd h1, section.phead .tcrd .title-card h1, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .title-card h1, .section.cattag-dir .alt.h4, .section.cattag-dir section.phead .tcrd h1.h4, section.phead .tcrd .section.cattag-dir h1.h4, .delta.alt, section.phead .tcrd h1.delta {
+h4.alt, .title-card h1.alt, .title-card section.phead .tcrd h1, section.phead .tcrd .title-card h1, .title-card section.process-step article h2, section.process-step article .title-card h2, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .title-card h1, .section.cattag-dir .alt.h4, .section.cattag-dir section.phead .tcrd h1.h4, section.phead .tcrd .section.cattag-dir h1.h4, .delta.alt, section.phead .tcrd h1.delta {
   border-bottom: 2px solid;
   margin-bottom: 14px;
 }
@@ -2955,6 +2955,132 @@ a.voidlink img {
   }
 }
 
+/*------------------------------------*\
+    $Process
+\*------------------------------------*/
+/* line 5, scss/templates/_process.scss */
+section.intro {
+  color: #E95740;
+  padding-top: 100px;
+}
+/* line 9, scss/templates/_process.scss */
+section.intro h2, section.intro h3, section.intro #gform_1 #field_1_3 > label, #gform_1 section.intro #field_1_3 > label, section.intro h4, section.intro .title-card h1, .title-card section.intro h1, section.intro .section.cattag-dir .h4, .section.cattag-dir section.intro .h4, section.intro h5 {
+  color: #E95740;
+}
+/* line 13, scss/templates/_process.scss */
+section.intro a.downarrow {
+  color: #E95740;
+  text-align: center;
+  font-size: 2em;
+  display: block;
+}
+
+/* line 22, scss/templates/_process.scss */
+section.process-step {
+  background: #a1cebe;
+  margin: 0;
+  padding: 60px 32px;
+}
+@media all and (min-width: 720px) {
+  /* line 22, scss/templates/_process.scss */
+  section.process-step {
+    padding: 140px 0;
+  }
+}
+/* line 32, scss/templates/_process.scss */
+section.process-step .step-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media all and (min-width: 720px) {
+  /* line 32, scss/templates/_process.scss */
+  section.process-step .step-wrap {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+/* line 45, scss/templates/_process.scss */
+section.process-step .step-wrap > img {
+  width: 100%;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+@media all and (min-width: 720px) {
+  /* line 45, scss/templates/_process.scss */
+  section.process-step .step-wrap > img {
+    width: 50%;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
+}
+/* line 54, scss/templates/_process.scss */
+section.process-step article {
+  width: 100%;
+  box-sizing: border-box;
+}
+@media all and (min-width: 720px) {
+  /* line 54, scss/templates/_process.scss */
+  section.process-step article {
+    width: 50%;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
+}
+@media all and (max-width: 720px) {
+  /* line 58, scss/templates/_process.scss */
+  section.process-step article h2 {
+    font-size: 2.75em;
+  }
+}
+/* line 66, scss/templates/_process.scss */
+section.process-step article p {
+  font-size: 20px;
+  line-height: 28px;
+}
+/* line 70, scss/templates/_process.scss */
+section.process-step article p strong, section.process-step article p b {
+  color: #58595b;
+}
+/* line 76, scss/templates/_process.scss */
+section.process-step.research {
+  background-color: #f1d23a;
+}
+/* line 79, scss/templates/_process.scss */
+section.process-step.info-arch {
+  background-color: #22A09E;
+}
+/* line 82, scss/templates/_process.scss */
+section.process-step.design {
+  background-color: #edd2e1;
+}
+/* line 85, scss/templates/_process.scss */
+section.process-step.build {
+  background-color: #a1cebe;
+}
+/* line 88, scss/templates/_process.scss */
+section.process-step.iterate {
+  background-color: #E95740;
+}
+/* line 92, scss/templates/_process.scss */
+section.process-step.info-arch, section.process-step.iterate {
+  color: #f4f0e9;
+}
+/* line 96, scss/templates/_process.scss */
+section.process-step.info-arch h1, section.process-step.info-arch h2, section.process-step.info-arch h23, section.process-step.info-arch h4, section.process-step.info-arch .title-card h1, .title-card section.process-step.info-arch h1, section.process-step.info-arch .section.cattag-dir .h4, .section.cattag-dir section.process-step.info-arch .h4, section.process-step.info-arch h5, section.process-step.info-arch p > strong, section.process-step.info-arch p > b, section.process-step.iterate h1, section.process-step.iterate h2, section.process-step.iterate h23, section.process-step.iterate h4, section.process-step.iterate .title-card h1, .title-card section.process-step.iterate h1, section.process-step.iterate .section.cattag-dir .h4, .section.cattag-dir section.process-step.iterate .h4, section.process-step.iterate h5, section.process-step.iterate p > strong, section.process-step.iterate p > b {
+  color: #f4f0e9;
+}
+
+@media all and (min-width: 720px) {
+  /* line 107, scss/templates/_process.scss */
+  section.process-step.research .step-wrap,
+  section.process-step.design .step-wrap,
+  section.process-step.iterate .step-wrap {
+    flex-direction: row-reverse;
+  }
+}
 /*------------------------------------*\
     $ABOUT
 \*------------------------------------*/
