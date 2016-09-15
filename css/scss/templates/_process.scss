@@ -57,7 +57,7 @@ section.process-step {
 		> img {
 			width:100%;
 			margin:20px 0;
-			@include grid-column(6,1,both);
+			@include grid-column(6,1,right);
 		}	
 	}
 

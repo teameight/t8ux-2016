@@ -3025,7 +3025,6 @@ section.process-step .step-wrap > img {
   /* line 57, scss/templates/_process.scss */
   section.process-step .step-wrap > img {
     width: 50%;
-    padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
 }

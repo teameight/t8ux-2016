@@ -26,12 +26,23 @@ get_header(); ?>
 		);
 
 		foreach ($processlist as $section) {
+
+			$image = $section.'_image';
+
 			if(get_field($section)) { ?>
 
 			<section class="section process-step <?php echo $section; ?>">
 				<a class="anchor" name="<?php echo $section; ?>"></a>
 				<div class="step-wrap">
-					<img src="http://placekitten.com/800/800" />
+					<?php 
+
+					$image = get_field($image);
+
+					if( !empty($image) ): ?>
+
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+					<?php endif; ?>
 					<article>
 						<?php the_field($section); ?>
 					</article>
