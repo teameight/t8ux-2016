@@ -24,6 +24,18 @@ section.process-step {
 	margin:0;
 	padding: 60px 32px;
 
+	&:nth-child(even) {
+		background:$teal;
+
+		color:$creme;
+
+		h1, h2, h23, h4, h5, p > strong, p > b {
+			color:$creme;
+		}
+	}
+	&:last-of-type {
+		background:$red;
+	}
 
 	@media all and (min-width: $bp-med-2) {
 		padding: 140px 0;
@@ -53,10 +65,11 @@ section.process-step {
 
 	article {
 		width:100%;
-		@include grid-column(6,1,both);
+		@include grid-column(6,2,right);
 
 		h2 {
 			@extend h1.alt;
+			line-height: 1;
 
 			@media all and (max-width: $bp-med-2) {
 				font-size:2.75em;
@@ -73,39 +86,4 @@ section.process-step {
 		}
 	}
 
-	&.research {
-		background-color: $yellow;
-	}
-	&.info-arch {
-		background-color: $teal;
-	}
-	&.design {
-		background-color: $rose;
-	}
-	&.build {
-		background-color: $mint;
-	}
-	&.iterate {
-		background-color: $red;
-	}
-	
-	&.info-arch,
-	&.iterate {
-		color:$creme;
-
-		h1, h2, h23, h4, h5, p > strong, p > b {
-			color:$creme;
-		}
-
-	}
-
-}
-@media all and (min-width: $bp-med-2) {
-	section.process-step.research,
-	section.process-step.design,
-	section.process-step.iterate { 
-		.step-wrap {
-			flex-direction: row-reverse;
-		}
-	}
 }
