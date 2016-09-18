@@ -79,9 +79,13 @@
 				$header.addClass('above').css("top", lbheight - 60);
 			}
 		} else {
-			var windowHeight = $window.height(),
-				hheight = $header.height() + 8;
-			screenstretch.outerHeight(windowHeight-hheight);
+			if(!isSmallScreen){
+
+				var windowHeight = $window.height(),
+					hheight = $header.height() + 8;
+				screenstretch.outerHeight(windowHeight-hheight);
+
+			}
 		}
 
 	}

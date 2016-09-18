@@ -35,6 +35,25 @@
 	    max-height:300px;
 	}
 }
+.t8-home-link {
+	display: block;
+	padding: 24px 0 4px 0;
+	@include font-2-style();
+	
+	color: $gray;
+
+	&:hover, &:focus {
+		color: $red;
+	}
+
+	@media all and (min-width: $bp-med-2) {
+		color: $creme;
+
+		&:hover, &:focus {
+			color: $gray-dk;
+		}
+	}
+}
 .nav-menu {
 	text-align:center;
 	clear: none;
@@ -55,7 +74,7 @@
 		}
 
 		@media all and (min-width: $bp-med-2) {
-			color: $creme-dk;
+			color: $creme;
 
 			&:hover, &:focus {
 				color: $gray-dk;

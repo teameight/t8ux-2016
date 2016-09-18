@@ -104,10 +104,15 @@ section.process-step {
 	}
 
 	a.downarrow {
-		position: absolute;
-	    bottom: 60px;
-	    left: 50%;
-	    transform: translateX(-50%);
+	    margin-top: 32px;
+	    
+	    @media all and (min-width: $bp-med-2) {
+		    margin-top:0;
+			position: absolute;
+		    bottom: 60px;
+		    left: 50%;
+		    transform: translateX(-50%);
+		}
 	}
 
 }
