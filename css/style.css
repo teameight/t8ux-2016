@@ -1334,32 +1334,27 @@ td {
   max-height: 300px;
 }
 
-/* line 38, scss/objects/_nav.scss */
+/* line 39, scss/objects/_nav.scss */
 .t8-home-link {
-  display: block;
+  display: inline-block;
   padding: 24px 0 4px 0;
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: .08em;
-  color: #58595b;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .08em;
+  font-size: .845em;
+  color: #e5e0ce;
+  position: absolute;
 }
-/* line 45, scss/objects/_nav.scss */
-.t8-home-link:hover, .t8-home-link:focus {
-  color: #E95740;
-}
-@media all and (min-width: 720px) {
-  /* line 38, scss/objects/_nav.scss */
-  .t8-home-link {
-    color: #f4f0e9;
-  }
-  /* line 52, scss/objects/_nav.scss */
-  .t8-home-link:hover, .t8-home-link:focus {
-    color: #231f20;
-  }
+/* line 50, scss/objects/_nav.scss */
+.t8-home-link:hover {
+  color: #231f20;
 }
 
-/* line 57, scss/objects/_nav.scss */
+/* line 55, scss/objects/_nav.scss */
 .nav-menu {
   text-align: center;
   clear: none;
@@ -1367,7 +1362,7 @@ td {
   padding-bottom: 24px;
   overflow: hidden;
 }
-/* line 64, scss/objects/_nav.scss */
+/* line 62, scss/objects/_nav.scss */
 .nav-menu a {
   display: block;
   padding: 24px 0 4px 0;
@@ -1378,76 +1373,76 @@ td {
   font-size: 0.75em;
   color: #58595b;
 }
-/* line 72, scss/objects/_nav.scss */
+/* line 70, scss/objects/_nav.scss */
 .nav-menu a:hover, .nav-menu a:focus {
   color: #E95740;
 }
 @media all and (min-width: 720px) {
-  /* line 64, scss/objects/_nav.scss */
+  /* line 62, scss/objects/_nav.scss */
   .nav-menu a {
     color: #f4f0e9;
   }
-  /* line 79, scss/objects/_nav.scss */
+  /* line 77, scss/objects/_nav.scss */
   .nav-menu a:hover, .nav-menu a:focus {
     color: #231f20;
   }
 }
-/* line 85, scss/objects/_nav.scss */
+/* line 83, scss/objects/_nav.scss */
 .nav-menu.active {
   max-height: 40em;
 }
-/* line 89, scss/objects/_nav.scss */
+/* line 87, scss/objects/_nav.scss */
 .nav-menu li {
   display: block;
   margin-bottom: 0;
 }
 @media all and (min-width: 720px) {
-  /* line 57, scss/objects/_nav.scss */
+  /* line 55, scss/objects/_nav.scss */
   .nav-menu {
     width: 45%;
     float: right;
     text-align: right;
     padding-bottom: 0;
   }
-  /* line 102, scss/objects/_nav.scss */
+  /* line 100, scss/objects/_nav.scss */
   .nav-menu li {
     display: inline-block;
   }
-  /* line 106, scss/objects/_nav.scss */
+  /* line 104, scss/objects/_nav.scss */
   .nav-menu a {
     border: 0;
     padding-left: 2em;
   }
 }
 
-/* line 115, scss/objects/_nav.scss */
+/* line 113, scss/objects/_nav.scss */
 .pagination {
   overflow: hidden;
 }
-/* line 118, scss/objects/_nav.scss */
+/* line 116, scss/objects/_nav.scss */
 .pagination li {
   float: left;
   border-right: 1px solid #eee;
 }
-/* line 122, scss/objects/_nav.scss */
+/* line 120, scss/objects/_nav.scss */
 .pagination li:last-child {
   border: 0;
 }
-/* line 127, scss/objects/_nav.scss */
+/* line 125, scss/objects/_nav.scss */
 .pagination a {
   padding: 16px;
 }
 
-/* line 131, scss/objects/_nav.scss */
+/* line 129, scss/objects/_nav.scss */
 .nav-social a {
   display: inline-block;
 }
-/* line 134, scss/objects/_nav.scss */
+/* line 132, scss/objects/_nav.scss */
 .nav-social a:hover, .nav-social a:focus {
   color: #f1d23a;
 }
 
-/* line 138, scss/objects/_nav.scss */
+/* line 136, scss/objects/_nav.scss */
 .nav-social li {
   display: inline;
   font-size: 1.5em;
@@ -1457,7 +1452,7 @@ td {
 /**
  * All Genericons.
  */
-/* line 147, scss/objects/_nav.scss */
+/* line 145, scss/objects/_nav.scss */
 [class*="genericon"] {
   width: 1em;
   height: 1em;

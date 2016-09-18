@@ -35,25 +35,23 @@
 	    max-height:300px;
 	}
 }
+
 .t8-home-link {
-	display: block;
+	display: inline-block;
 	padding: 24px 0 4px 0;
 	@include font-2-style();
-	
-	color: $gray;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .08em;
+	font-size: .845em;
+	color: #e5e0ce;
+	position: absolute;
 
-	&:hover, &:focus {
-		color: $red;
-	}
-
-	@media all and (min-width: $bp-med-2) {
-		color: $creme;
-
-		&:hover, &:focus {
-			color: $gray-dk;
-		}
+	&:hover {
+		color: $gray-dk;
 	}
 }
+
 .nav-menu {
 	text-align:center;
 	clear: none;
