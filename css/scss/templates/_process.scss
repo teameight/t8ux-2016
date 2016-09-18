@@ -2,7 +2,7 @@
     $Process
 \*------------------------------------*/
 
-section.intro {
+section.introduction {
 	color:$red;
 	padding-top:100px;
 
@@ -10,8 +10,13 @@ section.intro {
 		color:$red;
 	}
 
+	h5 {
+		margin-bottom:4px;
+	}
 
-
+	h4 + h5 {
+		margin-top:20px;
+	}
 }
 section	a.downarrow {
 	color:$red;
@@ -26,6 +31,12 @@ section.process-step {
 	margin:0;
 	padding: 60px 32px;
 
+
+	@media all and (min-width: $bp-med-2) {
+		padding: 0;
+		height:100vh;
+	}
+
 	&:nth-child(even) {
 		background:$teal;
 
@@ -39,14 +50,15 @@ section.process-step {
 			color: $creme;
 		}
 	}
+
 	&:last-of-type {
 		border-bottom:40px solid $mint;
 	}
 
-	@media all and (min-width: $bp-med-2) {
-		padding: 0;
+	a.anchor {
+	    top: 0;
 	}
-	
+
 	.step-wrap {
 		max-width: $max-width;
 		margin:0 auto;

@@ -8,19 +8,24 @@
 	text-align:center;
 	margin: 0;
 	background: $red;
-	padding:0 2em;
+	padding:0px 2em;
 	box-sizing:border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
+	@media all and (min-width: $bp-med-2) {
+		height: 100vh;
+	}
+
 	.logo-banner {
 		max-width: 120px;
 	    text-align: center;
-	    margin: 0 auto;
+	    margin: 60px auto 0;
 
 	    @media all and (min-width: $bp-med-2) {
 			max-width: 170px;
+			margin:0 auto;
 		}
 	}
 
@@ -88,9 +93,18 @@
 	}
 
 }
+a.voidlink {
+	
+	margin-bottom: 60px;
 
-a.voidlink img {
-	max-width:68px;
+	@media all and (min-width: $bp-med-2) {
+		margin-bottom: 0;
+	}
+
+	img {
+		max-width:68px;
+	}
+
 }
 
 .section.home-main {

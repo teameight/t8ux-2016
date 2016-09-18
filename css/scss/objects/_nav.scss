@@ -19,6 +19,12 @@
     }
 
 }
+
+.mobile-open:not(.below) .mobile-menu-toggle {
+    background: $red;
+    border-bottom: 2px solid $creme;
+}
+
 .menu-primary-nav-container {
 
 	overflow:hidden;

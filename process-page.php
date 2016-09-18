@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<section class="section intro">
+	<section class="section introduction">
 			<article>
 				<?php the_content(); ?>
 			</article>
@@ -36,7 +36,7 @@ get_header(); ?>
 
 			if(get_field($section)) { ?>
 
-			<section class="section screen-stretch process-step <?php echo $section; ?>">
+			<section class="section process-step <?php echo $section; ?>">
 				<a class="anchor" name="<?php echo $section; ?>"></a>
 				<div class="step-wrap">
 					<?php 

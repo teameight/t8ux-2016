@@ -13,7 +13,6 @@
 	var isSmallScreen = false,
 		windowwidth = $window.width(),
 		logobannerwrap = $(".logo-banner-wrap"),
-		screenstretch = $(".screen-stretch"),
 		$header = $('.header'),
 		$voiddownlink = $('.voidlink.icon-down-open');
 
@@ -26,13 +25,11 @@
 	function view_checker() {
 
 
-		if (screenstretch.length > 0) {
+		if (logobannerwrap.length > 0) {
 
-			stretchsize();  
-			
-			if (logobannerwrap.length > 0) {  			
-				homescrollheader();
-			}
+			screenstretch();  	
+
+			homescrollheader();
 
 		} // end if .logo-banner-wrap
 	
@@ -55,55 +52,45 @@
 
 	}
 
-	var stretchsize = function(){
-		if (logobannerwrap.length > 0) {
-			var windowHeight = $window.height(),
-				parentwidth = screenstretch.width(),
-				logobanner = $(".logo-banner"),
-				logobannerafter = $(".logo-banner:after");
-			var lbwidth = windowHeight*1.3;
-			hm_height = windowHeight;
-			screenstretch.outerHeight(hm_height);
-		
-			if(parentwidth < lbwidth) {
-				logobanner.width('100%');
-				//logobannerafter.css("paddingTop", logobanner.height());
-			} else {
-				var windowHeight = $window.height();
-				logobanner.width(lbwidth);
-			}
+	var screenstretch = function(){
 
-			var lbheight = screenstretch.height();
+			var lbheight = logobannerwrap.height(),
+				hheight = 60;//$header.height();
 			
 			if($header.hasClass("above")){
-				$header.addClass('above').css("top", lbheight - 60);
+				$header.css("top", lbheight - hheight);
 			}
-		} else {
-			if(!isSmallScreen){
-
-				var windowHeight = $window.height(),
-					hheight = $header.height() + 8;
-				screenstretch.outerHeight(windowHeight-hheight);
-
-			}
-		}
 
 	}
 	var homescrollheader = function(){
-		var lbheight = screenstretch.height();
+		var lbheight = logobannerwrap.height(),
+				hheight = 60;//$header.height();
 
-		if ($window.scrollTop() > lbheight - 60) {
-			if(!$header.hasClass("below")){
-				$header.addClass("below").removeClass('above').css("top", "0");
-				$voiddownlink.hide();
-			}
-		} else {
-			if($header.hasClass("below")){
+		if(isSmallScreen){
+
+			if ($window.scrollTop() > lbheight - hheight) {
+				if(!$header.hasClass("below")){
+					$header.addClass("below").removeClass('above').css("top", "0");
+				}
+			} else {
 				$header.removeClass("below");
 			}
-			if(!$header.hasClass("above")){
-				$header.addClass('above').css("top", lbheight - 60);
-				$voiddownlink.show();
+
+		} else {
+
+			if ($window.scrollTop() > lbheight - hheight) {
+				if(!$header.hasClass("below")){
+					$header.addClass("below").removeClass('above').css("top", "0");
+					$voiddownlink.hide();
+				}
+			} else {
+				if($header.hasClass("below")){
+					$header.removeClass("below");
+				}
+				if(!$header.hasClass("above")){
+					$header.addClass('above').css("top", lbheight - hheight);
+					$voiddownlink.show();
+				}
 			}
 		}
 

@@ -28,8 +28,12 @@
 
 	clear:both;
 	position: relative;
-	margin:5em auto;
+	margin:0 auto 5em;
 	overflow:hidden;
+
+	@media screen and (min-width:$bp-med-2){
+		margin-top:5em;
+	}
 
 
 	.cs-link {
@@ -83,7 +87,7 @@
 
 	.card {
 
-		padding:1em 16px 0;
+		padding:32px 16px 0;
 		@media screen and (min-width:$bp-med-2){
 			padding:0;
 		}
