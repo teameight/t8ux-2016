@@ -16,14 +16,19 @@ get_header(); ?>
 	</section>
 
 	<?php
-		$processlist = array(
-			'strategy', 
-			'research', 
-			'info-arch', 
-			'design', 
-			'build', 
-			'iterate', 
-		);
+		$processlist = 	new CachingIterator(
+			                 new ArrayIterator(
+			                  	array(
+									'strategy', 
+									'research', 
+									'info-arch', 
+									'design', 
+									'build', 
+									'iterate', 
+								)
+							)
+			            );
+
 
 		foreach ($processlist as $section) {
 
@@ -31,7 +36,7 @@ get_header(); ?>
 
 			if(get_field($section)) { ?>
 
-			<section class="section process-step <?php echo $section; ?>">
+			<section class="section screen-stretch process-step <?php echo $section; ?>">
 				<a class="anchor" name="<?php echo $section; ?>"></a>
 				<div class="step-wrap">
 					<?php 
@@ -46,7 +51,15 @@ get_header(); ?>
 					<article>
 						<?php the_field($section); ?>
 					</article>
+
+
 				</div>
+				<?php 
+					if($processlist->hasNext()) {
+						$next = $processlist->getInnerIterator()->current();
+						echo '<a class="downarrow" href="#'. $next .'">&darr;</a>';
+					}
+				?>
 			</section>
 
 	<?php

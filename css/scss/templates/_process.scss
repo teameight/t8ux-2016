@@ -10,14 +10,16 @@ section.intro {
 		color:$red;
 	}
 
-	a.downarrow {
-		color:$red;
-		text-align: center;
-		font-size:2em;
-		display: block;
-	}
+
 
 }
+section	a.downarrow {
+	color:$red;
+	text-align: center;
+	font-size:2em;
+	display: block;
+}
+
 
 section.process-step {
 	background:$mint;
@@ -29,16 +31,20 @@ section.process-step {
 
 		color:$creme;
 
-		h1, h2, h23, h4, h5, p > strong, p > b {
+		h1, h2, h23, h4, h5, p > strong, p > b, article p {
 			color:$creme;
+		}
+
+		a.downarrow {
+			color: $creme;
 		}
 	}
 	&:last-of-type {
-		background:$red;
+		border-bottom:40px solid $mint;
 	}
 
 	@media all and (min-width: $bp-med-2) {
-		padding: 140px 0;
+		padding: 0;
 	}
 	
 	.step-wrap {
@@ -52,12 +58,22 @@ section.process-step {
 		@media all and (min-width: $bp-med-2) {
 			align-items: center;
 			flex-direction: row;
+			top:50%;
+			transform:translateY(-50%);
+			position: relative;
 		}
 
 		> img {
 			width:100%;
 			margin:20px 0;
-			@include grid-column(6,1,right);
+			@include grid-column(6);
+
+			@media all and (min-width: $bp-med-2) {
+				padding-right:5%;
+				margin:36px 0 0;
+			}
+
+
 		}	
 	}
 
@@ -77,13 +93,21 @@ section.process-step {
 		}
 
 		p {
-			font-size: 20px;
-			line-height: 28px;
+			font-size: 22px;
+			line-height: 32px;
+			color: $gray-dk-2;
 
 			strong, b {
 				color:$gray;
 			}
 		}
+	}
+
+	a.downarrow {
+		position: absolute;
+	    bottom: 60px;
+	    left: 50%;
+	    transform: translateX(-50%);
 	}
 
 }

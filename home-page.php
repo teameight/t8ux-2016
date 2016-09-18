@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section class="section cf logo-banner-wrap">
+	<section class="section cf logo-banner-wrap screen-stretch">
 		<div class="logo-banner">
 			<img class="logo-block" src="<?php bloginfo('template_directory'); ?>/images/micro-block-01.svg" alt="T/8">
 		</div>

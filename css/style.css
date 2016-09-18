@@ -2967,40 +2967,45 @@ section.intro {
 section.intro h2, section.intro h3, section.intro #gform_1 #field_1_3 > label, #gform_1 section.intro #field_1_3 > label, section.intro h4, section.intro .title-card h1, .title-card section.intro h1, section.intro .section.cattag-dir .h4, .section.cattag-dir section.intro .h4, section.intro h5 {
   color: #E95740;
 }
-/* line 13, scss/templates/_process.scss */
-section.intro a.downarrow {
+
+/* line 16, scss/templates/_process.scss */
+section a.downarrow {
   color: #E95740;
   text-align: center;
   font-size: 2em;
   display: block;
 }
 
-/* line 22, scss/templates/_process.scss */
+/* line 24, scss/templates/_process.scss */
 section.process-step {
   background: #a1cebe;
   margin: 0;
   padding: 60px 32px;
 }
-/* line 27, scss/templates/_process.scss */
+/* line 29, scss/templates/_process.scss */
 section.process-step:nth-child(even) {
   background: #22A09E;
   color: #f4f0e9;
 }
-/* line 32, scss/templates/_process.scss */
-section.process-step:nth-child(even) h1, section.process-step:nth-child(even) h2, section.process-step:nth-child(even) h23, section.process-step:nth-child(even) h4, section.process-step:nth-child(even) .title-card h1, .title-card section.process-step:nth-child(even) h1, section.process-step:nth-child(even) .section.cattag-dir .h4, .section.cattag-dir section.process-step:nth-child(even) .h4, section.process-step:nth-child(even) h5, section.process-step:nth-child(even) p > strong, section.process-step:nth-child(even) p > b {
+/* line 34, scss/templates/_process.scss */
+section.process-step:nth-child(even) h1, section.process-step:nth-child(even) h2, section.process-step:nth-child(even) h23, section.process-step:nth-child(even) h4, section.process-step:nth-child(even) .title-card h1, .title-card section.process-step:nth-child(even) h1, section.process-step:nth-child(even) .section.cattag-dir .h4, .section.cattag-dir section.process-step:nth-child(even) .h4, section.process-step:nth-child(even) h5, section.process-step:nth-child(even) p > strong, section.process-step:nth-child(even) p > b, section.process-step:nth-child(even) article p {
   color: #f4f0e9;
 }
-/* line 36, scss/templates/_process.scss */
+/* line 38, scss/templates/_process.scss */
+section.process-step:nth-child(even) a.downarrow {
+  color: #f4f0e9;
+}
+/* line 42, scss/templates/_process.scss */
 section.process-step:last-of-type {
-  background: #E95740;
+  border-bottom: 40px solid #a1cebe;
 }
 @media all and (min-width: 720px) {
-  /* line 22, scss/templates/_process.scss */
+  /* line 24, scss/templates/_process.scss */
   section.process-step {
-    padding: 140px 0;
+    padding: 0;
   }
 }
-/* line 44, scss/templates/_process.scss */
+/* line 50, scss/templates/_process.scss */
 section.process-step .step-wrap {
   max-width: 1300px;
   margin: 0 auto;
@@ -3009,55 +3014,72 @@ section.process-step .step-wrap {
   flex-direction: column;
 }
 @media all and (min-width: 720px) {
-  /* line 44, scss/templates/_process.scss */
+  /* line 50, scss/templates/_process.scss */
   section.process-step .step-wrap {
     align-items: center;
     flex-direction: row;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
   }
 }
-/* line 57, scss/templates/_process.scss */
+/* line 66, scss/templates/_process.scss */
 section.process-step .step-wrap > img {
   width: 100%;
   margin: 20px 0;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 57, scss/templates/_process.scss */
+  /* line 66, scss/templates/_process.scss */
   section.process-step .step-wrap > img {
     width: 50%;
-    padding-right: 8.33333%;
   }
 }
-/* line 66, scss/templates/_process.scss */
+@media all and (min-width: 720px) {
+  /* line 66, scss/templates/_process.scss */
+  section.process-step .step-wrap > img {
+    padding-right: 5%;
+    margin: 36px 0 0;
+  }
+}
+/* line 82, scss/templates/_process.scss */
 section.process-step article {
   width: 100%;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 66, scss/templates/_process.scss */
+  /* line 82, scss/templates/_process.scss */
   section.process-step article {
     width: 50%;
     padding-right: 16.66667%;
   }
 }
-/* line 70, scss/templates/_process.scss */
+/* line 86, scss/templates/_process.scss */
 section.process-step article h2 {
   line-height: 1;
 }
 @media all and (max-width: 720px) {
-  /* line 70, scss/templates/_process.scss */
+  /* line 86, scss/templates/_process.scss */
   section.process-step article h2 {
     font-size: 2.75em;
   }
 }
-/* line 79, scss/templates/_process.scss */
+/* line 95, scss/templates/_process.scss */
 section.process-step article p {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 32px;
+  color: #494a4c;
 }
-/* line 83, scss/templates/_process.scss */
+/* line 100, scss/templates/_process.scss */
 section.process-step article p strong, section.process-step article p b {
   color: #58595b;
+}
+/* line 106, scss/templates/_process.scss */
+section.process-step a.downarrow {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*------------------------------------*\

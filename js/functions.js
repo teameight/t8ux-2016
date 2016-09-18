@@ -13,6 +13,7 @@
 	var isSmallScreen = false,
 		windowwidth = $window.width(),
 		logobannerwrap = $(".logo-banner-wrap"),
+		screenstretch = $(".screen-stretch"),
 		$header = $('.header'),
 		$voiddownlink = $('.voidlink.icon-down-open');
 
@@ -25,10 +26,13 @@
 	function view_checker() {
 
 
-		if (logobannerwrap.length > 0) {
+		if (screenstretch.length > 0) {
 
-			homesize();    			
-			homescrollheader();
+			stretchsize();  
+			
+			if (logobannerwrap.length > 0) {  			
+				homescrollheader();
+			}
 
 		} // end if .logo-banner-wrap
 	
@@ -51,32 +55,38 @@
 
 	}
 
-	var homesize = function(){
-		var windowHeight = $window.height(),
-			parentwidth = logobannerwrap.width(),
-			logobanner = $(".logo-banner"),
-			logobannerafter = $(".logo-banner:after");
-		var lbwidth = windowHeight*1.3;
-		hm_height = windowHeight;
-		logobannerwrap.outerHeight(hm_height);
+	var stretchsize = function(){
+		if (logobannerwrap.length > 0) {
+			var windowHeight = $window.height(),
+				parentwidth = screenstretch.width(),
+				logobanner = $(".logo-banner"),
+				logobannerafter = $(".logo-banner:after");
+			var lbwidth = windowHeight*1.3;
+			hm_height = windowHeight;
+			screenstretch.outerHeight(hm_height);
 		
-		if(parentwidth < lbwidth) {
-			logobanner.width('100%');
-			//logobannerafter.css("paddingTop", logobanner.height());
-		} else {
-			logobanner.width(lbwidth);
-			//logobannerafter.css("paddingTop", lbwidth*.59);
-		}
+			if(parentwidth < lbwidth) {
+				logobanner.width('100%');
+				//logobannerafter.css("paddingTop", logobanner.height());
+			} else {
+				var windowHeight = $window.height();
+				logobanner.width(lbwidth);
+			}
 
-		var lbheight = logobannerwrap.height();
-		
-		if($header.hasClass("above")){
-			$header.addClass('above').css("top", lbheight - 60);
+			var lbheight = screenstretch.height();
+			
+			if($header.hasClass("above")){
+				$header.addClass('above').css("top", lbheight - 60);
+			}
+		} else {
+			var windowHeight = $window.height(),
+				hheight = $header.height() + 8;
+			screenstretch.outerHeight(windowHeight-hheight);
 		}
 
 	}
 	var homescrollheader = function(){
-		var lbheight = logobannerwrap.height();
+		var lbheight = screenstretch.height();
 
 		if ($window.scrollTop() > lbheight - 60) {
 			if(!$header.hasClass("below")){
@@ -176,7 +186,7 @@
 		var windowHeight = $window.height(),
 			windowTop = $window.scrollTop();
 
-		if (logobannerwrap.length > 0 && !$header.hasClass('mobile-open') && windowTop < windowHeight) {
+		if (screenstretch.length > 0 && !$header.hasClass('mobile-open') && windowTop < windowHeight) {
 			menuscroll = true;
 			setTimeout(function(){
 				menuscroll = false;
