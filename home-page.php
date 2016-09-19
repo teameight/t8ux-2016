@@ -23,7 +23,7 @@ get_header(); ?>
 
 	<?php if(get_field('home_sub')) { ?>
 
-	<section class="section cf home-sub">
+	<section class="section cf next-page-cta">
 		<a class="anchor" name="start"></a>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article class="cf">

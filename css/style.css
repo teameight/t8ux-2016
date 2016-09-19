@@ -3346,11 +3346,18 @@ section.process-step a.downarrow {
   line-height: 1.18519;
   margin-bottom: 32px;
 }
-/* line 171, scss/templates/_about.scss */
+@media screen and (min-width: 960px) {
+  /* line 172, scss/templates/_about.scss */
+  .designers-on-duty .designers-on-duty-title, .hired-hands .designers-on-duty-title {
+    width: 66.66667%;
+    margin: 0 auto 32px;
+  }
+}
+/* line 180, scss/templates/_about.scss */
 .designers-on-duty h3 + p.emphasized, .designers-on-duty #gform_1 #field_1_3 > label + p.emphasized, #gform_1 .designers-on-duty #field_1_3 > label + p.emphasized, .hired-hands h3 + p.emphasized, .hired-hands #gform_1 #field_1_3 > label + p.emphasized, #gform_1 .hired-hands #field_1_3 > label + p.emphasized {
   margin-top: -20px;
 }
-/* line 175, scss/templates/_about.scss */
+/* line 184, scss/templates/_about.scss */
 .designers-on-duty .teammate, .hired-hands .teammate {
   clear: both;
   float: none;
@@ -3358,81 +3365,81 @@ section.process-step a.downarrow {
   position: relative;
 }
 @media screen and (min-width: 960px) {
-  /* line 175, scss/templates/_about.scss */
+  /* line 184, scss/templates/_about.scss */
   .designers-on-duty .teammate, .hired-hands .teammate {
-    float: left;
     clear: none;
-    width: 50%;
+    width: 66.66667%;
+    margin: 20px auto 32px;
   }
 }
-/* line 190, scss/templates/_about.scss */
+/* line 199, scss/templates/_about.scss */
 .designers-on-duty .teammate > img, .hired-hands .teammate > img {
   display: block;
   height: auto;
 }
 @media screen and (min-width: 480px) {
-  /* line 190, scss/templates/_about.scss */
+  /* line 199, scss/templates/_about.scss */
   .designers-on-duty .teammate > img, .hired-hands .teammate > img {
     float: left;
   }
 }
-/* line 199, scss/templates/_about.scss */
+/* line 208, scss/templates/_about.scss */
 .designers-on-duty .teammate > img, .designers-on-duty .teammate .imagewrap, .hired-hands .teammate > img, .hired-hands .teammate .imagewrap {
   -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 480px) {
-  /* line 204, scss/templates/_about.scss */
+  /* line 213, scss/templates/_about.scss */
   .designers-on-duty .teammate .deets, .hired-hands .teammate .deets {
     float: left;
   }
 }
-/* line 209, scss/templates/_about.scss */
+/* line 218, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h1 {
   font-size: 2.25em;
   line-height: 1.11111;
   margin-bottom: 4px;
   margin-left: -1px;
 }
-/* line 215, scss/templates/_about.scss */
+/* line 224, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets h4, .designers-on-duty .teammate .deets .title-card h1, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .section.cattag-dir .h4, .section.cattag-dir .designers-on-duty .teammate .deets .h4, .hired-hands .teammate .deets h4, .hired-hands .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .section.cattag-dir .h4, .section.cattag-dir .hired-hands .teammate .deets .h4 {
   font-size: 1em;
   line-height: 1.25;
   margin: 0;
 }
-/* line 219, scss/templates/_about.scss */
+/* line 228, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .sitelink, .designers-on-duty .teammate .deets .email, .hired-hands .teammate .deets .sitelink, .hired-hands .teammate .deets .email {
   color: #58595b;
   font-style: italic;
 }
-/* line 223, scss/templates/_about.scss */
+/* line 232, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets p, .hired-hands .teammate .deets p {
   margin-bottom: 4px;
 }
-/* line 226, scss/templates/_about.scss */
+/* line 235, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .nav-social, .hired-hands .teammate .deets .nav-social {
   font-size: .675em;
 }
-/* line 229, scss/templates/_about.scss */
+/* line 238, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .nav-social a, .hired-hands .teammate .deets .nav-social a {
   color: #777;
 }
-/* line 232, scss/templates/_about.scss */
+/* line 241, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .nav-social a:hover, .designers-on-duty .teammate .deets .nav-social a:focus, .hired-hands .teammate .deets .nav-social a:hover, .hired-hands .teammate .deets .nav-social a:focus {
   color: #E95740;
 }
 
-/* line 240, scss/templates/_about.scss */
+/* line 249, scss/templates/_about.scss */
 .designers-on-duty {
   background: #fff;
 }
 @media screen and (max-width: 480px) {
-  /* line 244, scss/templates/_about.scss */
+  /* line 253, scss/templates/_about.scss */
   .designers-on-duty .teammate {
     margin-top: 64px;
   }
-  /* line 248, scss/templates/_about.scss */
+  /* line 257, scss/templates/_about.scss */
   .designers-on-duty .teammate .deets {
     position: absolute;
     padding-top: 18px;
@@ -3441,35 +3448,30 @@ section.process-step a.downarrow {
   }
 }
 @media screen and (min-width: 480px) {
-  /* line 258, scss/templates/_about.scss */
+  /* line 267, scss/templates/_about.scss */
   .designers-on-duty .teammate > img {
     width: 50%;
   }
-  /* line 262, scss/templates/_about.scss */
+  /* line 271, scss/templates/_about.scss */
   .designers-on-duty .teammate .deets {
-    margin-left: -36px;
-    margin-top: 35%;
-    width: 50%;
+    padding-left: 32px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 480px) {
-  /* line 262, scss/templates/_about.scss */
+@media screen and (min-width: 480px) and (min-width: 480px) {
+  /* line 271, scss/templates/_about.scss */
   .designers-on-duty .teammate .deets {
-    position: absolute;
-    padding-top: 18px;
-    padding-left: 18px;
-    top: 0;
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* line 281, scss/templates/_about.scss */
+  /* line 284, scss/templates/_about.scss */
   .hired-hands .teammate {
     padding: 0 36px;
     margin-top: 64px;
   }
 }
-/* line 288, scss/templates/_about.scss */
+/* line 291, scss/templates/_about.scss */
 .hired-hands .teammate > .imagewrap {
   width: 100%;
   padding-top: 100%;
@@ -3478,14 +3480,14 @@ section.process-step a.downarrow {
   position: relative;
 }
 @media screen and (min-width: 480px) {
-  /* line 288, scss/templates/_about.scss */
+  /* line 291, scss/templates/_about.scss */
   .hired-hands .teammate > .imagewrap {
     width: 33.333%;
     padding-top: 33.333%;
     float: left;
   }
 }
-/* line 303, scss/templates/_about.scss */
+/* line 306, scss/templates/_about.scss */
 .hired-hands .teammate > .imagewrap img {
   position: absolute;
   top: 50%;
@@ -3496,12 +3498,12 @@ section.process-step a.downarrow {
   width: 102%;
   height: auto;
 }
-/* line 314, scss/templates/_about.scss */
+/* line 317, scss/templates/_about.scss */
 .hired-hands .teammate .deets {
   padding-top: 12px;
 }
 @media screen and (min-width: 480px) {
-  /* line 314, scss/templates/_about.scss */
+  /* line 317, scss/templates/_about.scss */
   .hired-hands .teammate .deets {
     padding: 0 36px;
     margin-top: 10%;

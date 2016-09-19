@@ -9,11 +9,11 @@
 	margin: 58px 0 0;
 
 	padding:$padpx*3 5%;
-	
+
 	@media screen and (min-width:$bp-med-2) {
 		padding:0;
 	}
-	
+
 	article {
 		padding: $padpx*2 0;
 		margin:0 auto;
@@ -36,14 +36,14 @@
 	}
 }
 .about-do {
-	
+
 	padding:0;
 	margin:0;
-	
+
 	background: linear-gradient(to right, $mint 50%, $creme 50%);
 
 	.wrap {
-		
+
 		@media screen and (min-width:$bp-med-2) {
 			display: flex;
 		    align-items: stretch;
@@ -52,11 +52,11 @@
 
 		> div {
 			padding:$padpx*3 5%;
-	
+
 			@media screen and (min-width:$bp-med-2) {
 				padding:$padpx*5 0;
 			}
-	
+
 			h4 {
 				color:$gray;
 				position:relative;
@@ -83,7 +83,7 @@
 				    top: -1px;
 				    width: 60%;
 				    text-align: right;
-				    color:$red;				
+				    color:$red;
 				}
 				h4:before {
 					content:"";
@@ -168,6 +168,15 @@
 		@include font-sizing(27,32);
 		margin-bottom: $padpx*2;
 	}
+
+	.designers-on-duty-title {
+
+		@media screen and (min-width: $bp-med-3) {
+			width: $col-8;
+			margin: 0 auto $padpx*2;
+		}
+	}
+
 	h3 + p.emphasized {
 	    margin-top: -20px;
 	}
@@ -178,9 +187,9 @@
 		@extend .cf;
 
 		@media screen and (min-width:$bp-med-3) {
-			float:left;
 			clear:none;
-			width:$col-6;
+			width:$col-8;
+			margin: 20px auto 32px;
 		}
 
 		margin:$padpx*2 0;
@@ -238,15 +247,15 @@
 	}
 }
 .designers-on-duty {
-	
+
 	background:$white;
-	
+
 	.teammate {
 
 		@media screen and (max-width:$bp-small-3) {
 			margin-top:$padpx*4;
 			.deets {
-					
+
 				position: absolute;
 				padding-top: 18px;
 				padding-left: 18px;
@@ -260,24 +269,18 @@
 
 			}
 			.deets {
+				padding-left: $padpx*2;
 
-				@media screen and (max-width:$bp-small-3) {
-					position: absolute;
-					padding-top: 18px;
-					padding-left: 18px;
-					top: 0;
+				@media screen and (min-width:$bp-small-3) {
+					width: 50%;
 				}
-
-				margin-left:-36px;
-				margin-top:35%;
-				width:50%;
 			}
 		}
 	}
 
 }
 .hired-hands {
-	
+
 	.teammate {
 
 		@media screen and (max-width:$bp-small-3) {
@@ -286,10 +289,10 @@
 		}
 
 		> .imagewrap {
-			
+
 			width:100%;
 			padding-top:100%;
-			
+
 			@media screen and (min-width:$bp-small-3) {
 				width:33.333%;
 				padding-top:33.333%;
@@ -297,7 +300,7 @@
 			}
 			height:0;
 			overflow:hidden;
-			
+
 			position:relative;
 
 			img {
@@ -307,7 +310,7 @@
 				@include transform(translateY(-50%));
 				width:102%;
 				height:auto;
-	
+
 			}
 
 		}

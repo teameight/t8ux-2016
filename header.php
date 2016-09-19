@@ -52,6 +52,7 @@
 <body <?php body_class(); ?>>
 	<header class="header cf" role="banner">
 		<div class="wrap">
+			<a href="/" class="t8-home-link">Team Eight</a>
 			<a href="<?php echo home_url(); ?>" class="logolink"><img src="<?php bloginfo('template_directory'); ?>/images/micro-block-01.svg" class="logo" alt="Team Eight" /></a>
 <!--				<a href="#nav" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>-->
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
