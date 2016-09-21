@@ -44,7 +44,7 @@
 
 .t8-home-link {
 	display: inline-block;
-	padding: 24px 0 4px 0;
+	padding: 12px 0 16px 0;
 	@include font-2-style();
 	text-transform: uppercase;
 	font-weight: 600;
@@ -67,10 +67,10 @@
 
 	a {
 		display: block;
-		padding: 24px 0 4px 0;
+		padding: 12px 0 16px 0;
 		@include font-2-style();
 		font-size:0.75em;
-		
+
 		color: $gray;
 
 		&:hover, &:focus {

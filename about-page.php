@@ -29,7 +29,6 @@ get_header(); ?>
 
 	<section class="section cf designers-on-duty">
 		<article class="wrap">
-			<h3 class="alt designers-on-duty-title">We're Ready to Believe You</h3>
 			<?php
 
 				$groupId = get_term_by( 'slug', 'designers-on-duty', 'group' );
@@ -81,6 +80,16 @@ get_header(); ?>
 				}
 			wp_reset_postdata(); ?>
 
+	<?php if ( $cta = get_field('next_page_cta' ) ) { ?>
+
+		<section class="section cf next-page-cta">
+			<a class="anchor" name="start"></a>
+			<article class="cf">
+				<?php echo $cta; ?>
+			</article>
+		</section>
+
+	<?php } // end next_page_cta ?>
 
 <?php endwhile; ?>
 

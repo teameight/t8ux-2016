@@ -17,17 +17,17 @@ get_header(); ?>
 
 	<?php
 		$processlist = 	new CachingIterator(
-			                 new ArrayIterator(
-			                  	array(
-									'strategy', 
-									'research', 
-									'info-arch', 
-									'design', 
-									'build', 
-									'iterate', 
-								)
-							)
-			            );
+			new ArrayIterator(
+				array(
+					'strategy',
+					'research',
+					'info-arch',
+					'design',
+					'build',
+					'iterate',
+				)
+			)
+		);
 
 
 		foreach ($processlist as $section) {
@@ -39,7 +39,7 @@ get_header(); ?>
 			<section class="section process-step <?php echo $section; ?>">
 				<a class="anchor" name="<?php echo $section; ?>"></a>
 				<div class="step-wrap">
-					<?php 
+					<?php
 
 					$image = get_field($image);
 
@@ -54,7 +54,7 @@ get_header(); ?>
 
 
 				</div>
-				<?php 
+				<?php
 					if($processlist->hasNext()) {
 						$next = $processlist->getInnerIterator()->current();
 						echo '<a class="downarrow" href="#'. $next .'">&darr;</a>';
@@ -64,8 +64,19 @@ get_header(); ?>
 
 	<?php
 			}
-		} 
+		}
 	?>
+
+	<?php if ( $cta = get_field('next_page_cta' ) ) { ?>
+
+		<section class="section cf next-page-cta">
+			<a class="anchor" name="start"></a>
+			<article class="cf">
+				<?php echo $cta; ?>
+			</article>
+		</section>
+
+	<?php } // end next_page_cta ?>
 
 <?php endwhile; ?>
 

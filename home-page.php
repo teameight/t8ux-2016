@@ -7,32 +7,31 @@
 
 get_header(); ?>
 
+<?php while ( have_posts() ) : the_post(); ?>
+
 	<section class="section cf logo-banner-wrap">
 		<div class="logo-banner">
 			<img class="logo-block" src="<?php bloginfo('template_directory'); ?>/images/micro-block-01.svg" alt="T/8">
 		</div>
-		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
 				<?php the_content(); ?>
 			</article>
-		<?php endwhile; ?>
 		<a class="voidlink" title="Enter the void..." href="#featured"><img src="<?php bloginfo('template_directory'); ?>/images/void-crystal.gif" alt="T/8"></a>
 	</section>
 
 	<?php get_template_part( 'partials/featposts' ); ?>
 
-	<?php if(get_field('home_sub')) { ?>
+	<?php if ( $cta = get_field('next_page_cta' ) ) { ?>
 
-	<section class="section cf next-page-cta">
-		<a class="anchor" name="start"></a>
-		<?php while ( have_posts() ) : the_post(); ?>
+		<section class="section cf next-page-cta">
+			<a class="anchor" name="start"></a>
 			<article class="cf">
-				<?php the_field('home_sub'); ?>
+				<?php echo $cta; ?>
 			</article>
-		<?php endwhile; ?>
-	</section>
+		</section>
 
-	<?php } // end home_sub ?>
+	<?php } // end next_page_cta ?>
 
+<?php endwhile; ?>
 
 <?php get_footer(); ?>

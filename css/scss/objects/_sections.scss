@@ -428,3 +428,20 @@ section.phead {
 }
 
 
+.next-page-cta {
+	background-color: $creme-lt;
+	margin: 0 auto;
+	padding: 100px 0;
+
+	h5 {
+		margin: 0 0 10px 0;
+
+		a {
+			color: $red;
+
+			&:hover {
+				color: darken( $red, 20% );
+			}
+		}
+	}
+}

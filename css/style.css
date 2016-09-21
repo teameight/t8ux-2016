@@ -1350,7 +1350,7 @@ td {
 /* line 45, scss/objects/_nav.scss */
 .t8-home-link {
   display: inline-block;
-  padding: 24px 0 4px 0;
+  padding: 12px 0 16px 0;
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -1378,7 +1378,7 @@ td {
 /* line 68, scss/objects/_nav.scss */
 .nav-menu a {
   display: block;
-  padding: 24px 0 4px 0;
+  padding: 12px 0 16px 0;
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -2567,6 +2567,25 @@ section.phead .pcont .text {
   background: #E95740;
 }
 
+/* line 431, scss/objects/_sections.scss */
+.next-page-cta {
+  background-color: #fbfaf6;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+/* line 436, scss/objects/_sections.scss */
+.next-page-cta h5 {
+  margin: 0 0 10px 0;
+}
+/* line 439, scss/objects/_sections.scss */
+.next-page-cta h5 a {
+  color: #E95740;
+}
+/* line 442, scss/objects/_sections.scss */
+.next-page-cta h5 a:hover {
+  color: #af2914;
+}
+
 /* line 2, scss/objects/_article.scss */
 .byline {
   font-size: 0.875em;
@@ -3432,7 +3451,7 @@ section.process-step a.downarrow {
 
 /* line 249, scss/templates/_about.scss */
 .designers-on-duty {
-  background: #fff;
+  background: #f4f0e9;
 }
 @media screen and (max-width: 480px) {
   /* line 253, scss/templates/_about.scss */
