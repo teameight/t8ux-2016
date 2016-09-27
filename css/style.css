@@ -101,12 +101,12 @@ header, footer, nav, section, article, hgroup, figure {
 \*------------------------------------*/
 /* Clearfix */
 /* line 6, scss/base/_global-classes.scss */
-.cf, .wrap, .l-two-col, .designers-on-duty .teammate, .hired-hands .teammate {
+.cf, .wrap, .l-two-col {
   *zoom: 1;
 }
 
 /* line 9, scss/base/_global-classes.scss */
-.cf:before, .wrap:before, .l-two-col:before, .designers-on-duty .teammate:before, .hired-hands .teammate:before, .cf:after, .wrap:after, .l-two-col:after, .designers-on-duty .teammate:after, .hired-hands .teammate:after {
+.cf:before, .wrap:before, .l-two-col:before, .cf:after, .wrap:after, .l-two-col:after {
   content: " ";
   /* 1 */
   display: table;
@@ -114,7 +114,7 @@ header, footer, nav, section, article, hgroup, figure {
 }
 
 /* line 14, scss/base/_global-classes.scss */
-.cf:after, .wrap:after, .l-two-col:after, .designers-on-duty .teammate:after, .hired-hands .teammate:after {
+.cf:after, .wrap:after, .l-two-col:after {
   clear: both;
 }
 
@@ -3343,9 +3343,9 @@ section.process-step a.downarrow {
 /* line 152, scss/templates/_about.scss */
 .designers-on-duty, .hired-hands {
   margin: 0;
-  padding: 64px 5%;
+  padding: 0;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 480px) {
   /* line 152, scss/templates/_about.scss */
   .designers-on-duty, .hired-hands {
     padding: 96px 36px 64px;
@@ -3378,119 +3378,110 @@ section.process-step a.downarrow {
 }
 /* line 184, scss/templates/_about.scss */
 .designers-on-duty .teammate, .hired-hands .teammate {
-  clear: both;
-  float: none;
-  margin: 32px 0;
-  position: relative;
+  width: 100%;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: column;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 480px) {
   /* line 184, scss/templates/_about.scss */
   .designers-on-duty .teammate, .hired-hands .teammate {
-    clear: none;
-    width: 66.66667%;
-    margin: 20px auto 32px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
   }
 }
-/* line 199, scss/templates/_about.scss */
+@media screen and (min-width: 720px) {
+  /* line 184, scss/templates/_about.scss */
+  .designers-on-duty .teammate, .hired-hands .teammate {
+    align-items: center;
+  }
+}
+/* line 200, scss/templates/_about.scss */
 .designers-on-duty .teammate > img, .hired-hands .teammate > img {
   display: block;
   height: auto;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
-  /* line 199, scss/templates/_about.scss */
+  /* line 200, scss/templates/_about.scss */
   .designers-on-duty .teammate > img, .hired-hands .teammate > img {
-    float: left;
+    width: 41.66667%;
   }
 }
-/* line 208, scss/templates/_about.scss */
-.designers-on-duty .teammate > img, .designers-on-duty .teammate .imagewrap, .hired-hands .teammate > img, .hired-hands .teammate .imagewrap {
-  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+@media screen and (min-width: 960px) {
+  /* line 200, scss/templates/_about.scss */
+  .designers-on-duty .teammate > img, .hired-hands .teammate > img {
+    width: 33.33333%;
+    margin-left: 8.33333%;
+  }
+}
+/* line 216, scss/templates/_about.scss */
+.designers-on-duty .teammate .deets, .hired-hands .teammate .deets {
+  padding: 16px 32px 0;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
-  /* line 213, scss/templates/_about.scss */
+  /* line 216, scss/templates/_about.scss */
   .designers-on-duty .teammate .deets, .hired-hands .teammate .deets {
-    float: left;
+    padding-left: 8.33333%;
+    width: 58.33333%;
   }
 }
-/* line 218, scss/templates/_about.scss */
+@media screen and (min-width: 960px) {
+  /* line 216, scss/templates/_about.scss */
+  .designers-on-duty .teammate .deets, .hired-hands .teammate .deets {
+    width: 50%;
+  }
+}
+/* line 229, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets h1, .hired-hands .teammate .deets h1 {
   font-size: 2.25em;
   line-height: 1.11111;
   margin-bottom: 4px;
   margin-left: -1px;
 }
-/* line 224, scss/templates/_about.scss */
+/* line 235, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets h4, .designers-on-duty .teammate .deets .title-card h1, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .section.cattag-dir .h4, .section.cattag-dir .designers-on-duty .teammate .deets .h4, .hired-hands .teammate .deets h4, .hired-hands .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .section.cattag-dir .h4, .section.cattag-dir .hired-hands .teammate .deets .h4 {
   font-size: 1em;
   line-height: 1.25;
   margin: 0;
 }
-/* line 228, scss/templates/_about.scss */
+/* line 239, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .sitelink, .designers-on-duty .teammate .deets .email, .hired-hands .teammate .deets .sitelink, .hired-hands .teammate .deets .email {
   color: #58595b;
   font-style: italic;
 }
-/* line 232, scss/templates/_about.scss */
+/* line 243, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets p, .hired-hands .teammate .deets p {
   margin-bottom: 4px;
 }
-/* line 235, scss/templates/_about.scss */
+/* line 246, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .nav-social, .hired-hands .teammate .deets .nav-social {
   font-size: .675em;
 }
-/* line 238, scss/templates/_about.scss */
+/* line 249, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .nav-social a, .hired-hands .teammate .deets .nav-social a {
   color: #777;
 }
-/* line 241, scss/templates/_about.scss */
+/* line 252, scss/templates/_about.scss */
 .designers-on-duty .teammate .deets .nav-social a:hover, .designers-on-duty .teammate .deets .nav-social a:focus, .hired-hands .teammate .deets .nav-social a:hover, .hired-hands .teammate .deets .nav-social a:focus {
   color: #E95740;
 }
 
-/* line 249, scss/templates/_about.scss */
+/* line 260, scss/templates/_about.scss */
 .designers-on-duty {
   background: #f4f0e9;
 }
-@media screen and (max-width: 480px) {
-  /* line 253, scss/templates/_about.scss */
-  .designers-on-duty .teammate {
-    margin-top: 64px;
-  }
-  /* line 257, scss/templates/_about.scss */
-  .designers-on-duty .teammate .deets {
-    position: absolute;
-    padding-top: 18px;
-    padding-left: 18px;
-    top: 0;
-  }
-}
-@media screen and (min-width: 480px) {
-  /* line 267, scss/templates/_about.scss */
-  .designers-on-duty .teammate > img {
-    width: 50%;
-  }
-  /* line 271, scss/templates/_about.scss */
-  .designers-on-duty .teammate .deets {
-    padding-left: 32px;
-  }
-}
-@media screen and (min-width: 480px) and (min-width: 480px) {
-  /* line 271, scss/templates/_about.scss */
-  .designers-on-duty .teammate .deets {
-    width: 50%;
-  }
-}
 
 @media screen and (max-width: 480px) {
-  /* line 284, scss/templates/_about.scss */
+  /* line 267, scss/templates/_about.scss */
   .hired-hands .teammate {
     padding: 0 36px;
     margin-top: 64px;
   }
 }
-/* line 291, scss/templates/_about.scss */
+/* line 274, scss/templates/_about.scss */
 .hired-hands .teammate > .imagewrap {
   width: 100%;
   padding-top: 100%;
@@ -3499,14 +3490,14 @@ section.process-step a.downarrow {
   position: relative;
 }
 @media screen and (min-width: 480px) {
-  /* line 291, scss/templates/_about.scss */
+  /* line 274, scss/templates/_about.scss */
   .hired-hands .teammate > .imagewrap {
     width: 33.333%;
     padding-top: 33.333%;
     float: left;
   }
 }
-/* line 306, scss/templates/_about.scss */
+/* line 289, scss/templates/_about.scss */
 .hired-hands .teammate > .imagewrap img {
   position: absolute;
   top: 50%;
@@ -3517,12 +3508,12 @@ section.process-step a.downarrow {
   width: 102%;
   height: auto;
 }
-/* line 317, scss/templates/_about.scss */
+/* line 300, scss/templates/_about.scss */
 .hired-hands .teammate .deets {
   padding-top: 12px;
 }
 @media screen and (min-width: 480px) {
-  /* line 317, scss/templates/_about.scss */
+  /* line 300, scss/templates/_about.scss */
   .hired-hands .teammate .deets {
     padding: 0 36px;
     margin-top: 10%;

@@ -152,9 +152,9 @@
 .designers-on-duty, .hired-hands {
 	margin:0;
 
-	padding:$padpx*4 5%;
+	padding:0;
 
-	@media screen and (min-width:$bp-med-2) {
+	@media screen and (min-width:$bp-small-3) {
 		padding: $padpx*6 36px $padpx*4;
 	}
 
@@ -182,37 +182,48 @@
 	}
 
 	.teammate {
-		clear:both;
-		float:none;
-		@extend .cf;
+	    width: 100%;
+		margin: 0 auto 100px;
+		display: flex;
+		flex-direction: column;
 
-		@media screen and (min-width:$bp-med-3) {
-			clear:none;
-			width:$col-8;
-			margin: 20px auto 32px;
+		@media screen and (min-width:$bp-small-3) {
+			flex-direction:row;
+			align-items: flex-start;
+			margin-top: 20px;
 		}
 
-		margin:$padpx*2 0;
-		position:relative;
-
+		@media screen and (min-width:$bp-med-2) {
+		    align-items: center;
+		}
 
 		> img {
 			display:block;
 			height:auto;
+			width:100%;
 
 			@media screen and (min-width:$bp-small-3) {
-				float:left;
+				width: $col-1*5;
+			}
+
+			@media screen and (min-width:$bp-med-3) {
+				width: $col-1*4;
+	    		margin-left: $col-1;
 			}
 
 		}
-		> img, .imagewrap {
-			-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
-			-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
-			box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
-		}
+
 		.deets {
+
+			padding:$padpx $padpx*2 0;
+			width: 100%;
+
 			@media screen and (min-width:$bp-small-3) {
-				float:left;
+				padding-left: $col-1;
+				width: $col-1*7;
+			}
+			@media screen and (min-width:$bp-med-3) {
+			    width: $col-1*6;
 			}
 
 			h1 {
@@ -249,34 +260,6 @@
 .designers-on-duty {
 
 	background:$creme;
-
-	.teammate {
-
-		@media screen and (max-width:$bp-small-3) {
-			margin-top:$padpx*4;
-			.deets {
-
-				position: absolute;
-				padding-top: 18px;
-				padding-left: 18px;
-				top: 0;
-			}
-		}
-
-		@media screen and (min-width:$bp-small-3) {
-			> img {
-				width:50%;
-
-			}
-			.deets {
-				padding-left: $padpx*2;
-
-				@media screen and (min-width:$bp-small-3) {
-					width: 50%;
-				}
-			}
-		}
-	}
 
 }
 .hired-hands {
