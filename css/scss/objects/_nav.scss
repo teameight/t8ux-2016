@@ -14,7 +14,7 @@
 	    max-height:300px;
 	}
 
-    @media all and (min-width: $bp-med-2) {
+    @media all and (min-width: $bp-med-3) {
     	display:none;
     }
 
@@ -32,7 +32,7 @@
 	@include transitions(max-height $duration $ease-cb);
     background: $yellow;
 
-	@media all and (min-width: $bp-med-2) {
+	@media all and (min-width: $bp-med-3) {
 		max-height:none;
     	background: transparent;
 	}
@@ -77,7 +77,7 @@
 			color: $red;
 		}
 
-		@media all and (min-width: $bp-med-2) {
+		@media all and (min-width: $bp-med-3) {
 			color: $creme;
 
 			&:hover, &:focus {
@@ -96,7 +96,7 @@
 	}
 
 
-	@media all and (min-width: $bp-med-2) {
+	@media all and (min-width: $bp-med-3) {
 		width:45%;
 		float: right;
 		text-align:right;
