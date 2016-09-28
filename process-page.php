@@ -58,6 +58,8 @@ get_header(); ?>
 					if($processlist->hasNext()) {
 						$next = $processlist->getInnerIterator()->current();
 						echo '<a class="downarrow" href="#'. $next .'">&darr;</a>';
+					} else {
+						echo '<a class="downarrow" href="#start">&darr;</a>';
 					}
 				?>
 			</section>
