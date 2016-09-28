@@ -208,6 +208,15 @@
 		$window.trigger('scroll');
 		lloader();
 
+		// Case Study animation
+		$('.cs-link .imgwrap').hover( function() {
+			console.log('hovered');
+			$(this).parent('.cs-link').addClass('active');
+		}, function() {
+			console.log('un-hovered');
+			$(this).parent('.cs-link').removeClass('active');
+		});
+
 		$('a.scroll').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			  var target = $(this.hash);

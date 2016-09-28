@@ -2644,13 +2644,13 @@ section.phead .pcont .text {
 }
 @media all and (min-width: 720px) {
   /* line 51, scss/objects/_article.scss */
-  .case-studies .case-study .cs-link:hover .imgwrap:after, .case-studies .case-study .cs-link:focus .imgwrap:after {
+  .case-studies .case-study .cs-link.active .imgwrap:after {
     width: 80%;
-    height: 80%;
+    height: 74%;
     opacity: 1;
   }
   /* line 57, scss/objects/_article.scss */
-  .case-studies .case-study .cs-link:hover .card .labels h4, .case-studies .case-study .cs-link:hover .card .labels .title-card h1, .title-card .case-studies .case-study .cs-link:hover .card .labels h1, .case-studies .case-study .cs-link:hover .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .cs-link:hover .card .labels .h4, .case-studies .case-study .cs-link:focus .card .labels h4, .case-studies .case-study .cs-link:focus .card .labels .title-card h1, .title-card .case-studies .case-study .cs-link:focus .card .labels h1, .case-studies .case-study .cs-link:focus .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .cs-link:focus .card .labels .h4 {
+  .case-studies .case-study .cs-link.active .card .labels h4, .case-studies .case-study .cs-link.active .card .labels .title-card h1, .title-card .case-studies .case-study .cs-link.active .card .labels h1, .case-studies .case-study .cs-link.active .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .cs-link.active .card .labels .h4 {
     width: 117.5%;
   }
 }

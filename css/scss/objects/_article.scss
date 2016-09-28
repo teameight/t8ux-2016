@@ -45,12 +45,12 @@
 			background:$teal;
 		}
 
-		&:hover, &:focus {
+		&.active {
 
 			@media all and (min-width:$bp-med-2){
 				.imgwrap:after {
 				    width: 80%;
-				    height: 80%;
+				    height: 74%;
 				    opacity: 1;
 				}
 
