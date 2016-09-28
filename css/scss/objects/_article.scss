@@ -45,11 +45,25 @@
 			background:$teal;
 		}
 
+		&:hover, &:focus {
+
+			@media all and (min-width:$bp-med-2){
+				.imgwrap:after {
+				    width: 80%;
+				    height: 80%;
+				    opacity: 1;
+				}
+
+				.card .labels h4 {								
+					width:117.5%;
+				}
+
+			}
+		}
+
 		.imgwrap {
 			position:relative;
 			width:100%;
-
-
 
 			img {
 				@include transitions(opacity $duration/2 $ease-cb);
@@ -60,18 +74,6 @@
 				position:absolute;
 				top:0;
 				left:0;
-			}
-
-			&:before {
-			    border-bottom: 2px solid $red;
-			    content: '';
-			    position: absolute;
-			    width: 0;
-			    height: 0;
-			    top: 66.6666%;
-			    left: 0;
-			    @include transitions(width $duration $ease-cb);
-
 			}
 
 			&:after {
@@ -91,15 +93,6 @@
 			&:hover, &:focus {
 				img:last-of-type:not(:only-of-type) {
 					opacity:0;
-				}
-
-				&:after {
-				    width: 80%;
-				    height: 80%;
-				    opacity: 1;
-				}
-				&:before {
-				    width: 10%;
 				}
 			}
 		}
@@ -170,10 +163,17 @@
 			}
 			h3 {
 				padding-bottom:.5em;
+				margin-top: 0;
 
 				&.subheading {
 					color:$gray;
 				}
+			}
+
+			h4 {
+				@include transitions(width $duration $ease-cb, margin $duration $ease-cb);
+				width:100%;
+				margin-left: 0;
 			}
 
 		}
@@ -233,6 +233,9 @@
 				    padding-left: 36px;
 				    padding-right: 0;
 				}
+				h4 {
+					float:right;
+				}
 			}
 			.card .title {
 
@@ -262,11 +265,6 @@
 				}
 			}
 
-			.imgwrap:before {	
-				left: inherit;
-				right: 0;
-				top: 66.8%;
-			}
 		}
 	}
 }

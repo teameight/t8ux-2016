@@ -2642,35 +2642,36 @@ section.phead .pcont .text {
     background: #22A09E;
   }
 }
-/* line 48, scss/objects/_article.scss */
+@media all and (min-width: 720px) {
+  /* line 51, scss/objects/_article.scss */
+  .case-studies .case-study .cs-link:hover .imgwrap:after, .case-studies .case-study .cs-link:focus .imgwrap:after {
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+  }
+  /* line 57, scss/objects/_article.scss */
+  .case-studies .case-study .cs-link:hover .card .labels h4, .case-studies .case-study .cs-link:hover .card .labels .title-card h1, .title-card .case-studies .case-study .cs-link:hover .card .labels h1, .case-studies .case-study .cs-link:hover .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .cs-link:hover .card .labels .h4, .case-studies .case-study .cs-link:focus .card .labels h4, .case-studies .case-study .cs-link:focus .card .labels .title-card h1, .title-card .case-studies .case-study .cs-link:focus .card .labels h1, .case-studies .case-study .cs-link:focus .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .cs-link:focus .card .labels .h4 {
+    width: 117.5%;
+  }
+}
+/* line 64, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap {
   position: relative;
   width: 100%;
 }
-/* line 54, scss/objects/_article.scss */
+/* line 68, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap img {
   transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: block;
 }
-/* line 58, scss/objects/_article.scss */
+/* line 72, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap img:last-of-type:not(:only-of-type) {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 65, scss/objects/_article.scss */
-.case-studies .case-study .cs-link .imgwrap:before {
-  border-bottom: 2px solid #E95740;
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 66.6666%;
-  left: 0;
-  transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-/* line 77, scss/objects/_article.scss */
+/* line 79, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap:after {
   border: 2px solid #E95740;
   content: '';
@@ -2683,27 +2684,17 @@ section.phead .pcont .text {
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), height 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 92, scss/objects/_article.scss */
+/* line 94, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap:hover img:last-of-type:not(:only-of-type), .case-studies .case-study .cs-link .imgwrap:focus img:last-of-type:not(:only-of-type) {
   opacity: 0;
 }
-/* line 96, scss/objects/_article.scss */
-.case-studies .case-study .cs-link .imgwrap:hover:after, .case-studies .case-study .cs-link .imgwrap:focus:after {
-  width: 80%;
-  height: 80%;
-  opacity: 1;
-}
-/* line 101, scss/objects/_article.scss */
-.case-studies .case-study .cs-link .imgwrap:hover:before, .case-studies .case-study .cs-link .imgwrap:focus:before {
-  width: 10%;
-}
 @media screen and (min-width: 720px) {
-  /* line 109, scss/objects/_article.scss */
+  /* line 102, scss/objects/_article.scss */
   .case-studies .case-study .cs-link .card.in-view .labels {
     margin-left: 8.33333%;
     width: 33.33333%;
   }
-  /* line 113, scss/objects/_article.scss */
+  /* line 106, scss/objects/_article.scss */
   .case-studies .case-study .cs-link .card.in-view .title {
     opacity: 1;
     height: 50%;
@@ -2712,18 +2703,18 @@ section.phead .pcont .text {
     transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
-/* line 125, scss/objects/_article.scss */
+/* line 118, scss/objects/_article.scss */
 .case-studies .case-study .card {
   padding: 32px 16px 0;
 }
 @media screen and (min-width: 720px) {
-  /* line 125, scss/objects/_article.scss */
+  /* line 118, scss/objects/_article.scss */
   .case-studies .case-study .card {
     padding: 0;
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 133, scss/objects/_article.scss */
+  /* line 126, scss/objects/_article.scss */
   .case-studies .case-study .card .title, .case-studies .case-study .card .labels {
     box-sizing: border-box;
     position: absolute;
@@ -2732,20 +2723,20 @@ section.phead .pcont .text {
     left: 0;
   }
 }
-/* line 143, scss/objects/_article.scss */
+/* line 136, scss/objects/_article.scss */
 .case-studies .case-study .card .labels {
   font-size: .825em;
   width: 100%;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 143, scss/objects/_article.scss */
+  /* line 136, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     width: 33.33333%;
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 143, scss/objects/_article.scss */
+  /* line 136, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     bottom: 50%;
     -webkit-transform: translate3d(0, 100%, 0);
@@ -2756,29 +2747,36 @@ section.phead .pcont .text {
   }
 }
 @media all and (min-width: 720px) and (max-width: 1024px) {
-  /* line 143, scss/objects/_article.scss */
+  /* line 136, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     margin-left: 8.33333%;
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 143, scss/objects/_article.scss */
+  /* line 136, scss/objects/_article.scss */
   .case-studies .case-study .card .labels {
     width: 25%;
     font-size: 1em;
   }
 }
-/* line 168, scss/objects/_article.scss */
+/* line 161, scss/objects/_article.scss */
 .case-studies .case-study .card .labels h3, .case-studies .case-study .card .labels #gform_1 #field_1_3 > label, #gform_1 .case-studies .case-study .card .labels #field_1_3 > label, .case-studies .case-study .card .labels h4, .case-studies .case-study .card .labels .title-card h1, .title-card .case-studies .case-study .card .labels h1, .case-studies .case-study .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .card .labels .h4 {
   padding-right: 36px;
 }
-/* line 171, scss/objects/_article.scss */
+/* line 164, scss/objects/_article.scss */
 .case-studies .case-study .card .labels h3, .case-studies .case-study .card .labels #gform_1 #field_1_3 > label, #gform_1 .case-studies .case-study .card .labels #field_1_3 > label {
   padding-bottom: .5em;
+  margin-top: 0;
 }
-/* line 174, scss/objects/_article.scss */
+/* line 168, scss/objects/_article.scss */
 .case-studies .case-study .card .labels h3.subheading, .case-studies .case-study .card .labels #gform_1 #field_1_3 > label.subheading, #gform_1 .case-studies .case-study .card .labels #field_1_3 > label.subheading {
   color: #58595b;
+}
+/* line 173, scss/objects/_article.scss */
+.case-studies .case-study .card .labels h4, .case-studies .case-study .card .labels .title-card h1, .title-card .case-studies .case-study .card .labels h1, .case-studies .case-study .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .card .labels .h4 {
+  transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1), margin 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  margin-left: 0;
 }
 /* line 181, scss/objects/_article.scss */
 .case-studies .case-study .card .title {
@@ -2839,7 +2837,11 @@ section.phead .pcont .text {
     padding-left: 36px;
     padding-right: 0;
   }
-  /* line 237, scss/objects/_article.scss */
+  /* line 236, scss/objects/_article.scss */
+  .case-studies .case-study:nth-child(odd) .card .labels h4, .case-studies .case-study:nth-child(odd) .card .labels .title-card h1, .title-card .case-studies .case-study:nth-child(odd) .card .labels h1, .case-studies .case-study:nth-child(odd) .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study:nth-child(odd) .card .labels .h4 {
+    float: right;
+  }
+  /* line 240, scss/objects/_article.scss */
   .case-studies .case-study:nth-child(odd) .card .title {
     right: 0;
     left: auto;
@@ -2847,28 +2849,22 @@ section.phead .pcont .text {
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 247, scss/objects/_article.scss */
+  /* line 250, scss/objects/_article.scss */
   .case-studies .case-study:nth-child(odd) .card .labels, .case-studies .case-study:nth-child(odd) .card .title {
     margin-right: 16.66667%;
   }
 }
-/* line 253, scss/objects/_article.scss */
+/* line 256, scss/objects/_article.scss */
 .case-studies .case-study:nth-child(odd) .cs-link {
   float: left;
 }
-/* line 257, scss/objects/_article.scss */
+/* line 260, scss/objects/_article.scss */
 .case-studies .case-study:nth-child(odd) .cs-link .card.in-view .labels {
   margin-right: 8.33333%;
 }
-/* line 260, scss/objects/_article.scss */
+/* line 263, scss/objects/_article.scss */
 .case-studies .case-study:nth-child(odd) .cs-link .card.in-view .title {
   margin-right: 8.33333%;
-}
-/* line 265, scss/objects/_article.scss */
-.case-studies .case-study:nth-child(odd) .cs-link .imgwrap:before {
-  left: inherit;
-  right: 0;
-  top: 66.8%;
 }
 
 /*------------------------------------*\
