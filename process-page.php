@@ -9,7 +9,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<section class="section introduction">
-			<article>
+			<article class="pcont entry-content wrap">
 				<?php the_content(); ?>
 			</article>
 		<a class="downarrow" href="#strategy">&darr;</a>

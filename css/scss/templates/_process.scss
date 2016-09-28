@@ -3,21 +3,28 @@
 \*------------------------------------*/
 
 section.introduction {
-	color:$red;
-	padding-top:100px;
+	padding-top: 100px;
+	text-align: center;
 
-	h2, h3, h4, h5 {
+	h1 {
+		@extend .delta;
 		color:$red;
 	}
 
-	h5 {
-		margin-bottom:4px;
-	}
+	p {
+		@extend .epsilon;
+		margin-bottom: 4px;
 
-	h4 + h5 {
-		margin-top:20px;
+		&:first-of-type {
+			margin-top: 16px;
+		}
+
+		&:last-of-type {
+			margin-bottom: 24px;
+		}
 	}
 }
+
 section	a.downarrow {
 	color:$red;
 	text-align: center;

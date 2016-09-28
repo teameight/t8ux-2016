@@ -362,7 +362,7 @@ h3, #gform_1 #field_1_3 > label, .gamma {
 }
 
 /* line 46, scss/base/_headings.scss */
-h4, .title-card h1, .section.cattag-dir .h4, .delta {
+h4, .title-card h1, .section.cattag-dir .h4, .delta, section.introduction h1 {
   font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 1.125em;
   line-height: 1.33333;
@@ -376,13 +376,13 @@ h4, .title-card h1, .section.cattag-dir .h4, .delta {
   color: #E95740;
 }
 /* line 58, scss/base/_headings.scss */
-h4.alt, .title-card h1.alt, .title-card section.phead .tcrd h1, section.phead .tcrd .title-card h1, .title-card section.process-step article h2, section.process-step article .title-card h2, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .title-card h1, .section.cattag-dir .alt.h4, .section.cattag-dir section.phead .tcrd h1.h4, section.phead .tcrd .section.cattag-dir h1.h4, .delta.alt, section.phead .tcrd h1.delta {
+h4.alt, .title-card h1.alt, .title-card section.phead .tcrd h1, section.phead .tcrd .title-card h1, .title-card section.process-step article h2, section.process-step article .title-card h2, .title-card .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets .title-card h1, .title-card .hired-hands .teammate .deets h1, .hired-hands .teammate .deets .title-card h1, .section.cattag-dir .alt.h4, .section.cattag-dir section.phead .tcrd h1.h4, section.phead .tcrd .section.cattag-dir h1.h4, .delta.alt, section.phead .tcrd h1.delta, section.phead .tcrd section.introduction h1, section.introduction section.phead .tcrd h1, section.introduction h1.alt, section.introduction section.process-step article h2, section.process-step article section.introduction h2, section.introduction .designers-on-duty .teammate .deets h1, .designers-on-duty .teammate .deets section.introduction h1, section.introduction .hired-hands .teammate .deets h1, .hired-hands .teammate .deets section.introduction h1 {
   border-bottom: 2px solid;
   margin-bottom: 14px;
 }
 
 /* line 64, scss/base/_headings.scss */
-h5, .epsilon {
+h5, .epsilon, section.introduction p {
   font-family: "MagallanesCond", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 1.6875em;
   line-height: 1.18519;
@@ -3064,23 +3064,27 @@ a.voidlink img {
 \*------------------------------------*/
 /* line 5, scss/templates/_process.scss */
 section.introduction {
-  color: #E95740;
   padding-top: 100px;
+  text-align: center;
 }
 /* line 9, scss/templates/_process.scss */
-section.introduction h2, section.introduction h3, section.introduction #gform_1 #field_1_3 > label, #gform_1 section.introduction #field_1_3 > label, section.introduction h4, section.introduction .title-card h1, .title-card section.introduction h1, section.introduction .section.cattag-dir .h4, .section.cattag-dir section.introduction .h4, section.introduction h5 {
+section.introduction h1 {
   color: #E95740;
 }
-/* line 13, scss/templates/_process.scss */
-section.introduction h5 {
+/* line 14, scss/templates/_process.scss */
+section.introduction p {
   margin-bottom: 4px;
 }
-/* line 17, scss/templates/_process.scss */
-section.introduction h4 + h5, section.introduction .title-card h1 + h5, .title-card section.introduction h1 + h5, section.introduction .section.cattag-dir .h4 + h5, .section.cattag-dir section.introduction .h4 + h5 {
-  margin-top: 20px;
+/* line 18, scss/templates/_process.scss */
+section.introduction p:first-of-type {
+  margin-top: 16px;
+}
+/* line 22, scss/templates/_process.scss */
+section.introduction p:last-of-type {
+  margin-bottom: 24px;
 }
 
-/* line 21, scss/templates/_process.scss */
+/* line 28, scss/templates/_process.scss */
 section a.downarrow {
   color: #E95740;
   text-align: center;
@@ -3088,41 +3092,41 @@ section a.downarrow {
   display: block;
 }
 
-/* line 29, scss/templates/_process.scss */
+/* line 36, scss/templates/_process.scss */
 section.process-step {
   background: #a1cebe;
   margin: 0;
   padding: 60px 32px;
 }
 @media all and (min-width: 720px) {
-  /* line 29, scss/templates/_process.scss */
+  /* line 36, scss/templates/_process.scss */
   section.process-step {
     padding: 0;
     height: 100vh;
   }
 }
-/* line 40, scss/templates/_process.scss */
+/* line 47, scss/templates/_process.scss */
 section.process-step:nth-child(even) {
   background: #22A09E;
   color: #f4f0e9;
 }
-/* line 45, scss/templates/_process.scss */
+/* line 52, scss/templates/_process.scss */
 section.process-step:nth-child(even) h1, section.process-step:nth-child(even) h2, section.process-step:nth-child(even) h23, section.process-step:nth-child(even) h4, section.process-step:nth-child(even) .title-card h1, .title-card section.process-step:nth-child(even) h1, section.process-step:nth-child(even) .section.cattag-dir .h4, .section.cattag-dir section.process-step:nth-child(even) .h4, section.process-step:nth-child(even) h5, section.process-step:nth-child(even) p > strong, section.process-step:nth-child(even) p > b, section.process-step:nth-child(even) article p {
   color: #f4f0e9;
 }
-/* line 49, scss/templates/_process.scss */
+/* line 56, scss/templates/_process.scss */
 section.process-step:nth-child(even) a.downarrow {
   color: #f4f0e9;
 }
-/* line 54, scss/templates/_process.scss */
+/* line 61, scss/templates/_process.scss */
 section.process-step:last-of-type {
   border-bottom: 40px solid #a1cebe;
 }
-/* line 58, scss/templates/_process.scss */
+/* line 65, scss/templates/_process.scss */
 section.process-step a.anchor {
   top: 0;
 }
-/* line 62, scss/templates/_process.scss */
+/* line 69, scss/templates/_process.scss */
 section.process-step .step-wrap {
   max-width: 1300px;
   margin: 0 auto;
@@ -3131,7 +3135,7 @@ section.process-step .step-wrap {
   flex-direction: column;
 }
 @media all and (min-width: 720px) {
-  /* line 62, scss/templates/_process.scss */
+  /* line 69, scss/templates/_process.scss */
   section.process-step .step-wrap {
     align-items: center;
     flex-direction: row;
@@ -3140,63 +3144,63 @@ section.process-step .step-wrap {
     position: relative;
   }
 }
-/* line 78, scss/templates/_process.scss */
+/* line 85, scss/templates/_process.scss */
 section.process-step .step-wrap > img {
   width: 100%;
   margin: 20px 0;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 78, scss/templates/_process.scss */
+  /* line 85, scss/templates/_process.scss */
   section.process-step .step-wrap > img {
     width: 50%;
   }
 }
 @media all and (min-width: 720px) {
-  /* line 78, scss/templates/_process.scss */
+  /* line 85, scss/templates/_process.scss */
   section.process-step .step-wrap > img {
     padding-right: 5%;
     margin: 36px 0 0;
   }
 }
-/* line 94, scss/templates/_process.scss */
+/* line 101, scss/templates/_process.scss */
 section.process-step article {
   width: 100%;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 94, scss/templates/_process.scss */
+  /* line 101, scss/templates/_process.scss */
   section.process-step article {
     width: 50%;
     padding-right: 16.66667%;
   }
 }
-/* line 98, scss/templates/_process.scss */
+/* line 105, scss/templates/_process.scss */
 section.process-step article h2 {
   line-height: 1;
 }
 @media all and (max-width: 720px) {
-  /* line 98, scss/templates/_process.scss */
+  /* line 105, scss/templates/_process.scss */
   section.process-step article h2 {
     font-size: 2.75em;
   }
 }
-/* line 107, scss/templates/_process.scss */
+/* line 114, scss/templates/_process.scss */
 section.process-step article p {
   font-size: 22px;
   line-height: 32px;
   color: #494a4c;
 }
-/* line 112, scss/templates/_process.scss */
+/* line 119, scss/templates/_process.scss */
 section.process-step article p strong, section.process-step article p b {
   color: #58595b;
 }
-/* line 118, scss/templates/_process.scss */
+/* line 125, scss/templates/_process.scss */
 section.process-step a.downarrow {
   margin-top: 32px;
 }
 @media all and (min-width: 720px) {
-  /* line 118, scss/templates/_process.scss */
+  /* line 125, scss/templates/_process.scss */
   section.process-step a.downarrow {
     margin-top: 0;
     position: absolute;
