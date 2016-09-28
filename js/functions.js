@@ -3,7 +3,7 @@
  *
  */
 
-( function( $ ) {	
+( function( $ ) {
 
 	//Cache reference to window and animation items
 	var $animation_elements = $('.animatable');
@@ -21,22 +21,22 @@
 	}
 
 	$window.on('scroll resize', view_checker);
-	
+
 	function view_checker() {
 
 
 		if (logobannerwrap.length > 0) {
 
-			screenstretch();  	
+			screenstretch();
 
 			homescrollheader();
 
 		} // end if .logo-banner-wrap
-	
+
 
 		if ($('img[data-srcset]').length > 0) {
 
-			setTimeout( lloader(), 5000);    
+			setTimeout( lloader(), 5000);
 
 		}
 
@@ -44,7 +44,7 @@
 
 			animate_in_view();
 
-		}	
+		}
 
 		if($header.hasClass('mobile-open') && !menuscroll){
 			mobilemenuhide();
@@ -56,7 +56,7 @@
 
 			var lbheight = logobannerwrap.height(),
 				hheight = 60;//$header.height();
-			
+
 			if($header.hasClass("above")){
 				$header.css("top", lbheight - hheight);
 			}
@@ -94,7 +94,7 @@
 			}
 		}
 
-		//console.log($( window ).scrollTop() +':scrolltop + lbheight:'+lbheight);	
+		//console.log($( window ).scrollTop() +':scrolltop + lbheight:'+lbheight);
 	}
 
 
@@ -135,7 +135,7 @@
 
 			$('img[data-srcset]').each( function(){
 				if(isSmallScreen && $(this).hasClass('no-mobile')){
-					
+
 					$(this).remove();
 
 				}else{
@@ -145,14 +145,14 @@
 					if(offset.top < wbottom + wheight*2){
 
 						imageload($(this));
-					
+
 					} else {
 						var imgwidth = $(this).attr('width')
 							, imgheight = $(this).attr('height');
 						$(this).css({
 							   'paddingTop' : (imgheight/imgwidth*100)+"%",
 							   'height' : '0'
-							})	
+							})
 					}
 				}
 			});
@@ -197,16 +197,16 @@
 		$header.removeClass('mobile-open');
 		$('.mobile-menu-toggle span').addClass('icon-menu').removeClass('icon-cancel');
 	}
-	
+
 
 	$(document).ready(function(){
 
 		$('body').addClass('loaded');
 
 		//$( "body" ).append( "<div class='hmarker' style='height:1px;width:100%;position:absolute;left:0;top:0;background:red;z-index: 500;'></div>" );
-		
+
 		$window.trigger('scroll');
-		lloader(); 
+		lloader();
 
 		$('a.scroll').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -226,20 +226,20 @@
 			$thisparent.toggleClass('open');
 		});
 
-		$(".gif-animate").hover(  
+		$(".gif-animate").hover(
 	      function()
 	        {
 	          var src = $(this).attr("src");
 	          $(this).fadeTo(300,0.3, function() {
 	            $(this).attr("src", src.replace(/\.png$/i, ".gif"));
-	          }).fadeTo(100,1);     
+	          }).fadeTo(100,1);
 	        },
 	        function()
 	        {
 	          var src = $(this).attr("src");
 	          $(this).fadeTo(300,0.3, function() {
 	            $(this).attr("src", src.replace(/\.gif$/i, ".png"));
-	          }).fadeTo(100,1); 
+	          }).fadeTo(100,1);
 	        });
 
 		// checkbox/textarea anims on about page

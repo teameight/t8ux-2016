@@ -54,7 +54,7 @@
 				    opacity: 1;
 				}
 
-				.card .labels h4 {								
+				.card .labels h4 {
 					width:117.5%;
 				}
 
@@ -68,7 +68,7 @@
 			img {
 				@include transitions(opacity $duration/2 $ease-cb);
 				display:block;
-			}	
+			}
 			img:last-of-type:not(:only-of-type) {
 				display:block;
 				position:absolute;
@@ -89,19 +89,19 @@
 			    @include transitions(opacity $duration $ease-cb, width $duration $ease-cb, height $duration $ease-cb);
 
 			}
-			
+
 			&:hover, &:focus {
 				img:last-of-type:not(:only-of-type) {
 					opacity:0;
 				}
 			}
 		}
-		
+
 		.card.in-view {
 			@media screen and (min-width:$bp-med-2){
 				.labels {
 					margin-left: $col-1;
-					width:$col-4;				
+					width:$col-4;
 				}
 				.title {
 					opacity:1;

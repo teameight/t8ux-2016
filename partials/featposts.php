@@ -8,8 +8,8 @@
 ?>
     <section class="section case-studies cf">
 	    <a class="anchor" name="featured"></a>
-		<?php 
-		$args = array( 
+		<?php
+		$args = array(
 			'posts_per_page' 	=> 4,
 			'category_name'		=> 'featured'
 		);
@@ -24,14 +24,7 @@
 		<article class="case-study cf">
 			<a class="cs-link" href="<?php the_permalink(); ?>">
 				<div class="imgwrap">
-				<?php  
-					
-					$f_image_2 = get_field('second_featured_image');
-					if($f_image_2) {
-						$size = "full";
-						 
-						teameight_images($f_image_2, $size, "no-mobile");
-					}
+				<?php
 
 					teameight_images(get_post_thumbnail_id(), 'large');
 
