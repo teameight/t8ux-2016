@@ -3,38 +3,52 @@
 \*------------------------------------*/
 
 .about-intro {
-	background:$teal;
+	background: $teal;
 
 	max-width:none;
 	margin: 58px 0 0;
 
-	padding:$padpx*3 5%;
+	padding: $padpx*3 5%;
 
 	@media screen and (min-width:$bp-med-2) {
-		padding:0;
+		padding: 0;
 	}
 
 	article {
 		padding: $padpx*2 0;
-		margin:0 auto;
-		text-align:center;
-		max-width:815px;
+		margin: 0 auto;
+		text-align: center;
+		max-width: 650px;
 
-		font-size:.75em;
+		font-size: .75em;
 
 		@media screen and (min-width:$bp-med-2) {
-			font-size:1em;
+			font-size: 1em;
 			padding: $padpx*8 0;
 		}
 
+	}
 
-		h3 {
-			color:$creme;
-			@include font-sizing(28,36);
+	h1 {
+		@extend .delta;
+		color: $creme;
+	}
+
+	p {
+		@extend .epsilon;
+		color: $creme;
+		margin-bottom: 4px;
+
+		&:first-of-type {
+			margin-top: 16px;
 		}
 
+		&:last-of-type {
+			margin-bottom: 24px;
+		}
 	}
 }
+
 .about-do {
 
 	padding:0;

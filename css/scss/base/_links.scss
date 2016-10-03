@@ -1,11 +1,10 @@
-/* Links */ 
+/* Links */
 a {
 	color: $gray-dk;
 	text-decoration: none;
 	outline: 0;
 	@include transitions(color $duration/2 $ease-cb, background-color $duration/2 $ease-cb);
 
-	
 	&:hover, &:focus {
 		//background-color: $mint;
 	}
@@ -48,9 +47,9 @@ a.button, .button {
 
     &:before {
     	background: linear-gradient(90deg, $mint 33.333%, $creme 33.333%, $creme 66.666%, $mint 0);
-		background-size: 3px 100%;
-		background-position:center;
-		content: '';    
+			background-size: 3px 100%;
+			background-position:center;
+			content: '';
 	    display: block;
 	    height: 100%;
 	    position: absolute;
@@ -58,7 +57,7 @@ a.button, .button {
 	    opacity: 0;
 	    width: 100%;
 	    z-index: -1;
-	
+
 		@include transitions(opacity $duration $ease-cb);
 
     }
@@ -81,6 +80,9 @@ a.button, .button {
 		background-color:$mint;
 	}
 }
-.text a, .pcont a, .entry-content a {
+.text a,
+.pcont a,
+.entry-content a,
+.teammate .deets p a {
 	@extend %smart-underline;
 }
