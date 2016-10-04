@@ -34,7 +34,7 @@
             color: $yellow;
         }
 	}
-	
+
 	.left,
 	.right {
 		padding: 4em $padpx 2em;
@@ -89,6 +89,17 @@
 
 	.nav-social {
 		padding: $padpx/2 0;
+
+		svg {
+			width: 32px;
+			height: 32px;
+			fill: $creme;
+			transition: fill 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+			&:hover {
+				fill: $yellow;
+			}
+		}
 	}
 
 	.bott {
@@ -96,7 +107,7 @@
 
 	    .copyright {
 		    padding: $padpx $padpx 0;
-			
+
 			@media all and (min-width: $bp-med-2) {
 			    text-align: left;
 			    float:left;
@@ -104,11 +115,11 @@
 	    }
 	    .email {
 		    padding: $padpx $padpx 0;
-			
+
 			@media all and (min-width: $bp-med-2) {
 			    text-align: right;
 			    float:right;
 		    }
-	    }	
-	}	
+	    }
+	}
 }

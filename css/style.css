@@ -1601,27 +1601,38 @@ td {
 .footer .nav-social {
   padding: 8px 0;
 }
-/* line 94, scss/objects/_footer.scss */
+/* line 93, scss/objects/_footer.scss */
+.footer .nav-social svg {
+  width: 32px;
+  height: 32px;
+  fill: #f4f0e9;
+  transition: fill 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 99, scss/objects/_footer.scss */
+.footer .nav-social svg:hover {
+  fill: #f1d23a;
+}
+/* line 105, scss/objects/_footer.scss */
 .footer .bott {
   border-top: 2px solid #f4f0e9;
 }
-/* line 97, scss/objects/_footer.scss */
+/* line 108, scss/objects/_footer.scss */
 .footer .bott .copyright {
   padding: 16px 16px 0;
 }
 @media all and (min-width: 720px) {
-  /* line 97, scss/objects/_footer.scss */
+  /* line 108, scss/objects/_footer.scss */
   .footer .bott .copyright {
     text-align: left;
     float: left;
   }
 }
-/* line 105, scss/objects/_footer.scss */
+/* line 116, scss/objects/_footer.scss */
 .footer .bott .email {
   padding: 16px 16px 0;
 }
 @media all and (min-width: 720px) {
-  /* line 105, scss/objects/_footer.scss */
+  /* line 116, scss/objects/_footer.scss */
   .footer .bott .email {
     text-align: right;
     float: right;

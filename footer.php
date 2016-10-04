@@ -12,11 +12,26 @@
 			<div class="left">
 				<h4>Lurk Us</h4>
 				<ul class="nav-social">
-					<li><a href="https://www.instagram.com/shoutforthings/" class="instagram"><span class="icon-instagram"></span></a></li>
-					<li><a href="https://www.facebook.com/teameightrva" class="facebook"><span class="icon-facebook"></span></a></li>
-					<li><a href="http://www.linkedin.com/company/team-eight-llc" class="linkedin"><span class="icon-linkedin"></span></a></li>
-					<li><a href="https://twitter.com/shoutforthings" class="twitter"><span class="icon-twitter"></span></a></li>
-					<li><a href="http://github.com/teameight" class="github"><span class="icon-github"></span></a></li>
+					<li><a href="https://www.instagram.com/shoutforthings/" class="instagram">
+						<svg class="social-icon">
+							<use xlink:href="#instagram-icon"></use>
+						</svg>
+					</a></li>
+					<li><a href="https://www.facebook.com/teameightrva" class="facebook">
+						<svg class="social-icon">
+							<use xlink:href="#facebook-icon"></use>
+						</svg>
+					</a></li>
+					<li><a href="http://www.linkedin.com/company/team-eight-llc" class="linkedin">
+						<svg class="social-icon">
+							<use xlink:href="#linkedin-icon"></use>
+						</svg>
+					</a></li>
+					<li><a href="https://twitter.com/shoutforthings" class="twitter">
+						<svg class="social-icon">
+							<use xlink:href="#twitter-icon"></use>
+						</svg>
+					</a></li>
 				</ul>
 			</div>
 			<div class="right">
