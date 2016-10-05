@@ -22,7 +22,7 @@
 
 .mobile-open:not(.below) .mobile-menu-toggle {
     background: $red;
-    border-bottom: 2px solid $creme;
+    //border-bottom: 2px solid $creme;
 }
 
 .menu-primary-nav-container {
@@ -34,7 +34,9 @@
 
 	@media all and (min-width: $bp-med-3) {
 		max-height:none;
-    	background: transparent;
+		background: transparent;
+		width: 80%;
+		float: right;
 	}
 
 	.mobile-open & {
@@ -44,7 +46,7 @@
 
 .t8-home-link {
 	display: inline-block;
-	padding: 12px 0 16px 0;
+	padding: 16px 0 16px 18px;
 	@include font-2-style();
 	text-transform: uppercase;
 	font-weight: 600;
@@ -56,20 +58,25 @@
 	&:hover {
 		color: $gray-dk;
 	}
+
+	@media screen and (min-width: $bp-med-3) {
+		padding: 11px 0 16px;
+	}
 }
 
 .nav-menu {
-	text-align:center;
+	text-align: center;
 	clear: none;
-	width:100%;
-	padding-bottom:24px;
-	overflow:hidden;
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	overflow: hidden;
 
 	a {
 		display: block;
 		padding: 12px 0 16px 0;
 		@include font-2-style();
-		font-size:0.75em;
+		font-size: 0.75em;
 
 		color: $gray;
 
@@ -100,7 +107,7 @@
 		width:45%;
 		float: right;
 		text-align:right;
-
+		padding-top: 0;
 		padding-bottom:0;
 
 		li {
