@@ -435,13 +435,28 @@ section.phead {
 
 	h5 {
 		margin: 0 0 10px 0;
+		text-align: center;
 
-		a {
+		a,
+		.cta-arrow {
 			color: $red;
+			fill: $red;
 
 			&:hover {
 				color: darken( $red, 20% );
+
+				.cta-arrow {
+					fill: darken( $red, 20% );
+				}
 			}
 		}
 	}
+}
+
+.cta-arrow {
+	transform: rotate(270deg);
+	height: 58px;
+	width: 14px;
+	vertical-align: middle;
+	margin-left: 15px;
 }

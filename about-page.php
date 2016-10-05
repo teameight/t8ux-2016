@@ -80,16 +80,12 @@ get_header(); ?>
 				}
 			wp_reset_postdata(); ?>
 
-	<?php if ( $cta = get_field('next_page_cta' ) ) { ?>
-
 		<section class="section cf next-page-cta">
 			<a class="anchor" name="start"></a>
 			<article class="cf">
-				<?php echo $cta; ?>
+				<h5>Ready to <a href="<?php echo home_url('/contact/'); ?>">say hey? <svg class="cta-arrow"><use xlink:href="#arrow-icon"></use></svg></a></h5>
 			</article>
 		</section>
-
-	<?php } // end next_page_cta ?>
 
 <?php endwhile; ?>
 

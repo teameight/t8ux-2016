@@ -21,16 +21,12 @@ get_header(); ?>
 
 	<?php get_template_part( 'partials/featposts' ); ?>
 
-	<?php if ( $cta = get_field('next_page_cta' ) ) { ?>
-
 		<section class="section cf next-page-cta">
 			<a class="anchor" name="start"></a>
 			<article class="cf">
-				<?php echo $cta; ?>
+				<h5>Learn more about our <a href="<?php echo home_url('/process/'); ?>">process. <svg class="cta-arrow"><use xlink:href="#arrow-icon"></use></svg></a></h5>
 			</article>
 		</section>
-
-	<?php } // end next_page_cta ?>
 
 <?php endwhile; ?>
 

@@ -27,14 +27,8 @@
 
 	<svg style="display: none;">
 		<symbol id="arrow-icon" viewBox="0 0 14 40">
-			<g fill="none">
-				<g fill="#000000">
-					<g transform="translate(0 -9.25)">
-						<polygon points="7 36.1 0 32 7 49.3 14 32"/>
-						<polygon points="6 36.4 8 36.4 8 0 6 0"/>
-					</g>
-				</g>
-			</g>
+			<polygon points="7 36.1 0 32 7 49.3 14 32"/>
+			<polygon points="6 36.4 8 36.4 8 0 6 0"/>
 		</symbol>
 
 		<symbol id="dribbble-icon" viewBox="0 0 32 32">
