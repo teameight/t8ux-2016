@@ -54,6 +54,7 @@
 	font-size: .845em;
 	color: #e5e0ce;
 	position: absolute;
+	transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	&:hover {
 		color: $gray-dk;
@@ -61,6 +62,15 @@
 
 	@media screen and (min-width: $bp-med-3) {
 		padding: 11px 0 16px;
+	}
+
+	// specific to home page
+	.home & {
+		display: none;
+	}
+
+	.home .below & {
+		display: inline-block;
 	}
 }
 
@@ -118,7 +128,6 @@
 			border: 0;
 			padding-left:2em;
 		}
-		
 	}
 }
 
