@@ -2628,6 +2628,7 @@ section.phead .pcont .text {
   width: 14px;
   vertical-align: middle;
   margin-left: 15px;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* line 2, scss/objects/_article.scss */
@@ -3665,51 +3666,51 @@ section.process-step a.downarrow {
   background: linear-gradient(to right, #f4f0e9 50%, #a1cebe 50%);
 }
 @media screen and (min-width: 720px) {
-  /* line 13, scss/templates/_contact.scss */
+  /* line 11, scss/templates/_contact.scss */
   .contact .wrap {
     display: flex;
     align-items: stretch;
     padding: 0;
   }
 }
-/* line 21, scss/templates/_contact.scss */
+/* line 18, scss/templates/_contact.scss */
 .contact .wrap > div {
   padding: 48px 5%;
 }
 @media screen and (min-width: 720px) {
-  /* line 21, scss/templates/_contact.scss */
+  /* line 18, scss/templates/_contact.scss */
   .contact .wrap > div {
     padding: 80px 0;
   }
 }
-/* line 29, scss/templates/_contact.scss */
+/* line 25, scss/templates/_contact.scss */
 .contact .wrap > div h4, .contact .wrap > div .title-card h1, .title-card .contact .wrap > div h1, .contact .wrap > div .section.cattag-dir .h4, .section.cattag-dir .contact .wrap > div .h4 {
   position: relative;
   font-size: 1em;
   line-height: 1.5;
 }
-/* line 33, scss/templates/_contact.scss */
+/* line 29, scss/templates/_contact.scss */
 .contact .wrap > div h4 em, .contact .wrap > div .title-card h1 em, .title-card .contact .wrap > div h1 em, .contact .wrap > div .section.cattag-dir .h4 em, .section.cattag-dir .contact .wrap > div .h4 em {
   font-style: normal;
   text-decoration: underline;
 }
-/* line 37, scss/templates/_contact.scss */
+/* line 33, scss/templates/_contact.scss */
 .contact .wrap > div h4 a, .contact .wrap > div .title-card h1 a, .title-card .contact .wrap > div h1 a, .contact .wrap > div .section.cattag-dir .h4 a, .section.cattag-dir .contact .wrap > div .h4 a {
   color: #22A09E;
   padding-top: 8px;
   text-transform: none;
 }
-/* line 42, scss/templates/_contact.scss */
+/* line 38, scss/templates/_contact.scss */
 .contact .wrap > div h4 a:hover, .contact .wrap > div .title-card h1 a:hover, .title-card .contact .wrap > div h1 a:hover, .contact .wrap > div .section.cattag-dir .h4 a:hover, .section.cattag-dir .contact .wrap > div .h4 a:hover, .contact .wrap > div h4 a:active, .contact .wrap > div .title-card h1 a:active, .title-card .contact .wrap > div h1 a:active, .contact .wrap > div .section.cattag-dir .h4 a:active, .section.cattag-dir .contact .wrap > div .h4 a:active {
   color: #E95740;
 }
-/* line 49, scss/templates/_contact.scss */
+/* line 45, scss/templates/_contact.scss */
 .contact .wrap .say-hay {
   background: #f4f0e9;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 49, scss/templates/_contact.scss */
+  /* line 45, scss/templates/_contact.scss */
   .contact .wrap .say-hay {
     width: 58.33333%;
     padding-left: 8.33333%;
@@ -3717,20 +3718,20 @@ section.process-step a.downarrow {
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 57, scss/templates/_contact.scss */
+  /* line 53, scss/templates/_contact.scss */
   .contact .wrap .say-hay h3:after, .contact .wrap .say-hay #gform_1 #field_1_3 > label:after, #gform_1 .contact .wrap .say-hay #field_1_3 > label:after {
-    content: "-->";
+    content: url("../SVG/arrow.svg");
     position: absolute;
-    right: -38%;
-    top: 11px;
-    width: 20%;
-    text-align: right;
-    font-size: 16px;
+    right: -36%;
+    width: 14px;
+    transform: rotate(270deg);
     line-height: 24px;
-    color: #E95740;
-    font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   }
-  /* line 69, scss/templates/_contact.scss */
+  /* line 61, scss/templates/_contact.scss */
+  .contact .wrap .say-hay h3:after #arrow-line, .contact .wrap .say-hay #gform_1 #field_1_3 > label:after #arrow-line, #gform_1 .contact .wrap .say-hay #field_1_3 > label:after #arrow-line {
+    fill: blue;
+  }
+  /* line 66, scss/templates/_contact.scss */
   .contact .wrap .say-hay h3:before, .contact .wrap .say-hay #gform_1 #field_1_3 > label:before, #gform_1 .contact .wrap .say-hay #field_1_3 > label:before {
     content: "";
     position: absolute;
@@ -3742,20 +3743,20 @@ section.process-step a.downarrow {
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 80, scss/templates/_contact.scss */
+  /* line 77, scss/templates/_contact.scss */
   .contact .wrap .say-hay h3:before, .contact .wrap .say-hay #gform_1 #field_1_3 > label:before, #gform_1 .contact .wrap .say-hay #field_1_3 > label:before {
     right: -32%;
     width: 90%;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 86, scss/templates/_contact.scss */
+  /* line 83, scss/templates/_contact.scss */
   .contact .wrap .say-hay h3:before, .contact .wrap .say-hay #gform_1 #field_1_3 > label:before, #gform_1 .contact .wrap .say-hay #field_1_3 > label:before {
     right: -33.75%;
     width: 100%;
   }
 }
-/* line 91, scss/templates/_contact.scss */
+/* line 88, scss/templates/_contact.scss */
 .contact .wrap .say-hay h3, .contact .wrap .say-hay #gform_1 #field_1_3 > label, #gform_1 .contact .wrap .say-hay #field_1_3 > label {
   position: relative;
   color: #E95740;
@@ -3763,25 +3764,25 @@ section.process-step a.downarrow {
   padding-right: 1em;
   margin-bottom: 0;
 }
-/* line 101, scss/templates/_contact.scss */
+/* line 98, scss/templates/_contact.scss */
 .contact .wrap .contact-form {
   background: #a1cebe;
   box-sizing: border-box;
 }
 @media all and (min-width: 720px) {
-  /* line 101, scss/templates/_contact.scss */
+  /* line 98, scss/templates/_contact.scss */
   .contact .wrap .contact-form {
     width: 41.66667%;
     padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
 }
-/* line 106, scss/templates/_contact.scss */
+/* line 103, scss/templates/_contact.scss */
 .contact .wrap .contact-form h4, .contact .wrap .contact-form .title-card h1, .title-card .contact .wrap .contact-form h1, .contact .wrap .contact-form .section.cattag-dir .h4, .section.cattag-dir .contact .wrap .contact-form .h4 {
   margin-top: 15px;
 }
 
-/* line 114, scss/templates/_contact.scss */
+/* line 111, scss/templates/_contact.scss */
 .acf-map {
   width: 100%;
   height: 300px;

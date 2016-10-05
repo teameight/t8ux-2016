@@ -15,7 +15,7 @@ get_header(); ?>
 		    	<?php the_content(); ?>
 		    	<?php 
 					$location = get_field('map');
-					 
+
 					if( !empty($location) ):
 				?>
 				<div class="acf-map">

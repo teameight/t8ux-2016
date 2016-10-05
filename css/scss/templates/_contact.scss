@@ -3,15 +3,12 @@
 \*------------------------------------*/
 
 .contact {
-	
 	padding:0;
 	margin-top:58px;
 	margin-bottom: 0;
-	
 	background: linear-gradient(to right, $creme 50%, $mint 50%);
 
 	.wrap {
-		
 		@media screen and (min-width:$bp-med-2) {
 			display: flex;
 		    align-items: stretch;
@@ -20,12 +17,11 @@
 
 		> div {
 			padding:$padpx*3 5%;
-	
+
 			@media screen and (min-width:$bp-med-2) {
 				padding:$padpx*5 0;
 			}
 
-	
 			h4 {
 				position:relative;
 				@include font-sizing(16,24);
@@ -55,17 +51,18 @@
 
 			@media screen and (min-width:$bp-med-2) {
 				h3:after {
-					content: "-->";
-				    position: absolute;
-					right: -38%;
-					top: 11px;
-					width: 20%;
-					text-align: right;
-					font-size: 16px;
+					content: url('../SVG/arrow.svg');
+			    position: absolute;
+					right: -36%;
+					width: 14px;
+					transform: rotate(270deg);
 					line-height: 24px;
-				    color:$red;
-				    font-family:$font-secondary;
+
+					#arrow-line {
+						fill: blue;
+					}
 				}
+
 				h3:before {
 					content:"";
 					position: absolute;
