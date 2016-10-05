@@ -492,6 +492,12 @@ abbr {
   cursor: help;
 }
 
+/* line 53, scss/base/_text.scss */
+::selection {
+  color: #231f20;
+  background: #f1d23a;
+}
+
 /* line 1, scss/base/_lists.scss */
 #content ol, #content ul {
   list-style: none;

@@ -49,3 +49,8 @@ abbr {
     border-bottom: 1px dotted $gray;
     cursor: help;
 }
+
+::selection {
+    color:$gray-dk;
+    background:$yellow;
+}
