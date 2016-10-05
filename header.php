@@ -27,8 +27,8 @@
 
 	<svg style="display: none;">
 		<symbol id="arrow-icon" viewBox="0 0 14 40">
-			<polygon points="7 36.1 0 32 7 49.3 14 32"/>
-			<polygon points="6 36.4 8 36.4 8 0 6 0"/>
+			<polygon id="arrow-line" points="7 36.1 0 32 7 49.3 14 32"/>
+			<polygon id="arrow-point" points="6 36.4 8 36.4 8 0 6 0"/>
 		</symbol>
 
 		<symbol id="dribbble-icon" viewBox="0 0 32 32">
