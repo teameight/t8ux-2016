@@ -21,6 +21,10 @@
     position: relative;
     max-width:$max-width;
     @extend .cf;
+
+    .single & {
+        max-width: none;
+    }
 }
 /* Completely remove from the flow and screen readers. */
 .is-hidden {

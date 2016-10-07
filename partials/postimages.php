@@ -15,8 +15,9 @@
 			
 			teameight_images($attachment_id, $size, $class);
 		?>
+
 	<?php elseif(get_row_layout() == "image_and_text"): ?>
-	<section class="imgdesc">
+	<section class="imgdesc img-<?php echo (get_sub_field('image_side') ?: 'left'); ?>">
 		<?php  
 			$attachment_id = get_sub_field('image');
 			$size = "full";
@@ -28,6 +29,24 @@
 			<?php the_sub_field('text'); ?>
 		</div>
 	</section>	
+
+	<?php elseif(get_row_layout() == "image_and_text_text"): ?>
+	<section class="imgdesc imgtexttext">
+		<?php  
+			$attachment_id = get_sub_field('image');
+			$size = "full";
+			$class = get_sub_field('image_class');
+			 
+			teameight_images($attachment_id, $size, $class);
+		?>
+		<div class="text">
+			<?php the_sub_field('text'); ?>
+		</div>
+		<div class="text">
+			<?php the_sub_field('text_2'); ?>
+		</div>
+	</section>	
+
 	<?php elseif(get_row_layout() == "section_header"): ?>
 	<section class="sechead">
 		<header>
@@ -38,11 +57,13 @@
 			<?php the_sub_field('intro_content'); ?>
 		</div>
 	</section>	
+
 	<?php elseif(get_row_layout() == "text_only"): ?>
 		<?php $class = get_sub_field('html_class'); ?>
 	<section class="freeform <?php echo $class; ?>">
 		<?php the_sub_field('text'); ?>
 	</section>
+
 	<?php elseif( get_row_layout() == "row2" || get_row_layout() == "row3" ): ?>
 	<?php 
 		$row = ( get_row_layout() == "row2" ? 2 : 3 ); 

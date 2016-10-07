@@ -154,11 +154,15 @@ add_action('init', 'create_teammates_teameight'); // Add our Custom Post Type
  */
 function teameight_singles_images($att_id, $size, $class) {
 
-    if($class == "web-page"){
-        echo "<div class='web-page-head'><span></span><span></span><span></span></div>";
-    }
+    $image = wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 
-    echo wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
+    if($class == "web-page"){
+        echo "<div class='web-page'><div class='web-page-head'><span></span><span></span><span></span></div>";
+        echo $image;
+        echo "</div>";
+    } else {
+        echo $image;
+    }
 
 }
 
@@ -169,8 +173,10 @@ function teameight_singles_images($att_id, $size, $class) {
  */
 function teameight_images($attachment_id, $size, $class, $lload = true) {
 
-    if($class == "web-page"){
-        echo "<div class='web-page-head'><span></span><span></span><span></span></div>";
+    $webpage = false;
+    if (strpos($class, 'web-page') !== false) {
+        $webpage = true;
+        echo "<div class='web-page-wrap'><div class='".$class."'>";
     }
     $html = '';
     $image = wp_get_attachment_image_src($attachment_id, $size, $icon);
@@ -237,6 +243,10 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
     }
  
     echo $html;
+
+    if($webpage){
+        echo "</div></div>";
+    }
 
     // echo wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 

@@ -8,6 +8,7 @@
 	}
 
 }
+
 .section.cattag-dir {
 	margin:44px auto 0;
 
@@ -121,34 +122,34 @@
 section.phead {
 	width:100%;
     background-color:$creme-dk;
-    margin-bottom: $padpx*5;
-    margin-top: 56px;
+    margin-top: 48px;
 
 	@media all and (min-width: $bp-med-3) {
 		display: flex;
 	    align-items: stretch;
-	}
-
+	}	
+	
 	/* Post Title */
 	.tcrd {
 		background: $mint;
 		position:relative;
 
 		@media all and (max-width: $bp-large) {
-			font-size:.75em;
+			font-size:.825em;
 		}
 
 		h1 {
 
 			@extend .alt;
-			padding: $padpx*6 48px .125em;
+			padding: $padpx*4 48px .125em;
 			line-height: 1;
+			font-size:3.25em;
 		
 		}
 
 		h5 {
 		    color: $gray;
-		    @include font-sizing(26,32);
+		    @include font-sizing(22,32);
 			padding: 0 48px 1em;
 		}
 
@@ -160,6 +161,10 @@ section.phead {
 		@media all and (min-width: $bp-med-3) {
 			width:$col-1*5;
 			box-sizing:border-box;
+
+			display: flex;
+	    	flex-direction: column;
+	    	justify-content: center;
 
 			&:before {
 				display:none!important;
@@ -174,8 +179,7 @@ section.phead {
 				margin-bottom:-.225em;
 				width:100%;
 				padding-right:10%;
-				position:absolute;
-				bottom:50%;
+				position:relative;
 				text-align:right;
 				right:0;
 				z-index: 1;
@@ -195,10 +199,8 @@ section.phead {
 
 			h5 {
 			    text-align: right;
-			    position: absolute;
-			    top: 50%;
 			    width: 100%;
-			    padding: 12px 10% 0;
+			    padding: 12px 10% $padpx*5;
 			}
 		}
 
@@ -237,10 +239,6 @@ section.phead {
 		}
 
 	}
-}
-
-.single .wrap section, .single .wrap > img {
-	margin-bottom:$padpx*4;
 }
 
 /* Team */

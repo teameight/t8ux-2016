@@ -54,3 +54,19 @@ abbr {
     color:$gray-dk;
     background:$yellow;
 }
+
+.single {
+
+    h4 {
+        font-size: 1em;
+        margin-top: 32px;
+    }
+
+    h4 + h5 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+
+
+}
