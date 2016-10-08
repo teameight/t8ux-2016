@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'teameight_setup' );
  */
 function teameight_scripts_styles() {
 
-    $version = '2016-09-14';
+    $version = '2016-10-08';
 
     // Loads JavaScript file with functionality specific to Team Eight.
     wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $version, true );
