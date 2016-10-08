@@ -3352,16 +3352,16 @@ section.process-step {
   }
 }
 /* line 89, scss/templates/_process.scss */
-section.process-step:nth-child(even) {
+section.process-step:nth-child(odd) {
   background: #22A09E;
   color: #f4f0e9;
 }
 /* line 94, scss/templates/_process.scss */
-section.process-step:nth-child(even) h1, section.process-step:nth-child(even) h2, section.process-step:nth-child(even) h23, section.process-step:nth-child(even) h4, section.process-step:nth-child(even) .title-card h1, .title-card section.process-step:nth-child(even) h1, section.process-step:nth-child(even) .section.cattag-dir .h4, .section.cattag-dir section.process-step:nth-child(even) .h4, section.process-step:nth-child(even) h5, section.process-step:nth-child(even) p > strong, section.process-step:nth-child(even) p > b, section.process-step:nth-child(even) article p {
+section.process-step:nth-child(odd) h1, section.process-step:nth-child(odd) h2, section.process-step:nth-child(odd) h23, section.process-step:nth-child(odd) h4, section.process-step:nth-child(odd) .title-card h1, .title-card section.process-step:nth-child(odd) h1, section.process-step:nth-child(odd) .section.cattag-dir .h4, .section.cattag-dir section.process-step:nth-child(odd) .h4, section.process-step:nth-child(odd) h5, section.process-step:nth-child(odd) p > strong, section.process-step:nth-child(odd) p > b, section.process-step:nth-child(odd) article p {
   color: #f4f0e9;
 }
 /* line 98, scss/templates/_process.scss */
-section.process-step:nth-child(even) .downarrow-icon {
+section.process-step:nth-child(odd) .downarrow-icon {
   fill: #f4f0e9;
 }
 /* line 103, scss/templates/_process.scss */
