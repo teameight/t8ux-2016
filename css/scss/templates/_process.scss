@@ -86,7 +86,7 @@ section.process-step {
 		height:100vh;
 	}
 
-	&:nth-child(odd) {
+	&:nth-child(even) {
 		background:$teal;
 
 		color:$creme;
