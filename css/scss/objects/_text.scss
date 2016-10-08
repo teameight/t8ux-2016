@@ -96,6 +96,14 @@
 	}
 }
 
+.captionwrap p {
+    font-style: italic;
+    text-align: right;
+    margin: 12px 1.5em 0;
+    font-size: 16px;
+    color:$gray-dk-2;
+}
+
 .single section ul {
 
     font-family: $font-tertiary;

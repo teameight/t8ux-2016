@@ -133,7 +133,7 @@
 			align-items: center;
 		}
 		
-		> img {
+		> img, > .captionwrap {
 			width:100%;
 			height:auto;
 			
@@ -154,6 +154,7 @@
 
 		@media all and (min-width: $bp-med-3) {
 			width:$col-1*6;
+			padding-right: 0;
 		}
 		
 		@media all and (min-width: $bp-full) {
@@ -165,6 +166,11 @@
 
 		@media all and (min-width: $bp-med-3) {
 			flex-direction: row-reverse;
+
+			.text {
+				padding-right: 80px;
+				padding-left: 0;
+			}
 		}
 	
 	}
@@ -258,9 +264,9 @@ section .wrap > .web-page-wrap {
 
 .web-page-wrap {
     width: 100%;
-    border: 2px solid $grey-light;
+    border: 2px solid #ccc;
     border-radius: 3px;
-    background: $gray-light-4;
+    background: #ddd;
     padding-top: 20px;
     padding-bottom: 1px;
     position: relative;
@@ -268,7 +274,7 @@ section .wrap > .web-page-wrap {
     &:before, &:after{
     	width: 9px;
 	    height:9px;
-	    border: 2px solid $grey-light;
+	    border: 2px solid #ccc;
 	    display: block;
 	    position: absolute;
 	    top: 1px;

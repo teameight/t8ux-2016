@@ -174,13 +174,11 @@ function teameight_singles_images($att_id, $size, $class) {
 function teameight_images($attachment_id, $size, $class, $lload = true) {
 
     $webpage = false;
-    if (strpos($class, 'web-page') !== false) {
-        $webpage = true;
-        echo "<div class='web-page-wrap'><div class='".$class."'>";
-    }
+    $imgcaption = false;
     $html = '';
     $image = wp_get_attachment_image_src($attachment_id, $size, $icon);
     if ( $image ) {
+
         list($src, $width, $height) = $image;
         $hwstring = image_hwstring($width, $height);
         $size_class = $size;
@@ -188,6 +186,17 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
             $size_class = join( 'x', $size_class );
         }
         $attachment = get_post($attachment_id);
+        $imgcaption = $attachment->post_excerpt;
+
+        //add wrapper if caption
+        if($imgcaption) {
+           $html .= "<div class='captionwrap'>";
+        }
+        if (strpos($class, 'web-page') !== false) {
+            $webpage = true;
+            $html .= "<div class='web-page-wrap'><div class='".$class."'>";
+        }
+
         $placeholder = get_template_directory_uri()."/images/img-phold.gif";
         $default_attr = array(
             'src'   => $placeholder,
@@ -196,7 +205,7 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
             'alt'   => trim(strip_tags( get_post_meta($attachment_id, '_wp_attachment_image_alt', true) )), // Use Alt field first
         );
         if ( empty($default_attr['alt']) )
-            $default_attr['alt'] = trim(strip_tags( $attachment->post_excerpt )); // If not, Use the Caption
+            $default_attr['alt'] = trim(strip_tags( $imgcaption )); // If not, Use the Caption
         if ( empty($default_attr['alt']) )
             $default_attr['alt'] = trim(strip_tags( $attachment->post_title )); // Finally, use the title
  
@@ -235,20 +244,22 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
          */
         $attr = apply_filters( 'wp_get_attachment_image_attributes', $attr, $attachment, $size );
         $attr = array_map( 'esc_attr', $attr );
-        $html = rtrim("<img $hwstring");
+        $html .= rtrim("<img $hwstring");
         foreach ( $attr as $name => $value ) {
             $html .= " $name=" . '"' . $value . '"';
         }
         $html .= ' />';
+
+        if($webpage){
+            $html .= "</div></div>";
+        }
+
+        if($imgcaption) {
+           $html .= "<p>".$imgcaption."</p></div>";
+        }
     }
  
     echo $html;
-
-    if($webpage){
-        echo "</div></div>";
-    }
-
-    // echo wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 
 }
 
