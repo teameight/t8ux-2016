@@ -25,14 +25,12 @@ get_header(); ?>
                         </div>
                     </section>
                     <?php if( get_field('images') ||  get_field('video') ){ ?>
-                        <div class="wrap">
                         <?php if( get_field('video') ): ?>
                             <?php get_template_part( 'partials/video' ); ?>
                         <?php endif; ?>
                         <?php if( get_field('images') ): ?>
                             <?php get_template_part( 'partials/postimages' ); ?>
                         <?php endif; ?>
-                        </div>
                     <?php } ?>
                 </article><!-- #post -->
 			<?php endwhile; ?>

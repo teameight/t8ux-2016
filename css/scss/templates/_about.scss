@@ -33,6 +33,10 @@
 		@extend .delta;
 		color: $creme;
 	}
+	
+	h3 {
+		color: $creme;
+	}
 
 	p {
 		@extend .epsilon;

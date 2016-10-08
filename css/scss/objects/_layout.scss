@@ -56,12 +56,13 @@
 	margin-left:-$padpx;
 	margin-right:-$padpx;
 }
-.single .wrap .g {
-	padding:60px;
+.single .wrap.g {
+	@media all and (min-width: $bp-med-2) {
+		padding:100px 42px 68px;
+	}
 }
 
-.wrap .g,
-.single .wrap > img {
+.wrap .g {
 	padding: 0 $padpx*2;
 
 	@media all and (min-width: $bp-med-2) {
@@ -96,6 +97,14 @@
 		display: block;
 	}
 
+	&:first-child {
+		margin-top: $padpx*2;
+
+		@media all and (min-width: $bp-med-2) {
+			margin-top:0;
+		}
+	}
+
 }
 
 .single .wrap .gi {
@@ -104,16 +113,16 @@
 
 /* Grid 1up */
 .g-1up {
-	margin: 0 0 24px;
+
 	.gi {
 		width: 100%;
 	}
 }
 /* Grid 2up */
 .g-2up {
-	margin: 0 0 24px;
+
 	@media all and (min-width: $bp-med-2) {
-		> .gi {
+		> .gi, .wrap > .gi {
 			float: left;
 			width: 50%;
 			
@@ -123,7 +132,7 @@
 		}
 	}
 	@media all and (min-width: $bp-full) {
-		> .gi {
+		> .gi, .wrap > .gi {
 			// width: 460px;
 		}
 	}
@@ -144,7 +153,7 @@
 
 /* Grid 3up */
 .g-3up {
-	> div {
+	> div, .wrap > div {
 		@include grid-column(4);
 		float:left;
 	}
@@ -153,9 +162,9 @@
 
 /* Grid 4up */
 .g-4up {
-	margin: 0 0 24px;
+
 	@media all and (min-width: $bp-med) {
-		>.gi {
+		>.gi, .wrap > .gi {
 			float: left;
 			width: 50%;
 			
@@ -166,7 +175,7 @@
 	}
 	
 	@media all and (min-width: $bp-large) {
-		>.gi {
+		>.gi, .wrap > .gi {
 			width: 25%;
 			
 			&:nth-of-type(2n+1) {

@@ -118,31 +118,39 @@
 }
 .imgdesc {
 	position:relative;
-	background: $creme-lt;
 	padding:0;
-	
-	@media all and (min-width: $bp-med-3) {
-		display: flex;
-		align-items: center;
-		padding:60px;
-	}
 
-	> img {
-		width:100%;
-		height:auto;
-		
+
+	.wrap {
+		position:relative;
+
+		@media all and (min-width: $bp-med-2) {
+			padding:100px 60px;
+		}
+
 		@media all and (min-width: $bp-med-3) {
-			width:$col-1*6;
+			display: flex;
+			align-items: center;
 		}
 		
-		@media all and (min-width: $bp-full) {
-			width:$col-1*7;
+		> img {
+			width:100%;
+			height:auto;
+			
+			@media all and (min-width: $bp-med-3) {
+				width:$col-1*6;
+			}
+			
+			@media all and (min-width: $bp-full) {
+				width:$col-1*7;
+			}
 		}
+
 	}
 
 	.text {
 		width:100%;
-		background: $creme-lt;
+		background: transparent;
 
 		@media all and (min-width: $bp-med-3) {
 			width:$col-1*6;
@@ -153,7 +161,7 @@
 		}
 	}
 
-	&.img-right {
+	&.img-right .wrap {
 
 		@media all and (min-width: $bp-med-3) {
 			flex-direction: row-reverse;
@@ -171,32 +179,55 @@
 	
 	}
 }
+
 .sechead {
 
-	background-color:$creme-dk;
-	padding:0;
+	position: relative;
 	
 	@media all and (min-width: $bp-large) {
+		&:before {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 42%;
+		    background: $creme-dk;
+		    height: 100%;
+		}
+	}
+
+}
+
+.sechead .wrap {
+
+	padding:0;
+
+	@media all and (min-width: $bp-large) {
 		display: flex;
-		align-items: center;
+		align-items: stretch;
 	}
 	header {
 		text-align:center;
 		padding:$padpx*4;
 		width:100%;
+		background: $creme-dk;
+
 		h5 {
 			color:$gray;
 		}
 		
 		@media all and (min-width: $bp-large) {
 			width:$col-1*5;
-			float:left;
+			
+			display: flex;
+			flex-direction:column;
+			justify-content:center;
 		}
 	}
 
 	.text {
 		width:100%;
-		background-color:$creme-lt;
+		background: transparent;
 		
 		@media all and (min-width: $bp-large) {
 			width:$col-1*7;
@@ -204,25 +235,24 @@
 		}
 	}
 }
-.web-page-head {
-    border: 2px solid $grey-light;
-    width: 100%;
-    height: 18px;
-    margin: 0;
-    background-color: $gray-light-4;
 
-    span {
-	    width: 9px;
-	    height:9px;
-	    border: 2px solid $grey-light;
-	    display: block;
-	    float: left;
-	    margin: 2px 0 0 8px;
-	    border-radius: 50%;
+.single section {
+	background:$creme-lt;
+
+	&.phead {
+		background:$creme-dk;
 	}
-
 }
-section > .web-page-wrap {
+
+.single section:nth-child(odd) {
+	background:$creme;
+
+	&.phead {
+		background:$creme-dk;
+	}
+}
+
+section .wrap > .web-page-wrap {
     margin: 0 12px;
 }
 
@@ -258,6 +288,10 @@ div.web-page {
     padding-top: 75%;
     overflow-x: hidden;
     position: relative;
+
+    @media all and (max-width: $bp-large) {
+    	overflow:hidden;
+    }
 
 
     &.ratio-4-3 {

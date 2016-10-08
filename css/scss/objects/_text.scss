@@ -67,6 +67,7 @@
 .text {
 	background: $creme-dk;
 	padding: $padpx;
+	max-width: 44em;
 	
 	@media all and (min-width: $bp-small) {
 		padding: $padpx*2;
@@ -93,4 +94,16 @@
 			margin-bottom: 0;
 		}
 	}
+}
+
+.single section ul {
+
+    font-family: $font-tertiary;
+    margin-top:16px;
+
+    li {
+        @include font-sizing(16, 20);
+        margin-bottom: 8px;
+    }
+    
 }

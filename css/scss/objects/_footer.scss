@@ -9,9 +9,6 @@
 	line-height: 1.2;
 	text-align: center;
 
-	.wrap{
-		max-width:$max-width;
-	}
 
 	@media all and (min-width: $bp-med-2) {
 		text-align: left;
