@@ -2213,7 +2213,7 @@ img.web-page {
 
 /* line 328, scss/objects/_blocks.scss */
 img.no-big {
-  width: auto;
+  width: auto !important;
   margin: 0 auto;
   max-width: 100%;
   display: block;
