@@ -32,6 +32,12 @@ get_header(); ?>
                             <?php get_template_part( 'partials/postimages' ); ?>
                         <?php endif; ?>
                     <?php } ?>
+                    <section class="section cf next-page-cta">
+                        <a class="anchor" name="start"></a>
+                        <article class="cf">
+                            <h5>Dig into our <a href="<?php echo home_url('/process/'); ?>">process. <svg class="cta-arrow"><use xlink:href="#arrow-icon"></use></svg></a></h5>
+                        </article>
+                    </section>
                 </article><!-- #post -->
 			<?php endwhile; ?>
 
