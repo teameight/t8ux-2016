@@ -25,6 +25,26 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 
+<link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-57x57.png?v=2">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-60x60.png?v=2">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-72x72.png?v=2">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-76x76.png?v=2">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-114x114.png?v=2">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-120x120.png?v=2">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-144x144.png?v=2">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-152x152.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-icon-180x180.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php bloginfo('template_directory'); ?>/images/favi/android-icon-192x192.png?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-96x96.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-16x16.png?v=2">
+<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/images/favi/manifest.json?v=2">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+	<?php wp_head(); ?>
+
 	<svg style="display: none;">
 		<symbol id="arrow-icon" viewBox="0 0 14 40">
 			<polygon id="arrow-line" points="7 36.1 0 32 7 49.3 14 32"/>
@@ -53,29 +73,6 @@
 			<path d="M32 7.1c-1.2 0.5-2.4 0.9-3.8 1 1.4-0.8 2.4-2.1 2.9-3.6-1.3 0.8-2.7 1.3-4.2 1.6-1.2-1.3-2.9-2.1-4.8-2.1-3.6 0-6.6 2.9-6.6 6.6 0 0.5 0.1 1 0.2 1.5-5.5-0.3-10.3-2.9-13.5-6.9-0.6 1-0.9 2.1-0.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-0.3-3-0.8 0 0 0 0.1 0 0.1 0 3.2 2.3 5.8 5.3 6.4-0.5 0.2-1.1 0.2-1.7 0.2-0.4 0-0.8 0-1.2-0.1 0.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-0.5 0-1 0-1.6-0.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7 0-0.3 0-0.6 0-0.8 1.3-0.9 2.4-2.1 3.3-3.4z"/>
 		</symbol>
 	</svg>
-
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php bloginfo('template_directory'); ?>/images/favi/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favi/favicon-128.png" sizes="128x128" />
-	<meta name="application-name" content="&nbsp;"/>
-	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="<?php bloginfo('template_directory'); ?>/images/favi/mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="<?php bloginfo('template_directory'); ?>/images/favi/mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="<?php bloginfo('template_directory'); ?>/images/favi/mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="<?php bloginfo('template_directory'); ?>/images/favi/mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="<?php bloginfo('template_directory'); ?>/images/favi/mstile-310x310.png" />
-
-	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
