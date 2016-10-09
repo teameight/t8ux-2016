@@ -66,7 +66,13 @@ function teameight_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'teameight_scripts_styles' );
 
+/*function to add async to all scripts*/
+function js_async_attr($tag){
 
+# Add async to all remaining scripts
+return str_replace( ' src', ' async="async" src', $tag );
+}
+add_filter( 'script_loader_tag', 'js_async_attr', 10 );
 
 /**
  * Alter the main query on the home page
