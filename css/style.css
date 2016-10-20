@@ -2172,8 +2172,30 @@ section .wrap > .web-page-wrap {
 .web-page-wrap:after {
   left: 20px;
 }
+/* line 289, scss/objects/_blocks.scss */
+.web-page-wrap .scroll-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+/* line 298, scss/objects/_blocks.scss */
+.web-page-wrap .scroll-cover:after {
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 1.5em;
+  content: 'click to view';
+  font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+}
 
-/* line 291, scss/objects/_blocks.scss */
+/* line 312, scss/objects/_blocks.scss */
 div.web-page {
   width: 100%;
   height: 0;
@@ -2182,21 +2204,21 @@ div.web-page {
   position: relative;
 }
 @media all and (max-width: 1024px) {
-  /* line 291, scss/objects/_blocks.scss */
+  /* line 312, scss/objects/_blocks.scss */
   div.web-page {
     overflow: hidden;
   }
 }
-/* line 306, scss/objects/_blocks.scss */
+/* line 326, scss/objects/_blocks.scss */
 div.web-page.ratio-square {
   padding-top: 100%;
 }
-/* line 309, scss/objects/_blocks.scss */
+/* line 329, scss/objects/_blocks.scss */
 div.web-page.ratio-3-4 {
   padding-top: 133.333%;
 }
 
-/* line 315, scss/objects/_blocks.scss */
+/* line 335, scss/objects/_blocks.scss */
 img.web-page {
   position: absolute;
   top: 0;
@@ -2204,14 +2226,14 @@ img.web-page {
 }
 
 @media all and (min-width: 1024px) {
-  /* line 321, scss/objects/_blocks.scss */
+  /* line 341, scss/objects/_blocks.scss */
   .imgdesc .web-page-head {
     width: 57.143%;
     float: left;
   }
 }
 
-/* line 328, scss/objects/_blocks.scss */
+/* line 348, scss/objects/_blocks.scss */
 img.no-big {
   width: auto !important;
   margin: 0 auto;

@@ -194,7 +194,7 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
         }
         if (strpos($class, 'web-page') !== false) {
             $webpage = true;
-            $html .= "<div class='web-page-wrap'><div class='".$class."'>";
+            $html .= "<div class='web-page-wrap'><div class='scroll-cover'></div><div class='".$class."'>";
         }
 
         $placeholder = get_template_directory_uri()."/images/img-phold.gif";
