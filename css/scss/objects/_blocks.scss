@@ -286,6 +286,27 @@ section .wrap > .web-page-wrap {
 	&:after{
 		left:20px;
 	}
+    .scroll-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		top: 0;
+		z-index: 1;
+		cursor:pointer;
+
+		&:after{
+		    display: block;
+		    position: absolute;
+		    top: 3px;
+		    right: 1.5em;
+		    content: 'click to view';
+		    font-family:$font-secondary;
+		    font-size:11px;
+		    color:#999;
+		    text-transform: uppercase;
+		}
+    }
 }
 
 div.web-page {
@@ -298,7 +319,6 @@ div.web-page {
     @media all and (max-width: $bp-large) {
     	overflow:hidden;
     }
-
 
     &.ratio-4-3 {
 

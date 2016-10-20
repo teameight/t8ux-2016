@@ -208,6 +208,24 @@
 		$window.trigger('scroll');
 		lloader();
 
+		var $scrollcover = $('.scroll-cover');
+
+		$scrollcover.click(function() {
+			$(this).toggle();
+		});
+
+		$(window).scroll(function(){
+			
+			$scrollcover.each(function() {
+				if($(this).parent().is(":hover")) {
+					console.log('go');
+				}else{
+					$(this).show();		    	
+				}			
+			});
+
+		});
+
 		// Case Study animation
 		$('.cs-link .imgwrap').hover( function() {
 			console.log('hovered');
