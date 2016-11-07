@@ -200,7 +200,7 @@
 	}
 
 	.teammate {
-	    width: 100%;
+		width: 100%;
 		margin: 0 auto 100px;
 		display: flex;
 		flex-direction: column;
@@ -275,6 +275,11 @@
 		}
 	}
 }
+
+.team-photo {
+	margin-bottom: 6.7%;
+}
+
 .designers-on-duty {
 
 	background:$creme;

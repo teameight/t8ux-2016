@@ -28,6 +28,18 @@ get_header(); ?>
 				if($featposts){ ?>
 
 	<section class="section cf designers-on-duty">
+
+		<div class="wrap team-photo">
+
+			<?php
+				if ( $team_photo = get_field('team_photo') ) :
+
+					echo '<img src="' . $team_photo['url'] . '" alt="' . $team_photo['alt'] . '" />';
+
+				endif;
+			?>
+
+		</div>
 		<article class="wrap">
 			<?php
 
