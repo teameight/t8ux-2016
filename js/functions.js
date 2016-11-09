@@ -58,7 +58,7 @@
 				hheight = 60;//$header.height();
 
 			if($header.hasClass("above")){
-				$header.css("top", lbheight - hheight);
+				$header.css("top", lbheight);
 			}
 
 	}
@@ -79,6 +79,7 @@
 		} else {
 
 			if ($window.scrollTop() > lbheight - hheight) {
+
 				if(!$header.hasClass("below")){
 					$header.addClass("below").removeClass('above').css("top", "0");
 					$voiddownlink.hide();
@@ -88,7 +89,7 @@
 					$header.removeClass("below");
 				}
 				if(!$header.hasClass("above")){
-					$header.addClass('above').css("top", lbheight - hheight);
+					$header.addClass('above').css("top", lbheight);
 					$voiddownlink.show();
 				}
 			}
@@ -218,7 +219,6 @@
 			
 			$scrollcover.each(function() {
 				if($(this).parent().is(":hover")) {
-					console.log('go');
 				}else{
 					$(this).show();		    	
 				}			
@@ -228,10 +228,8 @@
 
 		// Case Study animation
 		$('.cs-link .imgwrap').hover( function() {
-			console.log('hovered');
 			$(this).parent('.cs-link').addClass('active');
 		}, function() {
-			console.log('un-hovered');
 			$(this).parent('.cs-link').removeClass('active');
 		});
 

@@ -3109,73 +3109,113 @@ section.phead .pcont .text {
   /* line 5, scss/templates/_home.scss */
   .section.logo-banner-wrap {
     height: 100vh;
+    padding-bottom: 60px;
   }
 }
-/* line 21, scss/templates/_home.scss */
+/* line 22, scss/templates/_home.scss */
 .section.logo-banner-wrap .logo-banner {
-  max-width: 120px;
   text-align: center;
-  margin: 60px auto 0;
+  margin: 0 auto 0;
+  width: 100%;
+}
+@media all and (max-width: 720px) {
+  /* line 22, scss/templates/_home.scss */
+  .section.logo-banner-wrap .logo-banner {
+    margin-top: 2vh;
+  }
 }
 @media all and (min-width: 720px) {
-  /* line 21, scss/templates/_home.scss */
+  /* line 22, scss/templates/_home.scss */
   .section.logo-banner-wrap .logo-banner {
-    max-width: 170px;
     margin: 0 auto;
   }
 }
-/* line 33, scss/templates/_home.scss */
+/* line 37, scss/templates/_home.scss */
 .section.logo-banner-wrap .logo-block {
   z-index: 1;
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  max-width: 120px;
+  width: auto;
+  height: 25vh;
+  max-width: 170px;
+  margin: 0 auto;
 }
-/* line 41, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 37, scss/templates/_home.scss */
+  .section.logo-banner-wrap .logo-block {
+    max-width: 170px;
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 57, scss/templates/_home.scss */
 .loaded .section.logo-banner-wrap .logo-block, .loaded .section.logo-banner-wrap .logo-banner:after {
   opacity: 1;
 }
-/* line 46, scss/templates/_home.scss */
+/* line 62, scss/templates/_home.scss */
 .section.logo-banner-wrap article {
   max-width: 450px;
-  margin: 12px auto;
+  margin: 5vh auto;
 }
-@media all and (min-width: 720px) {
-  /* line 46, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 62, scss/templates/_home.scss */
   .section.logo-banner-wrap article {
     margin: 40px auto;
   }
 }
-/* line 56, scss/templates/_home.scss */
+/* line 72, scss/templates/_home.scss */
 .section.logo-banner-wrap article h1, .section.logo-banner-wrap article h2 {
   color: #f4f0e9;
   text-transform: uppercase;
 }
-/* line 60, scss/templates/_home.scss */
+/* line 76, scss/templates/_home.scss */
 .section.logo-banner-wrap article h2 {
   font-family: "MagallanesCondExtraLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 6vh;
+  line-height: 1;
   letter-spacing: .05em;
-  padding-bottom: 8px;
+  padding-bottom: .5vh;
 }
-/* line 68, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 76, scss/templates/_home.scss */
+  .section.logo-banner-wrap article h2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: .05em;
+    padding-bottom: 8px;
+  }
+}
+/* line 92, scss/templates/_home.scss */
 .section.logo-banner-wrap article h3, .section.logo-banner-wrap article #gform_1 #field_1_3 > label, #gform_1 .section.logo-banner-wrap article #field_1_3 > label, .section.logo-banner-wrap article h4, .section.logo-banner-wrap article .title-card h1, .title-card .section.logo-banner-wrap article h1, .section.logo-banner-wrap article .section.cattag-dir .h4, .section.cattag-dir .section.logo-banner-wrap article .h4, .section.logo-banner-wrap article h5 {
   color: #f4f0e9;
 }
-/* line 71, scss/templates/_home.scss */
-.section.logo-banner-wrap article h4, .section.logo-banner-wrap article .title-card h1, .title-card .section.logo-banner-wrap article h1, .section.logo-banner-wrap article .section.cattag-dir .h4, .section.cattag-dir .section.logo-banner-wrap article .h4 {
-  margin-bottom: 24px;
+/* line 95, scss/templates/_home.scss */
+.section.logo-banner-wrap article h5 {
+  font-size: 4vh;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
 }
-/* line 75, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 95, scss/templates/_home.scss */
+  .section.logo-banner-wrap article h5 {
+    font-size: 1.6875em;
+    line-height: 1.18519;
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+}
+/* line 110, scss/templates/_home.scss */
 .section.logo-banner-wrap p {
   font-size: 1.2em;
 }
-/* line 78, scss/templates/_home.scss */
+/* line 113, scss/templates/_home.scss */
 .section.logo-banner-wrap p em {
   display: block;
   position: relative;
 }
-/* line 82, scss/templates/_home.scss */
+/* line 117, scss/templates/_home.scss */
 .section.logo-banner-wrap p em::before {
   content: "";
   display: block;
@@ -3187,43 +3227,51 @@ section.phead .pcont .text {
   position: relative;
 }
 
-/* line 96, scss/templates/_home.scss */
+/* line 131, scss/templates/_home.scss */
 a.voidlink {
   margin-bottom: 60px;
 }
 @media all and (min-width: 720px) {
-  /* line 96, scss/templates/_home.scss */
+  /* line 131, scss/templates/_home.scss */
   a.voidlink {
     margin-bottom: 0;
   }
 }
-/* line 104, scss/templates/_home.scss */
+/* line 145, scss/templates/_home.scss */
 a.voidlink img {
-  max-width: 68px;
+  width: auto;
+  height: 11vh;
+}
+@media all and (min-width: 1200px) {
+  /* line 145, scss/templates/_home.scss */
+  a.voidlink img {
+    width: 68px;
+    height: auto;
+  }
 }
 
-/* line 110, scss/templates/_home.scss */
+/* line 161, scss/templates/_home.scss */
 .section.home-main {
   background: #a1cebe;
   max-width: none;
   margin: 0;
   padding: 0;
 }
-/* line 118, scss/templates/_home.scss */
+/* line 169, scss/templates/_home.scss */
 .section.home-main article {
   padding: 6em 2em;
   margin: 0 auto;
   text-align: center;
 }
 @media screen and (min-width: 720px) {
-  /* line 118, scss/templates/_home.scss */
+  /* line 169, scss/templates/_home.scss */
   .section.home-main article {
     padding: 8em;
     max-width: 720px;
   }
 }
 
-/* line 130, scss/templates/_home.scss */
+/* line 181, scss/templates/_home.scss */
 .section.home-sub {
   background: #f1d23a;
   border-bottom: 2em solid #a1cebe;
@@ -3231,13 +3279,13 @@ a.voidlink img {
   margin: 0;
   padding: 0;
 }
-/* line 138, scss/templates/_home.scss */
+/* line 189, scss/templates/_home.scss */
 .section.home-sub article {
   padding: 4em 0;
   margin: 0 auto;
   text-align: center;
 }
-/* line 143, scss/templates/_home.scss */
+/* line 194, scss/templates/_home.scss */
 .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label {
   font-family: "QuirogaSerifPro", Georgia, Times, "Times New Roman", serif;
   font-weight: normal;
@@ -3246,7 +3294,7 @@ a.voidlink img {
   line-height: 1.27273;
   color: #22A09E;
 }
-/* line 152, scss/templates/_home.scss */
+/* line 203, scss/templates/_home.scss */
 .section.home-sub article h4 a, .section.home-sub article .title-card h1 a, .title-card .section.home-sub article h1 a, .section.home-sub article .section.cattag-dir .h4 a, .section.cattag-dir .section.home-sub article .h4 a {
   color: #22A09E;
   display: block;
@@ -3254,27 +3302,27 @@ a.voidlink img {
   font-size: 0.875em;
   line-height: 1.42857;
 }
-/* line 158, scss/templates/_home.scss */
+/* line 209, scss/templates/_home.scss */
 .section.home-sub article h4 a:last-child, .section.home-sub article .title-card h1 a:last-child, .title-card .section.home-sub article h1 a:last-child, .section.home-sub article .section.cattag-dir .h4 a:last-child, .section.cattag-dir .section.home-sub article .h4 a:last-child {
   margin-bottom: 4px;
 }
-/* line 162, scss/templates/_home.scss */
+/* line 213, scss/templates/_home.scss */
 .section.home-sub article h4 a:hover, .section.home-sub article .title-card h1 a:hover, .title-card .section.home-sub article h1 a:hover, .section.home-sub article .section.cattag-dir .h4 a:hover, .section.cattag-dir .section.home-sub article .h4 a:hover, .section.home-sub article h4 a:active, .section.home-sub article .title-card h1 a:active, .title-card .section.home-sub article h1 a:active, .section.home-sub article .section.cattag-dir .h4 a:active, .section.cattag-dir .section.home-sub article .h4 a:active {
   color: #E95740;
 }
 @media screen and (min-width: 720px) {
-  /* line 171, scss/templates/_home.scss */
+  /* line 222, scss/templates/_home.scss */
   .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label, .section.home-sub article h4, .section.home-sub article .title-card h1, .title-card .section.home-sub article h1, .section.home-sub article .section.cattag-dir .h4, .section.cattag-dir .section.home-sub article .h4 {
     width: 50%;
     float: left;
   }
-  /* line 176, scss/templates/_home.scss */
+  /* line 227, scss/templates/_home.scss */
   .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label {
     text-align: right;
     padding-right: 36px;
     padding-top: 1.125em;
   }
-  /* line 182, scss/templates/_home.scss */
+  /* line 233, scss/templates/_home.scss */
   .section.home-sub article h4, .section.home-sub article .title-card h1, .title-card .section.home-sub article h1, .section.home-sub article .section.cattag-dir .h4, .section.cattag-dir .section.home-sub article .h4 {
     border-left: 2px solid #22A09E;
     text-align: left;
