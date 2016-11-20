@@ -33,6 +33,19 @@ function teameight_setup() {
 }
 add_action( 'after_setup_theme', 'teameight_setup' );
 
+function move_jquery_into_footer( $wp_scripts ) {
+
+    if( is_admin() ) {
+        return;
+    }
+
+    $wp_scripts->add_data( 'jquery', 'group', 1 );
+    $wp_scripts->add_data( 'jquery-core', 'group', 1 );
+    $wp_scripts->add_data( 'jquery-migrate', 'group', 1 );
+    
+}
+add_action( 'wp_default_scripts', 'move_jquery_into_footer' );
+
 /**
  * Enqueue scripts and styles for the front end.
  *
@@ -65,6 +78,7 @@ function teameight_scripts_styles() {
 	wp_style_add_data( 'teameight-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'teameight_scripts_styles' );
+
 
 // /*function to add async to all scripts*/
 // function js_async_attr($tag){
