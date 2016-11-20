@@ -209,22 +209,55 @@
 		$window.trigger('scroll');
 		lloader();
 
-		var $scrollcover = $('.scroll-cover');
+		var $webpage_img = $('article .web-page-wrap');
 
-		$scrollcover.click(function() {
-			$(this).toggle();
-		});
-
-		$(window).scroll(function(){
+		if ($webpage_img.length > 0) {
 			
-			$scrollcover.each(function() {
-				if($(this).parent().is(":hover")) {
-				}else{
-					$(this).show();		    	
-				}			
-			});
+			// setup basic lightbox elements
+			$('body').append('<div class="t8-modal-overlay hide"></div>');
+			console.log('overlay');
+
+
+		}
+
+		$webpage_img.on( "click", function() {
+			$this = $(this).clone();
+
+
+			$('.t8-modal-overlay')
+				.html($this)
+				.removeClass('hide');
+
+			$('body').addClass('modalshowing');
+
+			console.log('on');
 
 		});
+
+		$('.t8-modal-overlay').on( "click", function(e) {
+
+			if (e.target !== this)
+    		return;
+			
+			$(this).addClass('hide');
+			// .delay(800).empty();
+			
+			$('body').removeClass('modalshowing');
+
+			console.log('off');
+
+		});
+
+		// $(window).scroll(function(){
+			
+		// 	$scrollcover.each(function() {
+		// 		if($(this).parent().is(":hover")) {
+		// 		}else{
+		// 			$(this).show();		    	
+		// 		}			
+		// 	});
+
+		// });
 
 		// Case Study animation
 		$('.cs-link .imgwrap').hover( function() {
