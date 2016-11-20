@@ -3,6 +3,7 @@
  *
  */
 
+
 ( function( $ ) {
 
 	//Cache reference to window and animation items
