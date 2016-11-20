@@ -233,6 +233,14 @@ body {
   line-height: 1.5;
   color: #231f20;
 }
+/* line 7, scss/base/_main.scss */
+body.modalshowing {
+  margin-right: 15px;
+}
+/* line 10, scss/base/_main.scss */
+body.modalshowing .header {
+  padding-right: 33px;
+}
 
 /* Links */
 /* line 2, scss/base/_links.scss */
@@ -240,7 +248,7 @@ a {
   color: #231f20;
   text-decoration: none;
   outline: 0;
-  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 12, scss/base/_links.scss */
 a.anchor {
@@ -278,7 +286,7 @@ a.button, .button {
   background: #E95740;
   padding: 1em 1.5em .75em;
   z-index: 1;
-  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 48, scss/base/_links.scss */
 a.button:before, .button:before {
@@ -294,7 +302,7 @@ a.button:before, .button:before {
   opacity: 0;
   width: 100%;
   z-index: -1;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 64, scss/base/_links.scss */
 a.button:hover, a.button:active, .button:hover, .button:active {
@@ -964,7 +972,7 @@ input[type="search"]::-webkit-search-decoration {
   left: 0;
   top: 0;
   box-sizing: border-box;
-  transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 315, scss/base/_forms.scss */
 #gform_1 .gfield_checkbox input + label:after,
@@ -1269,7 +1277,7 @@ td {
   width: 100%;
   top: 0;
   z-index: 10;
-  transition: border 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: border 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @media all and (min-width: 960px) {
   /* line 1, scss/objects/_header.scss */
@@ -1322,7 +1330,7 @@ td {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 200ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 58, scss/objects/_header.scss */
 .home .below .logolink {
@@ -1330,7 +1338,7 @@ td {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.125s, transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms, transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /*------------------------------------*\
@@ -1365,7 +1373,7 @@ td {
 .menu-primary-nav-container {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: max-height 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   background: #f1d23a;
 }
 @media all and (min-width: 960px) {
@@ -1920,11 +1928,11 @@ td {
   background: url(../images/eye.png) center center no-repeat;
   background-size: 100px;
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.125s;
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
 }
 /* line 56, scss/objects/_blocks.scss */
 .tcrdwrap img {
-  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   position: absolute;
   top: 0;
   left: 0;
@@ -1965,7 +1973,7 @@ td {
   bottom: 0;
   left: 0;
   width: 100%;
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 99, scss/objects/_blocks.scss */
 .title-card h1 {
@@ -2145,7 +2153,17 @@ section .wrap > .web-page-wrap {
   margin: 0 12px;
 }
 
-/* line 265, scss/objects/_blocks.scss */
+/* line 267, scss/objects/_blocks.scss */
+article .web-page-wrap:hover {
+  background: #22A09E;
+  border-color: #a1cebe;
+}
+/* line 271, scss/objects/_blocks.scss */
+article .web-page-wrap:hover:before, article .web-page-wrap:hover:after {
+  border-color: #a1cebe;
+}
+
+/* line 277, scss/objects/_blocks.scss */
 .web-page-wrap {
   cursor: zoom-in;
   width: 100%;
@@ -2155,8 +2173,9 @@ section .wrap > .web-page-wrap {
   padding-top: 20px;
   padding-bottom: 1px;
   position: relative;
+  transition: background 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms, border-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 275, scss/objects/_blocks.scss */
+/* line 288, scss/objects/_blocks.scss */
 .web-page-wrap:before, .web-page-wrap:after {
   width: 9px;
   height: 9px;
@@ -2168,13 +2187,14 @@ section .wrap > .web-page-wrap {
   margin: 2px 0 0 8px;
   border-radius: 50%;
   content: '';
+  transition: border-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 287, scss/objects/_blocks.scss */
+/* line 301, scss/objects/_blocks.scss */
 .web-page-wrap:after {
   left: 20px;
 }
 
-/* line 292, scss/objects/_blocks.scss */
+/* line 306, scss/objects/_blocks.scss */
 div.web-page {
   width: 100%;
   height: 0;
@@ -2182,65 +2202,67 @@ div.web-page {
   overflow-x: hidden;
   position: relative;
   overflow: hidden;
-  background: #a1cebe;
+  background: #22A09E;
 }
-/* line 304, scss/objects/_blocks.scss */
+/* line 318, scss/objects/_blocks.scss */
 div.web-page.ratio-square {
   padding-top: 100%;
 }
-/* line 307, scss/objects/_blocks.scss */
+/* line 321, scss/objects/_blocks.scss */
 div.web-page.ratio-3-4 {
   padding-top: 133.333%;
 }
-/* line 311, scss/objects/_blocks.scss */
-div.web-page:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  padding-top: 75%;
-  background: url(../images/eye.png) center center no-repeat;
-  background-size: 100px;
+/* line 325, scss/objects/_blocks.scss */
+div.web-page .eye-icon {
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.125s;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  fill: #f4f0e9;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* line 328, scss/objects/_blocks.scss */
+/* line 340, scss/objects/_blocks.scss */
 img.web-page {
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.125s;
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @media all and (min-width: 1024px) {
-  /* line 336, scss/objects/_blocks.scss */
+  /* line 348, scss/objects/_blocks.scss */
   .imgdesc .web-page-head {
     width: 57.143%;
     float: left;
   }
 }
 
-/* line 344, scss/objects/_blocks.scss */
+/* line 356, scss/objects/_blocks.scss */
 article .web-page-wrap:hover img.web-page {
   opacity: 0.2;
 }
-/* line 347, scss/objects/_blocks.scss */
+/* line 359, scss/objects/_blocks.scss */
 article .web-page-wrap:hover div.web-page:after {
   opacity: 1;
 }
+/* line 363, scss/objects/_blocks.scss */
+article .web-page-wrap:hover .eye-icon {
+  opacity: .9;
+}
 
-/* line 352, scss/objects/_blocks.scss */
+/* line 368, scss/objects/_blocks.scss */
 .t8-modal-overlay {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   max-height: 120vh;
-  background: #f4f0e9;
-  background: rgba(244, 240, 233, 0.95);
+  background: #22A09E;
+  background: rgba(34, 160, 158, 0.95);
   position: fixed;
   z-index: 9998;
   opacity: 1;
@@ -2248,34 +2270,48 @@ article .web-page-wrap:hover div.web-page:after {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, max-height 5ms linear;
+  transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, max-height 5ms linear;
 }
-/* line 371, scss/objects/_blocks.scss */
+/* line 387, scss/objects/_blocks.scss */
 .t8-modal-overlay.hide {
   max-height: 0;
   opacity: 0;
-  transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, max-height 5ms linear 300ms;
+  transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, max-height 5ms linear 300ms;
 }
-/* line 377, scss/objects/_blocks.scss */
+/* line 393, scss/objects/_blocks.scss */
+.t8-modal-overlay .x-icon {
+  display: block;
+  fill: #f4f0e9;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+/* line 403, scss/objects/_blocks.scss */
 .t8-modal-overlay .web-page-wrap {
   max-width: 800px;
   width: 75vw;
   cursor: ns-resize;
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.125);
-  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.125);
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
 }
-/* line 388, scss/objects/_blocks.scss */
+/* line 414, scss/objects/_blocks.scss */
+.t8-modal-overlay.hide .web-page-wrap {
+  transform: translateX(7.5px);
+}
+/* line 418, scss/objects/_blocks.scss */
 .t8-modal-overlay div.web-page {
   overflow: auto;
 }
 
-/* line 393, scss/objects/_blocks.scss */
+/* line 423, scss/objects/_blocks.scss */
 body.modalshowing {
   overflow: hidden;
 }
 
-/* line 397, scss/objects/_blocks.scss */
+/* line 427, scss/objects/_blocks.scss */
 img.no-big {
   width: auto !important;
   margin: 0 auto;
@@ -2926,7 +2962,7 @@ section.phead .pcont .text {
 }
 /* line 67, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap img {
-  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   display: block;
 }
 /* line 71, scss/objects/_article.scss */
@@ -2947,7 +2983,7 @@ section.phead .pcont .text {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), height 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), height 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 93, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap:hover img:last-of-type:not(:only-of-type), .case-studies .case-study .cs-link .imgwrap:focus img:last-of-type:not(:only-of-type) {
@@ -2965,7 +3001,7 @@ section.phead .pcont .text {
     height: 50%;
     margin-left: 8.33333%;
     padding: 0;
-    transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 /* line 117, scss/objects/_article.scss */
@@ -3008,7 +3044,7 @@ section.phead .pcont .text {
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     padding: 5% 0 0;
-    transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), top 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1), top 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 @media all and (min-width: 720px) and (max-width: 1024px) {
@@ -3039,7 +3075,7 @@ section.phead .pcont .text {
 }
 /* line 172, scss/objects/_article.scss */
 .case-studies .case-study .card .labels h4, .case-studies .case-study .card .labels .title-card h1, .title-card .case-studies .case-study .card .labels h1, .case-studies .case-study .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .card .labels .h4 {
-  transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1), margin 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   width: 100%;
   margin-left: 0;
 }
@@ -3062,7 +3098,7 @@ section.phead .pcont .text {
     font-size: .75em;
     height: 0;
     opacity: 0;
-    transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), height 1ms ease 2s;
+    transition: margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 200ms cubic-bezier(0.165, 0.84, 0.44, 1), height 1ms ease 1600ms;
   }
 }
 @media all and (min-width: 1200px) {
@@ -3176,7 +3212,7 @@ section.phead .pcont .text {
 .section.logo-banner-wrap .logo-block {
   z-index: 1;
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   max-width: 120px;
   width: auto;
   height: 25vh;

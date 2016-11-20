@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'teameight_setup' );
  */
 function teameight_scripts_styles() {
 
-    $version = '2016-10-08';
+    $version = '2016-11-18';
 
     // Loads JavaScript file with functionality specific to Team Eight.
     wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $version, true );
@@ -158,7 +158,7 @@ add_action('init', 'create_teammates_teameight'); // Add our Custom Post Type
  *
  * 
  */
-function teameight_singles_images($att_id, $size, $class) {
+function teameight_singles_images($att_id, $size, $class) { // !!! I THINK WE CAN RETIRE THIS FUNCTION
 
     $image = wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 
@@ -200,7 +200,7 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
         }
         if (strpos($class, 'web-page') !== false) {
             $webpage = true;
-            $html .= "<div class='web-page-wrap'><div class='".$class."'>";
+            $html .= '<div class="web-page-wrap"><div class="'.$class.'"><svg class="eye-icon"><use xlink:href="#eye-icon"></use></svg>"';
         }
 
         $placeholder = get_template_directory_uri()."/images/img-phold.gif";

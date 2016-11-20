@@ -100,7 +100,6 @@
 
 
 
-
 	// Image Lazy Loading
 	function animate_in_view() {
 	  var window_height = $window.height();
@@ -209,13 +208,13 @@
 		$window.trigger('scroll');
 		lloader();
 
-		var $webpage_img = $('article .web-page-wrap');
+		var $webpage_img = $('article .web-page-wrap'),
+			xicon = '<svg class="x-icon"><use xlink:href="#x-icon"></use></svg>';
 
 		if ($webpage_img.length > 0) {
 			
 			// setup basic lightbox elements
 			$('body').append('<div class="t8-modal-overlay hide"></div>');
-			console.log('overlay');
 
 
 		}
@@ -225,28 +224,29 @@
 
 
 			$('.t8-modal-overlay')
-				.html($this)
+				.html(xicon)
+				.append($this)
 				.removeClass('hide');
 
 			$('body').addClass('modalshowing');
-
-			console.log('on');
 
 		});
 
 		$('.t8-modal-overlay').on( "click", function(e) {
 
-			if (e.target !== this)
-    		return;
+			if (e.target !== this){
+				if( $(e.target).hasClass('x-icon') || $(e.target).parents('.x-icon').length ) {
+					// let it bubble up
+				}else{
+					return;
+				}
+
+			}
 			
 			$(this).addClass('hide');
-			// .delay(800).empty();
-			
 			$('body').removeClass('modalshowing');
 
-			console.log('off');
-
-		});
+		});	
 
 		// $(window).scroll(function(){
 			

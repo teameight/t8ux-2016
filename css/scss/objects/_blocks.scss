@@ -262,6 +262,18 @@ section .wrap > .web-page-wrap {
     margin: 0 12px;
 }
 
+article .web-page-wrap {
+
+    &:hover {
+    	background: $teal;
+    	border-color:$mint;
+
+    	&:before, &:after{
+	    	border-color:$mint;
+		}
+    }
+}
+
 .web-page-wrap {
 	cursor:zoom-in;
     width: 100%;
@@ -271,6 +283,7 @@ section .wrap > .web-page-wrap {
     padding-top: 20px;
     padding-bottom: 1px;
     position: relative;
+	@include transitions(background $duration $ease-cb $duration/8, border-color $duration $ease-cb);
 
     &:before, &:after{
     	width: 9px;
@@ -283,6 +296,7 @@ section .wrap > .web-page-wrap {
 	    margin: 2px 0 0 8px;
 	    border-radius: 50%;
 	    content: '';
+    	@include transitions(border-color $duration $ease-cb);
 	}
 	&:after{
 		left:20px;
@@ -296,7 +310,7 @@ div.web-page {
     overflow-x: hidden;
     position: relative;
    	overflow:hidden;
-	background:$mint;
+	background:$teal;
 
     &.ratio-4-3 {
 
@@ -308,20 +322,18 @@ div.web-page {
     	padding-top: 133.333%;
     }
 
-    &:after {
-		content:"";
-		display:block;
-		position:absolute;
-		width:100%;
-		padding-top:75%;
-		background: url(../images/eye.png) center center no-repeat;
-		background-size: 100px;
-		opacity:0;
-		@include transitions(opacity $duration $ease-cb $duration/8);
-		top: 0;
-		left: 0;
+    .eye-icon {
+    	opacity: 0;
+    	position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		fill: $creme;
+		transform: translate(-50%,-50%);
+		width: 100px;
+		@include transitions(opacity $duration $ease-cb);
 
-	}
+    }
 
 }
 
@@ -329,7 +341,7 @@ img.web-page {
 	position: absolute;
 	top: 0;
 	left: 0;
-	@include transitions(opacity $duration $ease-cb $duration/8);
+	@include transitions(opacity $duration $ease-cb);
 
 }
 
@@ -347,6 +359,10 @@ article .web-page-wrap:hover {
 	div.web-page:after {
 		opacity:1;	
 	}
+
+	.eye-icon {
+		opacity:.9;
+	}
 }
 
 .t8-modal-overlay {
@@ -355,8 +371,8 @@ article .web-page-wrap:hover {
 	width:100%;
 	height: 100%;
 	max-height: 120vh;
-	background:$creme;
-	background:rgba(244, 240, 233,.95);
+	background:$teal;
+	background:rgba(34, 160, 158,.95);
 	position: fixed;
 	z-index: 9998;
 	opacity: 1;
@@ -366,12 +382,22 @@ article .web-page-wrap:hover {
     justify-content: center;
     align-items: center;
 
-	@include transitions(opacity 300ms $ease-cb 0s, max-height 5ms linear);
+	@include transitions(opacity 500ms $ease-cb 0s, max-height 5ms linear);
 
 	&.hide {
 		max-height:0;
 		opacity: 0;
-	@include transitions(opacity 300ms $ease-cb 0s, max-height 5ms linear 300ms);
+	@include transitions(opacity 500ms $ease-cb 0s, max-height 5ms linear 300ms);
+	}
+
+	.x-icon {
+	    display: block;
+	    fill: $creme;
+	    height: 40px;
+	    width: 40px;
+	    position: absolute;
+	    top: 40px;
+	    right: 40px;
 	}
 
 	.web-page-wrap {
@@ -379,10 +405,14 @@ article .web-page-wrap:hover {
 		width: 75vw;
 		cursor: ns-resize;
 
-		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.125);
-		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.125);
-		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.125);
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.35);
+		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.35);
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.35);
 
+	}
+
+	&.hide .web-page-wrap {
+		transform: translateX(7.5px);
 	}
 
 	div.web-page {
