@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*                                                                                                                                         
                                                 ,,            ,,                          ,,                                             
  .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO 
@@ -51,7 +52,318 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * NAVIGATION------------------------------
  * TOC To Be Continued
  */
-@import url(../fonts/fonts.css);
+/**
+ * @license
+ * MyFonts Webfont Build ID 3181099, 2016-03-03T21:56:17-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MagallanesCondBold by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/magallanes-condensed/bold/
+ * Copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * Webfont: MagallanesCondExtraLight by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/magallanes-condensed/extra-light/
+ * Copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * Webfont: MagallanesCond by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/magallanes-condensed/regular/
+ * Copyright: Copyright (c) 2013 by Daniel Hernandez. All rights reserved.
+ * 
+ * Webfont: QuirogaSerifPro-Bold by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/quiroga-serif-pro/bold/
+ * Copyright: Copyright (c) 2007 by Fernando D&#x00ED;az. All rights reserved.
+ * 
+ * Webfont: QuirogaSerifPro-Italic by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/quiroga-serif-pro/italic/
+ * Copyright: Copyright (c) 2007 by Fernando D&#x00ED;az. All rights reserved.
+ * 
+ * Webfont: QuirogaSerifPro by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/quiroga-serif-pro/reguar/
+ * Copyright: Copyright (c) 2010 by Fernando D&#x00ED;az. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3181099
+ * Licensed pageviews: 10,000
+ * 
+ * © 2016 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/308a2b");
+@font-face {
+  font-family: 'MagallanesCondBold';
+  src: url("../fonts/webfonts/308A2B_0_0.eot");
+  src: url("../fonts/webfonts/308A2B_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/308A2B_0_0.woff2") format("woff2"), url("../fonts/webfonts/308A2B_0_0.woff") format("woff"), url("../fonts/webfonts/308A2B_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MagallanesCondExtraLight';
+  src: url("../fonts/webfonts/308A2B_1_0.eot");
+  src: url("../fonts/webfonts/308A2B_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/308A2B_1_0.woff2") format("woff2"), url("../fonts/webfonts/308A2B_1_0.woff") format("woff"), url("../fonts/webfonts/308A2B_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MagallanesCond';
+  src: url("../fonts/webfonts/308A2B_2_0.eot");
+  src: url("../fonts/webfonts/308A2B_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/308A2B_2_0.woff2") format("woff2"), url("../fonts/webfonts/308A2B_2_0.woff") format("woff"), url("../fonts/webfonts/308A2B_2_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'QuirogaSerifPro';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/webfonts/308A2B_3_0.eot");
+  src: url("../fonts/webfonts/308A2B_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/308A2B_3_0.woff2") format("woff2"), url("../fonts/webfonts/308A2B_3_0.woff") format("woff"), url("../fonts/webfonts/308A2B_3_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'QuirogaSerifPro';
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/webfonts/308A2B_4_0.eot");
+  src: url("../fonts/webfonts/308A2B_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/308A2B_4_0.woff2") format("woff2"), url("../fonts/webfonts/308A2B_4_0.woff") format("woff"), url("../fonts/webfonts/308A2B_4_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'QuirogaSerifPro';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/webfonts/308A2B_5_0.eot");
+  src: url("../fonts/webfonts/308A2B_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/308A2B_5_0.woff2") format("woff2"), url("../fonts/webfonts/308A2B_5_0.woff") format("woff"), url("../fonts/webfonts/308A2B_5_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 't8icons';
+  src: url("../fonts/webfonts/t8icons.eot?77936122");
+  src: url("../fonts/webfonts/t8icons.eot?77936122#iefix") format("embedded-opentype"), url("../fonts/webfonts/t8icons.woff2?77936122") format("woff2"), url("../fonts/webfonts/t8icons.woff?77936122") format("woff"), url("../fonts/webfonts/t8icons.ttf?77936122") format("truetype"), url("../fonts/webfonts/t8icons.svg?77936122#t8icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 't8icons';
+    src: url('webfont/t8icons.svg?77936122#t8icons') format('svg');
+  }
+}
+*/
+/* line 88, scss/base/_fonts.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "t8icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 118, scss/base/_fonts.scss */
+.icon-facebook:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 119, scss/base/_fonts.scss */
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 120, scss/base/_fonts.scss */
+.icon-rss:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 121, scss/base/_fonts.scss */
+.icon-right-open:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 122, scss/base/_fonts.scss */
+.icon-up-open:before {
+  content: '\e805';
+}
+
+/* '' */
+/* line 123, scss/base/_fonts.scss */
+.icon-angle-double-left:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 124, scss/base/_fonts.scss */
+.icon-angle-double-right:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 125, scss/base/_fonts.scss */
+.icon-angle-double-up:before {
+  content: '\e80a';
+}
+
+/* '' */
+/* line 126, scss/base/_fonts.scss */
+.icon-angle-double-down:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 127, scss/base/_fonts.scss */
+.icon-menu:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 128, scss/base/_fonts.scss */
+.icon-left-open:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 129, scss/base/_fonts.scss */
+.icon-cancel:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 130, scss/base/_fonts.scss */
+.icon-pinterest:before {
+  content: '\e80f';
+}
+
+/* '' */
+/* line 131, scss/base/_fonts.scss */
+.icon-github:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 132, scss/base/_fonts.scss */
+.icon-gplus:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 133, scss/base/_fonts.scss */
+.icon-linkedin:before {
+  content: '\e812';
+}
+
+/* '' */
+/* line 134, scss/base/_fonts.scss */
+.icon-vimeo:before {
+  content: '\e813';
+}
+
+/* '' */
+/* line 135, scss/base/_fonts.scss */
+.icon-tumblr:before {
+  content: '\e814';
+}
+
+/* '' */
+/* line 136, scss/base/_fonts.scss */
+.icon-down-open:before {
+  content: '\e816';
+}
+
+/* '' */
+/* line 137, scss/base/_fonts.scss */
+.icon-music:before {
+  content: '\e817';
+}
+
+/* '' */
+/* line 138, scss/base/_fonts.scss */
+.icon-behance:before {
+  content: '\e819';
+}
+
+/* '' */
+/* line 139, scss/base/_fonts.scss */
+.icon-slack:before {
+  content: '\e81b';
+}
+
+/* '' */
+/* line 140, scss/base/_fonts.scss */
+.icon-instagram:before {
+  content: '\e81e';
+}
+
+/* '' */
+/* line 141, scss/base/_fonts.scss */
+.icon-youtube:before {
+  content: '\e822';
+}
+
+/* '' */
+/* line 142, scss/base/_fonts.scss */
+.icon-bicycle:before {
+  content: '\e823';
+}
+
+/* '' */
+/* line 143, scss/base/_fonts.scss */
+.icon-link:before {
+  content: '\e824';
+}
+
+/* '' */
+/* line 144, scss/base/_fonts.scss */
+.icon-heart:before {
+  content: '\e825';
+}
+
+/* '' */
+/* line 145, scss/base/_fonts.scss */
+.icon-heart-empty:before {
+  content: '\e826';
+}
+
+/* '' */
+/* line 146, scss/base/_fonts.scss */
+.icon-plus:before {
+  content: '\e827';
+}
+
+/* '' */
+/* line 147, scss/base/_fonts.scss */
+.icon-minus:before {
+  content: '\e828';
+}
+
+/* '' */
+/* line 148, scss/base/_fonts.scss */
+.icon-phone:before {
+  content: '\e82a';
+}
+
+/* '' */
+/* line 149, scss/base/_fonts.scss */
+.icon-mail:before {
+  content: '\e82b';
+}
+
+/* '' */
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
@@ -233,6 +545,14 @@ body {
   line-height: 1.5;
   color: #231f20;
 }
+/* line 7, scss/base/_main.scss */
+body.modalshowing {
+  margin-right: 15px;
+}
+/* line 10, scss/base/_main.scss */
+body.modalshowing .header {
+  padding-right: 33px;
+}
 
 /* Links */
 /* line 2, scss/base/_links.scss */
@@ -240,7 +560,7 @@ a {
   color: #231f20;
   text-decoration: none;
   outline: 0;
-  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 12, scss/base/_links.scss */
 a.anchor {
@@ -278,7 +598,7 @@ a.button, .button {
   background: #E95740;
   padding: 1em 1.5em .75em;
   z-index: 1;
-  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 48, scss/base/_links.scss */
 a.button:before, .button:before {
@@ -294,7 +614,7 @@ a.button:before, .button:before {
   opacity: 0;
   width: 100%;
   z-index: -1;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 64, scss/base/_links.scss */
 a.button:hover, a.button:active, .button:hover, .button:active {
@@ -964,7 +1284,7 @@ input[type="search"]::-webkit-search-decoration {
   left: 0;
   top: 0;
   box-sizing: border-box;
-  transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 315, scss/base/_forms.scss */
 #gform_1 .gfield_checkbox input + label:after,
@@ -1269,7 +1589,7 @@ td {
   width: 100%;
   top: 0;
   z-index: 10;
-  transition: border 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: border 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @media all and (min-width: 960px) {
   /* line 1, scss/objects/_header.scss */
@@ -1322,7 +1642,7 @@ td {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 200ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 58, scss/objects/_header.scss */
 .home .below .logolink {
@@ -1330,7 +1650,7 @@ td {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.125s, transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms, transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /*------------------------------------*\
@@ -1365,7 +1685,7 @@ td {
 .menu-primary-nav-container {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: max-height 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   background: #f1d23a;
 }
 @media all and (min-width: 960px) {
@@ -1920,11 +2240,11 @@ td {
   background: url(../images/eye.png) center center no-repeat;
   background-size: 100px;
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.125s;
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
 }
 /* line 56, scss/objects/_blocks.scss */
 .tcrdwrap img {
-  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   position: absolute;
   top: 0;
   left: 0;
@@ -1965,7 +2285,7 @@ td {
   bottom: 0;
   left: 0;
   width: 100%;
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 99, scss/objects/_blocks.scss */
 .title-card h1 {
@@ -2145,8 +2465,19 @@ section .wrap > .web-page-wrap {
   margin: 0 12px;
 }
 
-/* line 265, scss/objects/_blocks.scss */
+/* line 267, scss/objects/_blocks.scss */
+article .web-page-wrap:hover {
+  background: #22A09E;
+  border-color: #a1cebe;
+}
+/* line 271, scss/objects/_blocks.scss */
+article .web-page-wrap:hover:before, article .web-page-wrap:hover:after {
+  border-color: #a1cebe;
+}
+
+/* line 277, scss/objects/_blocks.scss */
 .web-page-wrap {
+  cursor: zoom-in;
   width: 100%;
   border: 2px solid #ccc;
   border-radius: 3px;
@@ -2154,8 +2485,9 @@ section .wrap > .web-page-wrap {
   padding-top: 20px;
   padding-bottom: 1px;
   position: relative;
+  transition: background 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 100ms, border-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 274, scss/objects/_blocks.scss */
+/* line 288, scss/objects/_blocks.scss */
 .web-page-wrap:before, .web-page-wrap:after {
   width: 9px;
   height: 9px;
@@ -2167,73 +2499,131 @@ section .wrap > .web-page-wrap {
   margin: 2px 0 0 8px;
   border-radius: 50%;
   content: '';
+  transition: border-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 286, scss/objects/_blocks.scss */
+/* line 301, scss/objects/_blocks.scss */
 .web-page-wrap:after {
   left: 20px;
 }
-/* line 289, scss/objects/_blocks.scss */
-.web-page-wrap .scroll-cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  top: 0;
-  z-index: 1;
-  cursor: pointer;
-}
-/* line 298, scss/objects/_blocks.scss */
-.web-page-wrap .scroll-cover:after {
-  display: block;
-  position: absolute;
-  top: 3px;
-  right: 1.5em;
-  content: 'click to view';
-  font-family: "MagallanesCondBold", ITC Franklin Gothic Std, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  font-size: 11px;
-  color: #999;
-  text-transform: uppercase;
-}
 
-/* line 312, scss/objects/_blocks.scss */
+/* line 306, scss/objects/_blocks.scss */
 div.web-page {
   width: 100%;
   height: 0;
   padding-top: 75%;
   overflow-x: hidden;
   position: relative;
+  overflow: hidden;
+  background: #22A09E;
 }
-@media all and (max-width: 1024px) {
-  /* line 312, scss/objects/_blocks.scss */
-  div.web-page {
-    overflow: hidden;
-  }
-}
-/* line 326, scss/objects/_blocks.scss */
+/* line 318, scss/objects/_blocks.scss */
 div.web-page.ratio-square {
   padding-top: 100%;
 }
-/* line 329, scss/objects/_blocks.scss */
+/* line 321, scss/objects/_blocks.scss */
 div.web-page.ratio-3-4 {
   padding-top: 133.333%;
 }
+/* line 325, scss/objects/_blocks.scss */
+div.web-page .eye-icon {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  fill: #f4f0e9;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
-/* line 335, scss/objects/_blocks.scss */
+/* line 340, scss/objects/_blocks.scss */
 img.web-page {
   position: absolute;
   top: 0;
   left: 0;
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @media all and (min-width: 1024px) {
-  /* line 341, scss/objects/_blocks.scss */
+  /* line 348, scss/objects/_blocks.scss */
   .imgdesc .web-page-head {
     width: 57.143%;
     float: left;
   }
 }
 
-/* line 348, scss/objects/_blocks.scss */
+/* line 356, scss/objects/_blocks.scss */
+article .web-page-wrap:hover img.web-page {
+  opacity: 0.2;
+}
+/* line 359, scss/objects/_blocks.scss */
+article .web-page-wrap:hover div.web-page:after {
+  opacity: 1;
+}
+/* line 363, scss/objects/_blocks.scss */
+article .web-page-wrap:hover .eye-icon {
+  opacity: .9;
+}
+
+/* line 368, scss/objects/_blocks.scss */
+.t8-modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 120vh;
+  background: #22A09E;
+  background: rgba(34, 160, 158, 0.95);
+  position: fixed;
+  z-index: 9998;
+  opacity: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, max-height 5ms linear;
+}
+/* line 387, scss/objects/_blocks.scss */
+.t8-modal-overlay.hide {
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, max-height 5ms linear 300ms;
+}
+/* line 393, scss/objects/_blocks.scss */
+.t8-modal-overlay .x-icon {
+  display: block;
+  fill: #f4f0e9;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+/* line 403, scss/objects/_blocks.scss */
+.t8-modal-overlay .web-page-wrap {
+  max-width: 800px;
+  width: 75vw;
+  cursor: ns-resize;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+}
+/* line 414, scss/objects/_blocks.scss */
+.t8-modal-overlay.hide .web-page-wrap {
+  transform: translateX(7.5px);
+}
+/* line 418, scss/objects/_blocks.scss */
+.t8-modal-overlay div.web-page {
+  overflow: auto;
+}
+
+/* line 423, scss/objects/_blocks.scss */
+body.modalshowing {
+  overflow: hidden;
+}
+
+/* line 427, scss/objects/_blocks.scss */
 img.no-big {
   width: auto !important;
   margin: 0 auto;
@@ -2884,7 +3274,7 @@ section.phead .pcont .text {
 }
 /* line 67, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap img {
-  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   display: block;
 }
 /* line 71, scss/objects/_article.scss */
@@ -2905,7 +3295,7 @@ section.phead .pcont .text {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), height 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), height 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 93, scss/objects/_article.scss */
 .case-studies .case-study .cs-link .imgwrap:hover img:last-of-type:not(:only-of-type), .case-studies .case-study .cs-link .imgwrap:focus img:last-of-type:not(:only-of-type) {
@@ -2923,7 +3313,7 @@ section.phead .pcont .text {
     height: 50%;
     margin-left: 8.33333%;
     padding: 0;
-    transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 /* line 117, scss/objects/_article.scss */
@@ -2966,7 +3356,7 @@ section.phead .pcont .text {
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     padding: 5% 0 0;
-    transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), top 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1), top 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 @media all and (min-width: 720px) and (max-width: 1024px) {
@@ -2997,7 +3387,7 @@ section.phead .pcont .text {
 }
 /* line 172, scss/objects/_article.scss */
 .case-studies .case-study .card .labels h4, .case-studies .case-study .card .labels .title-card h1, .title-card .case-studies .case-study .card .labels h1, .case-studies .case-study .card .labels .section.cattag-dir .h4, .section.cattag-dir .case-studies .case-study .card .labels .h4 {
-  transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1), margin 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   width: 100%;
   margin-left: 0;
 }
@@ -3020,7 +3410,7 @@ section.phead .pcont .text {
     font-size: .75em;
     height: 0;
     opacity: 0;
-    transition: margin 1s cubic-bezier(0.165, 0.84, 0.44, 1), width 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), height 1ms ease 2s;
+    transition: margin 800ms cubic-bezier(0.165, 0.84, 0.44, 1), width 800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 200ms cubic-bezier(0.165, 0.84, 0.44, 1), height 1ms ease 1600ms;
   }
 }
 @media all and (min-width: 1200px) {
@@ -3109,73 +3499,113 @@ section.phead .pcont .text {
   /* line 5, scss/templates/_home.scss */
   .section.logo-banner-wrap {
     height: 100vh;
+    padding-bottom: 60px;
   }
 }
-/* line 21, scss/templates/_home.scss */
+/* line 22, scss/templates/_home.scss */
 .section.logo-banner-wrap .logo-banner {
-  max-width: 120px;
   text-align: center;
-  margin: 60px auto 0;
+  margin: 0 auto 0;
+  width: 100%;
+}
+@media all and (max-width: 720px) {
+  /* line 22, scss/templates/_home.scss */
+  .section.logo-banner-wrap .logo-banner {
+    margin-top: 2vh;
+  }
 }
 @media all and (min-width: 720px) {
-  /* line 21, scss/templates/_home.scss */
+  /* line 22, scss/templates/_home.scss */
   .section.logo-banner-wrap .logo-banner {
-    max-width: 170px;
     margin: 0 auto;
   }
 }
-/* line 33, scss/templates/_home.scss */
+/* line 37, scss/templates/_home.scss */
 .section.logo-banner-wrap .logo-block {
   z-index: 1;
   opacity: 0;
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  max-width: 120px;
+  width: auto;
+  height: 25vh;
+  max-width: 170px;
+  margin: 0 auto;
 }
-/* line 41, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 37, scss/templates/_home.scss */
+  .section.logo-banner-wrap .logo-block {
+    max-width: 170px;
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 57, scss/templates/_home.scss */
 .loaded .section.logo-banner-wrap .logo-block, .loaded .section.logo-banner-wrap .logo-banner:after {
   opacity: 1;
 }
-/* line 46, scss/templates/_home.scss */
+/* line 62, scss/templates/_home.scss */
 .section.logo-banner-wrap article {
   max-width: 450px;
-  margin: 12px auto;
+  margin: 5vh auto;
 }
-@media all and (min-width: 720px) {
-  /* line 46, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 62, scss/templates/_home.scss */
   .section.logo-banner-wrap article {
     margin: 40px auto;
   }
 }
-/* line 56, scss/templates/_home.scss */
+/* line 72, scss/templates/_home.scss */
 .section.logo-banner-wrap article h1, .section.logo-banner-wrap article h2 {
   color: #f4f0e9;
   text-transform: uppercase;
 }
-/* line 60, scss/templates/_home.scss */
+/* line 76, scss/templates/_home.scss */
 .section.logo-banner-wrap article h2 {
   font-family: "MagallanesCondExtraLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 6vh;
+  line-height: 1;
   letter-spacing: .05em;
-  padding-bottom: 8px;
+  padding-bottom: .5vh;
 }
-/* line 68, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 76, scss/templates/_home.scss */
+  .section.logo-banner-wrap article h2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: .05em;
+    padding-bottom: 8px;
+  }
+}
+/* line 92, scss/templates/_home.scss */
 .section.logo-banner-wrap article h3, .section.logo-banner-wrap article #gform_1 #field_1_3 > label, #gform_1 .section.logo-banner-wrap article #field_1_3 > label, .section.logo-banner-wrap article h4, .section.logo-banner-wrap article .title-card h1, .title-card .section.logo-banner-wrap article h1, .section.logo-banner-wrap article .section.cattag-dir .h4, .section.cattag-dir .section.logo-banner-wrap article .h4, .section.logo-banner-wrap article h5 {
   color: #f4f0e9;
 }
-/* line 71, scss/templates/_home.scss */
-.section.logo-banner-wrap article h4, .section.logo-banner-wrap article .title-card h1, .title-card .section.logo-banner-wrap article h1, .section.logo-banner-wrap article .section.cattag-dir .h4, .section.cattag-dir .section.logo-banner-wrap article .h4 {
-  margin-bottom: 24px;
+/* line 95, scss/templates/_home.scss */
+.section.logo-banner-wrap article h5 {
+  font-size: 4vh;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
 }
-/* line 75, scss/templates/_home.scss */
+@media all and (min-width: 1200px) {
+  /* line 95, scss/templates/_home.scss */
+  .section.logo-banner-wrap article h5 {
+    font-size: 1.6875em;
+    line-height: 1.18519;
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+}
+/* line 110, scss/templates/_home.scss */
 .section.logo-banner-wrap p {
   font-size: 1.2em;
 }
-/* line 78, scss/templates/_home.scss */
+/* line 113, scss/templates/_home.scss */
 .section.logo-banner-wrap p em {
   display: block;
   position: relative;
 }
-/* line 82, scss/templates/_home.scss */
+/* line 117, scss/templates/_home.scss */
 .section.logo-banner-wrap p em::before {
   content: "";
   display: block;
@@ -3187,43 +3617,51 @@ section.phead .pcont .text {
   position: relative;
 }
 
-/* line 96, scss/templates/_home.scss */
+/* line 131, scss/templates/_home.scss */
 a.voidlink {
   margin-bottom: 60px;
 }
 @media all and (min-width: 720px) {
-  /* line 96, scss/templates/_home.scss */
+  /* line 131, scss/templates/_home.scss */
   a.voidlink {
     margin-bottom: 0;
   }
 }
-/* line 104, scss/templates/_home.scss */
+/* line 145, scss/templates/_home.scss */
 a.voidlink img {
-  max-width: 68px;
+  width: auto;
+  height: 11vh;
+}
+@media all and (min-width: 1200px) {
+  /* line 145, scss/templates/_home.scss */
+  a.voidlink img {
+    width: 68px;
+    height: auto;
+  }
 }
 
-/* line 110, scss/templates/_home.scss */
+/* line 161, scss/templates/_home.scss */
 .section.home-main {
   background: #a1cebe;
   max-width: none;
   margin: 0;
   padding: 0;
 }
-/* line 118, scss/templates/_home.scss */
+/* line 169, scss/templates/_home.scss */
 .section.home-main article {
   padding: 6em 2em;
   margin: 0 auto;
   text-align: center;
 }
 @media screen and (min-width: 720px) {
-  /* line 118, scss/templates/_home.scss */
+  /* line 169, scss/templates/_home.scss */
   .section.home-main article {
     padding: 8em;
     max-width: 720px;
   }
 }
 
-/* line 130, scss/templates/_home.scss */
+/* line 181, scss/templates/_home.scss */
 .section.home-sub {
   background: #f1d23a;
   border-bottom: 2em solid #a1cebe;
@@ -3231,13 +3669,13 @@ a.voidlink img {
   margin: 0;
   padding: 0;
 }
-/* line 138, scss/templates/_home.scss */
+/* line 189, scss/templates/_home.scss */
 .section.home-sub article {
   padding: 4em 0;
   margin: 0 auto;
   text-align: center;
 }
-/* line 143, scss/templates/_home.scss */
+/* line 194, scss/templates/_home.scss */
 .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label {
   font-family: "QuirogaSerifPro", Georgia, Times, "Times New Roman", serif;
   font-weight: normal;
@@ -3246,7 +3684,7 @@ a.voidlink img {
   line-height: 1.27273;
   color: #22A09E;
 }
-/* line 152, scss/templates/_home.scss */
+/* line 203, scss/templates/_home.scss */
 .section.home-sub article h4 a, .section.home-sub article .title-card h1 a, .title-card .section.home-sub article h1 a, .section.home-sub article .section.cattag-dir .h4 a, .section.cattag-dir .section.home-sub article .h4 a {
   color: #22A09E;
   display: block;
@@ -3254,27 +3692,27 @@ a.voidlink img {
   font-size: 0.875em;
   line-height: 1.42857;
 }
-/* line 158, scss/templates/_home.scss */
+/* line 209, scss/templates/_home.scss */
 .section.home-sub article h4 a:last-child, .section.home-sub article .title-card h1 a:last-child, .title-card .section.home-sub article h1 a:last-child, .section.home-sub article .section.cattag-dir .h4 a:last-child, .section.cattag-dir .section.home-sub article .h4 a:last-child {
   margin-bottom: 4px;
 }
-/* line 162, scss/templates/_home.scss */
+/* line 213, scss/templates/_home.scss */
 .section.home-sub article h4 a:hover, .section.home-sub article .title-card h1 a:hover, .title-card .section.home-sub article h1 a:hover, .section.home-sub article .section.cattag-dir .h4 a:hover, .section.cattag-dir .section.home-sub article .h4 a:hover, .section.home-sub article h4 a:active, .section.home-sub article .title-card h1 a:active, .title-card .section.home-sub article h1 a:active, .section.home-sub article .section.cattag-dir .h4 a:active, .section.cattag-dir .section.home-sub article .h4 a:active {
   color: #E95740;
 }
 @media screen and (min-width: 720px) {
-  /* line 171, scss/templates/_home.scss */
+  /* line 222, scss/templates/_home.scss */
   .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label, .section.home-sub article h4, .section.home-sub article .title-card h1, .title-card .section.home-sub article h1, .section.home-sub article .section.cattag-dir .h4, .section.cattag-dir .section.home-sub article .h4 {
     width: 50%;
     float: left;
   }
-  /* line 176, scss/templates/_home.scss */
+  /* line 227, scss/templates/_home.scss */
   .section.home-sub article h3, .section.home-sub article #gform_1 #field_1_3 > label, #gform_1 .section.home-sub article #field_1_3 > label {
     text-align: right;
     padding-right: 36px;
     padding-top: 1.125em;
   }
-  /* line 182, scss/templates/_home.scss */
+  /* line 233, scss/templates/_home.scss */
   .section.home-sub article h4, .section.home-sub article .title-card h1, .title-card .section.home-sub article h1, .section.home-sub article .section.cattag-dir .h4, .section.cattag-dir .section.home-sub article .h4 {
     border-left: 2px solid #22A09E;
     text-align: left;

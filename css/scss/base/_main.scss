@@ -3,4 +3,12 @@ body {
 	font-family: $font;
 	@include font-sizing(16, 24);
 	color: $gray-dk;
+
+	&.modalshowing {
+		margin-right: 15px;
+
+		.header {
+			padding-right: 33px;
+		}
+	}
 }

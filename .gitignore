@@ -3,3 +3,17 @@
 
 # Ignore idea files.
 *.idea*
+
+Thumbs.db
+Desktop.ini
+_notes
+.svn
+.project
+.DS_Store
+.cvs
+*~
+*.tmproj
+*.swp
+*.sublime-workspace
+*.sublime-project
+*.bak

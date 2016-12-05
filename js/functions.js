@@ -3,6 +3,7 @@
  *
  */
 
+
 ( function( $ ) {
 
 	//Cache reference to window and animation items
@@ -58,7 +59,7 @@
 				hheight = 60;//$header.height();
 
 			if($header.hasClass("above")){
-				$header.css("top", lbheight - hheight);
+				$header.css("top", lbheight);
 			}
 
 	}
@@ -79,6 +80,7 @@
 		} else {
 
 			if ($window.scrollTop() > lbheight - hheight) {
+
 				if(!$header.hasClass("below")){
 					$header.addClass("below").removeClass('above').css("top", "0");
 					$voiddownlink.hide();
@@ -88,7 +90,7 @@
 					$header.removeClass("below");
 				}
 				if(!$header.hasClass("above")){
-					$header.addClass('above').css("top", lbheight - hheight);
+					$header.addClass('above').css("top", lbheight);
 					$voiddownlink.show();
 				}
 			}
@@ -96,7 +98,6 @@
 
 		//console.log($( window ).scrollTop() +':scrolltop + lbheight:'+lbheight);
 	}
-
 
 
 
@@ -208,30 +209,61 @@
 		$window.trigger('scroll');
 		lloader();
 
-		var $scrollcover = $('.scroll-cover');
+		var $webpage_img = $('article .web-page-wrap'),
+			xicon = '<svg class="x-icon"><use xlink:href="#x-icon"></use></svg>';
 
-		$scrollcover.click(function() {
-			$(this).toggle();
-		});
-
-		$(window).scroll(function(){
+		if ($webpage_img.length > 0) {
 			
-			$scrollcover.each(function() {
-				if($(this).parent().is(":hover")) {
-					console.log('go');
-				}else{
-					$(this).show();		    	
-				}			
-			});
+			// setup basic lightbox elements
+			$('body').append('<div class="t8-modal-overlay hide"></div>');
+
+
+		}
+
+		$webpage_img.on( "click", function() {
+			$this = $(this).clone();
+
+
+			$('.t8-modal-overlay')
+				.html(xicon)
+				.append($this)
+				.removeClass('hide');
+
+			$('body').addClass('modalshowing');
 
 		});
+
+		$('.t8-modal-overlay').on( "click", function(e) {
+
+			if (e.target !== this){
+				if( $(e.target).hasClass('x-icon') || $(e.target).parents('.x-icon').length ) {
+					// let it bubble up
+				}else{
+					return;
+				}
+
+			}
+			
+			$(this).addClass('hide');
+			$('body').removeClass('modalshowing');
+
+		});	
+
+		// $(window).scroll(function(){
+			
+		// 	$scrollcover.each(function() {
+		// 		if($(this).parent().is(":hover")) {
+		// 		}else{
+		// 			$(this).show();		    	
+		// 		}			
+		// 	});
+
+		// });
 
 		// Case Study animation
 		$('.cs-link .imgwrap').hover( function() {
-			console.log('hovered');
 			$(this).parent('.cs-link').addClass('active');
 		}, function() {
-			console.log('un-hovered');
 			$(this).parent('.cs-link').removeClass('active');
 		});
 

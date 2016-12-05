@@ -33,6 +33,19 @@ function teameight_setup() {
 }
 add_action( 'after_setup_theme', 'teameight_setup' );
 
+function move_jquery_into_footer( $wp_scripts ) {
+
+    if( is_admin() ) {
+        return;
+    }
+
+    $wp_scripts->add_data( 'jquery', 'group', 1 );
+    $wp_scripts->add_data( 'jquery-core', 'group', 1 );
+    $wp_scripts->add_data( 'jquery-migrate', 'group', 1 );
+    
+}
+add_action( 'wp_default_scripts', 'move_jquery_into_footer' );
+
 /**
  * Enqueue scripts and styles for the front end.
  *
@@ -40,7 +53,7 @@ add_action( 'after_setup_theme', 'teameight_setup' );
  */
 function teameight_scripts_styles() {
 
-    $version = '2016-10-08';
+    $version = '2016-11-18';
 
     // Loads JavaScript file with functionality specific to Team Eight.
     wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $version, true );
@@ -65,6 +78,7 @@ function teameight_scripts_styles() {
 	wp_style_add_data( 'teameight-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'teameight_scripts_styles' );
+
 
 // /*function to add async to all scripts*/
 // function js_async_attr($tag){
@@ -158,7 +172,7 @@ add_action('init', 'create_teammates_teameight'); // Add our Custom Post Type
  *
  * 
  */
-function teameight_singles_images($att_id, $size, $class) {
+function teameight_singles_images($att_id, $size, $class) { // !!! I THINK WE CAN RETIRE THIS FUNCTION
 
     $image = wp_get_attachment_image( $att_id, $size, false, array( 'class' => $class ) );
 
@@ -200,7 +214,7 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
         }
         if (strpos($class, 'web-page') !== false) {
             $webpage = true;
-            $html .= "<div class='web-page-wrap'><div class='scroll-cover'></div><div class='".$class."'>";
+            $html .= '<div class="web-page-wrap"><div class="'.$class.'"><svg class="eye-icon"><use xlink:href="#eye-icon"></use></svg>"';
         }
 
         $placeholder = get_template_directory_uri()."/images/img-phold.gif";
