@@ -4414,3 +4414,31 @@ section.process-step a.downarrow {
   border: #e5e0ce solid 3px;
   margin: 12px 0;
 }
+
+/*------------------------------------*\
+    $Discount
+\*------------------------------------*/
+/* line 5, scss/templates/_discount.scss */
+.splash-banner {
+  background-color: #E95740;
+  text-align: center;
+  padding: 100px 0px 40px;
+}
+/* line 10, scss/templates/_discount.scss */
+.splash-banner img {
+  width: 100%;
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+/* line 17, scss/templates/_discount.scss */
+.discount-form {
+  padding: 40px 0;
+}
+/* line 20, scss/templates/_discount.scss */
+.discount-form input[type=text],
+.discount-form input[type=email],
+.discount-form textarea {
+  width: 100%;
+  max-width: 400px;
+}

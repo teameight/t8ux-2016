@@ -44,7 +44,7 @@ function move_jquery_into_footer( $wp_scripts ) {
     $wp_scripts->add_data( 'jquery-migrate', 'group', 1 );
     
 }
-add_action( 'wp_default_scripts', 'move_jquery_into_footer' );
+// add_action( 'wp_default_scripts', 'move_jquery_into_footer' );
 
 /**
  * Enqueue scripts and styles for the front end.

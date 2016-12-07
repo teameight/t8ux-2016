@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $Discount
+\*------------------------------------*/
+
+.splash-banner {
+	background-color: $red;
+	text-align: center;
+	padding: 100px 0px 40px;
+
+	img {
+		width: 100%;
+		max-width: 890px;
+		margin: 0 auto;
+	}
+}
+
+.discount-form {
+	padding: 40px 0;
+
+	input[type=text],
+	input[type=email],
+	textarea {
+		width: 100%;
+		max-width: 400px;
+	}
+}
