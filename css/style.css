@@ -1311,20 +1311,20 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* line 338, scss/base/_forms.scss */
-#gform_2 {
+#gform_2, #gform_3 {
   margin-top: 16px;
 }
 /* line 341, scss/base/_forms.scss */
-#gform_2 label {
+#gform_2 label, #gform_3 label {
   display: none;
 }
 /* line 344, scss/base/_forms.scss */
-#gform_2 input[type=text], #gform_2 input[type=email], #gform_2 textarea {
+#gform_2 input[type=text], #gform_2 input[type=email], #gform_2 textarea, #gform_3 input[type=text], #gform_3 input[type=email], #gform_3 textarea {
   width: 100%;
   background: #f4f0e9;
 }
 /* line 348, scss/base/_forms.scss */
-#gform_2 textarea {
+#gform_2 textarea, #gform_3 textarea {
   border: 3px solid #e5e0ce;
   height: 120px;
 }
