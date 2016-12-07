@@ -4572,6 +4572,11 @@ section.process-step a.downarrow {
 }
 
 /* line 140, scss/templates/_discount.scss */
+.single section .gi:last-of-type ul {
+  font-family: "QuirogaSerifPro", Georgia, Times, "Times New Roman", serif;
+}
+
+/* line 146, scss/templates/_discount.scss */
 .gform_confirmation_wrapper {
   margin-left: 0 !important;
 }
