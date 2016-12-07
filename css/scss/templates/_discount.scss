@@ -14,20 +14,126 @@
 	}
 }
 
-.discount-form {
-	padding: 40px 0;
+.single .category-landing {
+	.discount-form {
+		background: linear-gradient(to right, $creme 50%, $mint 50%);
 
-	input[type=text],
-	input[type=email],
-	textarea {
-		width: 100%;
-		max-width: 400px;
+		input[type=text],
+		input[type=email],
+		textarea {
+			width: 100%;
+			max-width: 400px;
+		}
+
+		.wrap {
+			@media screen and (min-width:$bp-med-2) {
+				display: flex;
+			    align-items: stretch;
+				padding:0;
+			}
+
+			> div {
+				padding:$padpx*3 5%;
+				margin-bottom: 0;
+
+				@media screen and (min-width:$bp-med-2) {
+					padding:$padpx*5 0;
+				}
+
+				h4 {
+					position:relative;
+					@include font-sizing(16,24);
+
+					em {
+						font-style:normal;
+						text-decoration:underline;
+					}
+					a {
+						color:$teal;
+						padding-top:8px;
+						text-transform:none;
+
+						&:hover, &:active {
+							color:$red;
+						}
+					}
+				}
+			}
+		}
+
+		.gi:first-of-type {
+
+			background: $creme;
+
+			@include grid-column(7, 1, both);
+
+
+			@media screen and (min-width:$bp-med-2) {
+				h3:after {
+					content: url('../SVG/arrow.svg');
+			    position: absolute;
+					right: -36%;
+					width: 14px;
+					transform: rotate(270deg);
+					line-height: 24px;
+
+					#arrow-line {
+						fill: blue;
+					}
+				}
+
+				h3:before {
+					content:"";
+					position: absolute;
+				    top: 21px;
+					width:77%;
+					right: -30%;
+				    border-top:2px solid $red;
+				    z-index:0;
+				}
+			}
+			@media screen and (min-width:$bp-med-3) {
+				h3:before {
+			        right: -32%;
+				    width: 90%;
+				}
+			}
+			@media screen and (min-width:$bp-large-2) {
+				h3:before {
+			        right: -33.75%;
+				    width: 100%;
+				}
+			}
+			h3 {
+				position:relative;
+				color:$red;
+				background:$creme;
+				padding-right:1em;
+				margin-bottom:0;
+			}
+
+		}
+
+		.gi:last-of-type {
+
+			background: $mint;
+			@include grid-column(5, 1, both);
+
+			h4 {
+				margin-top: 15px;
+			}
+
+		}
+	}
+	section.title-next-section {
+		background-color: $creme-lt;
+		padding-top:60px;
+		padding-bottom:12px;
 	}
 
-	.gi:first-of-type {
-		p {
-			max-width: 600px;
-		}
+	.wrap.g-3up {
+		background-color: $creme-lt;
+		padding-top:0;
 	}
 }
 

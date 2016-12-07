@@ -4431,23 +4431,147 @@ section.process-step a.downarrow {
   margin: 0 auto;
 }
 
-/* line 17, scss/templates/_discount.scss */
-.discount-form {
-  padding: 40px 0;
+/* line 18, scss/templates/_discount.scss */
+.single .category-landing .discount-form {
+  background: linear-gradient(to right, #f4f0e9 50%, #a1cebe 50%);
 }
-/* line 20, scss/templates/_discount.scss */
-.discount-form input[type=text],
-.discount-form input[type=email],
-.discount-form textarea {
+/* line 21, scss/templates/_discount.scss */
+.single .category-landing .discount-form input[type=text],
+.single .category-landing .discount-form input[type=email],
+.single .category-landing .discount-form textarea {
   width: 100%;
   max-width: 400px;
 }
-/* line 28, scss/templates/_discount.scss */
-.discount-form .gi:first-of-type p {
-  max-width: 600px;
+@media screen and (min-width: 720px) {
+  /* line 28, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .wrap {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+  }
+}
+/* line 35, scss/templates/_discount.scss */
+.single .category-landing .discount-form .wrap > div {
+  padding: 48px 5%;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 720px) {
+  /* line 35, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .wrap > div {
+    padding: 80px 0;
+  }
+}
+/* line 43, scss/templates/_discount.scss */
+.single .category-landing .discount-form .wrap > div h4, .single .category-landing .discount-form .wrap > div .title-card h1, .title-card .single .category-landing .discount-form .wrap > div h1, .single .category-landing .discount-form .wrap > div .section.cattag-dir .h4, .section.cattag-dir .single .category-landing .discount-form .wrap > div .h4 {
+  position: relative;
+  font-size: 1em;
+  line-height: 1.5;
+}
+/* line 47, scss/templates/_discount.scss */
+.single .category-landing .discount-form .wrap > div h4 em, .single .category-landing .discount-form .wrap > div .title-card h1 em, .title-card .single .category-landing .discount-form .wrap > div h1 em, .single .category-landing .discount-form .wrap > div .section.cattag-dir .h4 em, .section.cattag-dir .single .category-landing .discount-form .wrap > div .h4 em {
+  font-style: normal;
+  text-decoration: underline;
+}
+/* line 51, scss/templates/_discount.scss */
+.single .category-landing .discount-form .wrap > div h4 a, .single .category-landing .discount-form .wrap > div .title-card h1 a, .title-card .single .category-landing .discount-form .wrap > div h1 a, .single .category-landing .discount-form .wrap > div .section.cattag-dir .h4 a, .section.cattag-dir .single .category-landing .discount-form .wrap > div .h4 a {
+  color: #22A09E;
+  padding-top: 8px;
+  text-transform: none;
+}
+/* line 56, scss/templates/_discount.scss */
+.single .category-landing .discount-form .wrap > div h4 a:hover, .single .category-landing .discount-form .wrap > div .title-card h1 a:hover, .title-card .single .category-landing .discount-form .wrap > div h1 a:hover, .single .category-landing .discount-form .wrap > div .section.cattag-dir .h4 a:hover, .section.cattag-dir .single .category-landing .discount-form .wrap > div .h4 a:hover, .single .category-landing .discount-form .wrap > div h4 a:active, .single .category-landing .discount-form .wrap > div .title-card h1 a:active, .title-card .single .category-landing .discount-form .wrap > div h1 a:active, .single .category-landing .discount-form .wrap > div .section.cattag-dir .h4 a:active, .section.cattag-dir .single .category-landing .discount-form .wrap > div .h4 a:active {
+  color: #E95740;
+}
+/* line 64, scss/templates/_discount.scss */
+.single .category-landing .discount-form .gi:first-of-type {
+  background: #f4f0e9;
+  box-sizing: border-box;
+}
+@media all and (min-width: 720px) {
+  /* line 64, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:first-of-type {
+    width: 58.33333%;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
+}
+@media screen and (min-width: 720px) {
+  /* line 72, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:first-of-type h3:after, .single .category-landing .discount-form .gi:first-of-type #gform_1 #field_1_3 > label:after, #gform_1 .single .category-landing .discount-form .gi:first-of-type #field_1_3 > label:after {
+    content: url("../SVG/arrow.svg");
+    position: absolute;
+    right: -36%;
+    width: 14px;
+    transform: rotate(270deg);
+    line-height: 24px;
+  }
+  /* line 80, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:first-of-type h3:after #arrow-line, .single .category-landing .discount-form .gi:first-of-type #gform_1 #field_1_3 > label:after #arrow-line, #gform_1 .single .category-landing .discount-form .gi:first-of-type #field_1_3 > label:after #arrow-line {
+    fill: blue;
+  }
+  /* line 85, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:first-of-type h3:before, .single .category-landing .discount-form .gi:first-of-type #gform_1 #field_1_3 > label:before, #gform_1 .single .category-landing .discount-form .gi:first-of-type #field_1_3 > label:before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    width: 77%;
+    right: -30%;
+    border-top: 2px solid #E95740;
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 96, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:first-of-type h3:before, .single .category-landing .discount-form .gi:first-of-type #gform_1 #field_1_3 > label:before, #gform_1 .single .category-landing .discount-form .gi:first-of-type #field_1_3 > label:before {
+    right: -32%;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 102, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:first-of-type h3:before, .single .category-landing .discount-form .gi:first-of-type #gform_1 #field_1_3 > label:before, #gform_1 .single .category-landing .discount-form .gi:first-of-type #field_1_3 > label:before {
+    right: -33.75%;
+    width: 100%;
+  }
+}
+/* line 107, scss/templates/_discount.scss */
+.single .category-landing .discount-form .gi:first-of-type h3, .single .category-landing .discount-form .gi:first-of-type #gform_1 #field_1_3 > label, #gform_1 .single .category-landing .discount-form .gi:first-of-type #field_1_3 > label {
+  position: relative;
+  color: #E95740;
+  background: #f4f0e9;
+  padding-right: 1em;
+  margin-bottom: 0;
+}
+/* line 117, scss/templates/_discount.scss */
+.single .category-landing .discount-form .gi:last-of-type {
+  background: #a1cebe;
+  box-sizing: border-box;
+}
+@media all and (min-width: 720px) {
+  /* line 117, scss/templates/_discount.scss */
+  .single .category-landing .discount-form .gi:last-of-type {
+    width: 41.66667%;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
+}
+/* line 122, scss/templates/_discount.scss */
+.single .category-landing .discount-form .gi:last-of-type h4, .single .category-landing .discount-form .gi:last-of-type .title-card h1, .title-card .single .category-landing .discount-form .gi:last-of-type h1, .single .category-landing .discount-form .gi:last-of-type .section.cattag-dir .h4, .section.cattag-dir .single .category-landing .discount-form .gi:last-of-type .h4 {
+  margin-top: 15px;
+}
+/* line 128, scss/templates/_discount.scss */
+.single .category-landing section.title-next-section {
+  background-color: #fbfaf6;
+  padding-top: 60px;
+  padding-bottom: 12px;
+}
+/* line 134, scss/templates/_discount.scss */
+.single .category-landing .wrap.g-3up {
+  background-color: #fbfaf6;
+  padding-top: 0;
 }
 
-/* line 34, scss/templates/_discount.scss */
+/* line 140, scss/templates/_discount.scss */
 .gform_confirmation_wrapper {
   margin-left: 0 !important;
 }
