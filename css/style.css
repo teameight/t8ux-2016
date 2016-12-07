@@ -4422,7 +4422,7 @@ section.process-step a.downarrow {
 .splash-banner {
   background-color: #E95740;
   text-align: center;
-  padding: 100px 0px 40px;
+  padding: 130px 0px 40px;
 }
 /* line 10, scss/templates/_discount.scss */
 .splash-banner img {
@@ -4441,4 +4441,13 @@ section.process-step a.downarrow {
 .discount-form textarea {
   width: 100%;
   max-width: 400px;
+}
+/* line 28, scss/templates/_discount.scss */
+.discount-form .gi:first-of-type p {
+  max-width: 600px;
+}
+
+/* line 34, scss/templates/_discount.scss */
+.gform_confirmation_wrapper {
+  margin-left: 0 !important;
 }

@@ -91,8 +91,8 @@
 	position: relative;
 	box-sizing:border-box;
 	width: 100%;
-    float: left;
-	
+  float: left;
+
 	img {
 		display: block;
 	}
@@ -125,7 +125,7 @@
 		> .gi, .wrap > .gi {
 			float: left;
 			width: 50%;
-			
+
 			&:nth-of-type(odd) {
 				clear: left;
 			}
@@ -144,7 +144,7 @@
 	> .gi {
 		float: left;
 		width: 50%;
-		
+
 		&:nth-of-type(odd) {
 			clear: left;
 		}
@@ -167,21 +167,21 @@
 		>.gi, .wrap > .gi {
 			float: left;
 			width: 50%;
-			
+
 			&:nth-of-type(2n+1) {
 				clear: both;
 			}
 		}
 	}
-	
+
 	@media all and (min-width: $bp-large) {
 		>.gi, .wrap > .gi {
 			width: 25%;
-			
+
 			&:nth-of-type(2n+1) {
 				clear: none;
 			}
-			
+
 			&:nth-of-type(4n+1) {
 				clear: left;
 			}

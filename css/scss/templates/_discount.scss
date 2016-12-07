@@ -5,7 +5,7 @@
 .splash-banner {
 	background-color: $red;
 	text-align: center;
-	padding: 100px 0px 40px;
+	padding: 130px 0px 40px;
 
 	img {
 		width: 100%;
@@ -23,4 +23,14 @@
 		width: 100%;
 		max-width: 400px;
 	}
+
+	.gi:first-of-type {
+		p {
+			max-width: 600px;
+		}
+	}
+}
+
+.gform_confirmation_wrapper {
+	margin-left: 0 !important;
 }
