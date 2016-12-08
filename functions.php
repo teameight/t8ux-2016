@@ -53,7 +53,7 @@ function move_jquery_into_footer( $wp_scripts ) {
  */
 function teameight_scripts_styles() {
 
-    $version = '2016-12-07-5';
+    $version = '2016-12-08';
 
     // Loads JavaScript file with functionality specific to Team Eight.
     wp_enqueue_script( 'teameight-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $version, true );
