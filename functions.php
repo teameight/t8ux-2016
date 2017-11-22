@@ -191,12 +191,12 @@ function teameight_singles_images($att_id, $size, $class) { // !!! I THINK WE CA
  *
  * 
  */
-function teameight_images($attachment_id, $size, $class, $lload = true) {
+function teameight_images($attachment_id = false, $size = 'large', $class = '', $lload = true) {
 
     $webpage = false;
     $imgcaption = false;
     $html = '';
-    $image = wp_get_attachment_image_src($attachment_id, $size, $icon);
+    $image = wp_get_attachment_image_src($attachment_id, $size);
     if ( $image ) {
 
         list($src, $width, $height) = $image;
@@ -205,6 +205,7 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
         if ( is_array( $size_class ) ) {
             $size_class = join( 'x', $size_class );
         }
+        
         $attachment = get_post($attachment_id);
         $imgcaption = $attachment->post_excerpt;
 
@@ -229,11 +230,15 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
         if ( empty($default_attr['alt']) )
             $default_attr['alt'] = trim(strip_tags( $attachment->post_title )); // Finally, use the title
  
-        $attr = wp_parse_args( $attr, $default_attr );
+        $attr = $default_attr;
+
  
         // Generate 'srcset' and 'sizes' if not already present.
         if ( empty( $attr['srcset'] ) ) {
+            
+
             $image_meta = get_post_meta( $attachment_id, '_wp_attachment_metadata', true );
+            
  
             if ( is_array( $image_meta ) ) {
                 $size_array = array( absint( $width ), absint( $height ) );
@@ -246,11 +251,14 @@ function teameight_images($attachment_id, $size, $class, $lload = true) {
                     if ( empty( $attr['sizes'] ) ) {
                         $attr['sizes'] = $sizes;
                     }
+                } else {
+                    $attr['srcset'] = '';
                 }
             }
         }
         $attr['data-srcset'] = $attr['srcset'];
         unset($attr['srcset']); 
+
  
         /**
          * Filter the list of attachment image attributes.

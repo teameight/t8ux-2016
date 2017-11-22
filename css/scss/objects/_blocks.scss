@@ -430,3 +430,49 @@ img.no-big {
     max-width: 100%;
     display: block;
 }
+
+.testimonial .wrap {
+
+	padding: $padpx;
+
+	@media all and (min-width: $bp-small) {
+		padding: $padpx*2;
+	}
+
+	@media all and (min-width: $bp-med-2) {
+	  padding: 100px 0 80px;
+  }
+
+  blockquote {
+
+    font-size: 1.125em;
+  	text-align: center;
+    max-width: 55ch;
+    margin: 0 auto;
+    font-family: $font-tertiary;
+    font-style: normal;
+    font-weight:400;
+    color: $gray-dk-2;
+
+    @media all and (min-width: $bp-med) {
+			font-size: 1.35em;
+		}
+
+    &:before{
+    	content: "\201C";
+	    color: teal;
+	    font-size: 2.5em;
+	    display: block;
+	    line-height: 1;
+	    height: .5em;
+	    padding-top: .5em;
+	  }
+	}
+
+  h5.attribution {
+  	font-size: 1.125em;
+    line-height: 36px;
+    color: $red;
+    margin-top: 24px;
+  }
+}

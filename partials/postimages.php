@@ -86,7 +86,7 @@
 					$attachment_id = get_sub_field('image_1');
 					$class = get_sub_field('image_1_class');
 				 
-					teameight_images($attachment_id, $size, $class);
+					teameight_images($attachment_id, 'large', $class);
 				?>
 			</div>
 			<div class="gi">
@@ -94,7 +94,7 @@
 					$attachment_id = get_sub_field('image_2');
 					$class = get_sub_field('image_2_class');
 				 
-					teameight_images($attachment_id, $size, $class);
+					teameight_images($attachment_id, 'large', $class);
 				?>
 			</div>
 			<?php if( $row == 3 ){ ?>
@@ -103,10 +103,21 @@
 					$attachment_id = get_sub_field('image_3');
 					$class = get_sub_field('image_3_class');
 				 
-					teameight_images($attachment_id, $size, $class);
+					teameight_images($attachment_id, 'large', $class);
 				?>
 			</div>
 			<?php } ?>
+		</div>
+	</section>
+
+<?php elseif(get_row_layout() == "testimonial"): ?>
+	<?php $class = get_sub_field('class'); ?>
+	<section class="freeform testimonial <?php echo $class; ?>">
+		<div class="wrap">
+			<blockquote>
+				<?php the_sub_field('quote_text'); ?>
+				<h5 class="attribution"><?php the_sub_field('attribution'); ?></h5>
+			</blockquote>
 		</div>
 	</section>
 	<?php endif; ?>
