@@ -22,7 +22,7 @@
 							<use xlink:href="#facebook-icon"></use>
 						</svg>
 					</a></li>
-					<li><a href="http://www.linkedin.com/company/team-eight-llc" class="linkedin">
+					<li><a href="https://www.linkedin.com/company/team-eight-llc" class="linkedin">
 						<svg class="social-icon">
 							<use xlink:href="#linkedin-icon"></use>
 						</svg>
@@ -41,7 +41,7 @@
 			</div>
 			<div class="right">
 				<!-- Begin MailChimp Signup Form -->
-				<form action="http://team-eight.us5.list-manage.com/subscribe/post?u=b27e0b88c8dcc2a4d49d9fd36&amp;id=34d5690b8c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate inline-form newsletter-form" target="_blank" novalidate>
+				<form action="https://team-eight.us5.list-manage.com/subscribe/post?u=b27e0b88c8dcc2a4d49d9fd36&amp;id=34d5690b8c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate inline-form newsletter-form" target="_blank" novalidate>
 				    <fieldset>
 					    <h4>Keep Up</h4>
 					    <div class="inline-container">
