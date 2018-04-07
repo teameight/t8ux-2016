@@ -21,12 +21,34 @@ get_header(); ?>
 
 	<?php get_template_part( 'partials/featposts' ); ?>
 
-		<section class="section cf next-page-cta">
-			<a class="anchor" name="start"></a>
-			<article class="cf">
-				<h5>Learn more about our <a href="<?php echo home_url('/process/'); ?>">process. <svg class="cta-arrow"><use xlink:href="#arrow-icon"></use></svg></a></h5>
-			</article>
-		</section>
+	<section class="section cf next-page-cta">
+		<a class="anchor" name="start"></a>
+		<article class="cf">
+			<h5>Learn more about our <a href="<?php echo home_url('/process/'); ?>">process. <svg class="cta-arrow"><use xlink:href="#arrow-icon"></use></svg></a></h5>
+		</article>
+	</section>
+
+	<section class="section fullgrid cf">
+	    <a class="anchor" name="other"></a>
+		<?php 
+		// Most recent 9 STICKY POSTS ONLY from the Other Things category
+		$args = array( 
+			'cat'					=> 48, // Other Things cat id
+			'ignore_sticky_posts'    => 0,
+	        'posts_per_page'         => 9
+		);
+		$others = new WP_Query( $args );
+		
+		if($others->have_posts()) : 
+		      while($others->have_posts()) : 
+		         $others->the_post();
+		?>
+			<?php get_template_part( 'partials/threerow' ); ?>
+		<?php endwhile; endif; ?>
+		<?php wp_reset_postdata(); ?>
+<!--		<a class="more" href="#">View More</a>-->
+	</section>
+
 
 <?php endwhile; ?>
 
